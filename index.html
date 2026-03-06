@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC | Elevate Process Consulting</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- CORE STYLES & COLORS --- */
+        :root {
+            --blue-primary: #0052cc;
+            --blue-dark: #091e42;
+            --blue-light: #f4f7fa;
+            --blue-accent: #00b8d9;
+            --text-dark: #172b4d;
+            --text-grey: #5e6c84;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        header.nav-bar {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo i { color: var(--blue-primary); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--blue-primary); }
+
+        .btn-contact-nav {
+            background-color: var(--blue-primary);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 5px;
+        }
+
+        .btn-contact-nav:hover { background-color: var(--blue-dark); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            margin-top: 75px;
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
+            padding: 120px 5%;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            color: #e6f0ff;
+        }
+
+        .hero-btn {
+            background-color: var(--blue-accent);
+            color: var(--blue-dark);
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* --- POSITIONING / OUR APPROACH SECTION --- */
+        .positioning {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .section-label {
+            color: var(--blue-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .positioning h2 {
+            font-size: 2.5rem;
+            color: var(--blue-dark);
+            margin-bottom: 20px;
+        }
+
+        .positioning p {
+            font-size: 1.15rem;
+            color: var(--text-grey);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- ABOUT US SECTION --- */
+        .about-section {
+            padding: 60px 5% 80px;
+            text-align: center;
+            background-color: var(--white);
+            border-top: 1px solid #f0f4f8;
+        }
+        
+        .about-section h2 {
+            font-size: 2rem;
+            color: var(--blue-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: var(--text-grey);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- OFFERS / PACKAGES GRID --- */
+        .packages {
+            padding: 80px 5%;
+            background-color: var(--blue-light);
+        }
+
+        .packages-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .packages-header h2 {
+            font-size: 2.5rem;
+            color: var(--blue-dark);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .offer-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--blue-primary);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover { transform: translateY(-5px); }
+
+        .offer-card:nth-child(2) { border-top-color: #0747a6; }
+        .offer-card:nth-child(3) { border-top-color: #4c9aff; }
+        .offer-card:nth-child(4) { border-top-color: var(--blue-accent); }
+
+        .offer-tag {
+            font-size: 0.9rem;
+            color: var(--text-grey);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            color: var(--blue-dark);
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .offer-time {
+            display: inline-block;
+            background-color: #e6f0ff;
+            color: var(--blue-primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .offer-time i { margin-right: 5px; }
+
+        .offer-best-for {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-left: 4px solid var(--blue-primary);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .offer-list {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .offer-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-grey);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .offer-list li i {
+            color: var(--blue-accent);
+            margin-top: 4px;
+        }
+
+        /* --- CONTACT FORM SECTION --- */
+        .contact-section {
+            padding: 80px 5%;
+            background-color: var(--white);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h2 {
+            font-size: 2.5rem;
+            color: var(--blue-dark);
+            margin-top: 10px;
+        }
+
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--blue-primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background-color: var(--blue-primary);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover { background-color: var(--blue-dark); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--blue-dark);
+            color: var(--white);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h3 i { color: var(--blue-accent); }
+        .footer-col p { color: #94a3b8; margin-bottom: 10px; }
+        
+        .footer-col a {
+            color: var(--blue-accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 850px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .contact-form-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav-bar">
+        <a href="#" class="logo">
+            <i class="fa-solid fa-layer-group"></i> EPC
+        </a>
+        <nav class="nav-links">
+            <a href="#positioning">Our Approach</a>
+            <a href="#packages">Consulting Packages</a>
+            <a href="#about">About Us</a>
+            <a href="#contact" class="btn-contact-nav">Contact Form</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Reduce Inefficiency.<br>Improve Coordination.<br>Deliver Change.</h1>
+        <p>We help SMEs bridge the gap between strategy and execution through practical process mapping, business analysis, and hands-on implementation support.</p>
+        <a href="#packages" class="hero-btn">View Consulting Packages</a>
+    </section>
+
+    <!-- OUR APPROACH SECTION -->
+    <section id="positioning" class="positioning">
+        <span class="section-label">Our Approach</span>
+        <h2>Bridging the Gap Between Strategy and Execution</h2>
+        <p>Whether work is getting delayed, repeated, or stuck, we provide the clarity and structure you need. From diagnosing deep-rooted workflow issues to setting up market plans and delivering complex projects, we implement solutions that actually work.</p>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="about-section">
+        <span class="section-label">Who We Are</span>
+        <h2>About EPC</h2>
+        <p>Elevate Process Consulting (EPC) is a dedicated consulting partner for SMEs based in Perth, WA. We are passionate about taking the friction out of daily operations. Our team works closely with you to untangle complex workflows, creating transparent processes and building operational rhythm that allows your business to scale effortlessly.</p>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section id="packages" class="packages">
+        <div class="packages-header">
+            <span class="section-label">Service Ladder</span>
+            <h2>Our Consulting Offers</h2>
+        </div>
+
+        <div class="packages-grid">
+            
+            <!-- PACKAGE 1 -->
+            <div class="offer-card">
+                <div class="offer-tag">Process Optimisation</div>
+                <h3 class="offer-title">Process Mapping Diagnostic</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 20 fixed value-added hours</div>
+                
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Businesses that know work is getting delayed, repeated, or stuck but cannot clearly see why.
+                </div>
+
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Discovery call and issue framing</li>
+                    <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop</li>
+                    <li><i class="fa-solid fa-check"></i> Critical process workflow</li>
+                    <li><i class="fa-solid fa-check"></i> Pain point and bottleneck summary</li>
+                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations</li>
+                    <li><i class="fa-solid fa-check"></i> Short action roadmap</li>
+                </ul>
+            </div>
+
+            <!-- PACKAGE 2 -->
+            <div class="offer-card">
+                <div class="offer-tag">Market Strategy</div>
+                <h3 class="offer-title">Market Research & Plan</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 40 fixed value-added hours</div>
+                
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Clients that need clearer direction on target market, customer demand, competitor positioning, and practical growth actions.
+                </div>
+
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Business and market context review</li>
+                    <li><i class="fa-solid fa-check"></i> Target customer and segment analysis</li>
+                    <li><i class="fa-solid fa-check"></i> Competitor scan and positioning insights</li>
+                    <li><i class="fa-solid fa-check"></i> Market opportunity summary</li>
+                    <li><i class="fa-solid fa-check"></i> Practical marketing and growth action plan</li>
+                    <li><i class="fa-solid fa-check"></i> 30-60 day priority roadmap</li>
+                </ul>
+            </div>
+
+            <!-- PACKAGE 3 -->
+            <div class="offer-card">
+                <div class="offer-tag">Operational Structure</div>
+                <h3 class="offer-title">Operations Coordination Setup</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 25 - 50 value-added hours</div>
+                
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Businesses that need more structure in planning, meetings, scheduling, accountability, and follow-up.
+                </div>
+
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Responsibility matrix</li>
+                    <li><i class="fa-solid fa-check"></i> Meeting cadence and agenda templates</li>
+                    <li><i class="fa-solid fa-check"></i> Task and action tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Weekly coordination rhythm</li>
+                    <li><i class="fa-solid fa-check"></i> Simple KPI and reporting structure</li>
+                    <li><i class="fa-solid fa-check"></i> Admin and filing discipline</li>
+                </ul>
+            </div>
+
+            <!-- PACKAGE 4: PROJECT MANAGEMENT -->
+            <div class="offer-card">
+                <div class="offer-tag">Implementation Support</div>
+                <h3 class="offer-title">Project Management Delivery</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hour based on project</div>
+                
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Defined operational changes, implementation work, installations, upgrades, or business improvement projects.
+                </div>
+
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Project charter or brief</li>
+                    <li><i class="fa-solid fa-check"></i> Timeline and milestone tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Risk and issue register</li>
+                    <li><i class="fa-solid fa-check"></i> Stakeholder coordination</li>
+                    <li><i class="fa-solid fa-check"></i> Execution follow-up</li>
+                    <li><i class="fa-solid fa-check"></i> Close-out and lessons learned</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-header">
+            <span class="section-label">Get in Touch</span>
+            <h2>Contact Our Team</h2>
+            <p style="color: #5e6c84; margin-top: 10px;">Fill out the form below to connect with our team directly and discuss your project needs.</p>
+        </div>
+
+        <div class="contact-form-container">
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@yourcompany.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your Business Pty Ltd">
+                </div>
+
+                <div class="form-group">
+                    <label for="package">Which area are you interested in?</label>
+                    <select id="package" name="package">
+                        <option value="Not Sure">Not Sure Yet / Let's Discuss</option>
+                        <option value="Process Mapping Diagnostic">Process Mapping Diagnostic</option>
+                        <option value="Market Research & Plan">Market Research & Plan</option>
+                        <option value="Operations Coordination Setup">Operations Coordination Setup</option>
+                        <option value="Project Management Delivery">Project Management Delivery</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message details</label>
+                    <textarea id="message" name="message" placeholder="Briefly describe the operational issues or projects you need help with..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Inquiry <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-layer-group"></i> EPC</h3>
+                <p>Helping SMEs reduce workflow inefficiency, improve operational coordination, and deliver change more effectively.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3 style="font-size: 1.2rem; color: #fff;">Contact Details</h3>
+                <p><i class="fa-solid fa-users" style="margin-right: 10px;"></i> Our Team</p>
+                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Perth, WA Australia</p>
+                <p style="margin-top: 15px;">
+                    <a href="mailto:archie@elevateprocess.com.au"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> archie@elevateprocess.com.au</a>
+                </p>
+                <p>
+                    <a href="mailto:vitoria@elevateprocess.com.au"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> vitoria@elevateprocess.com.au</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 EPC | Elevate Process Consulting. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
