@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPC | Elevate Process Consulting</title>
+    <title>About Us | EPC | Elevate Process Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -48,58 +48,62 @@
         .hero {
             margin-top: 75px;
             background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
-            padding: 120px 5%; text-align: center; color: var(--white);
+            padding: 100px 5%; text-align: center; color: var(--white);
         }
 
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: #e6f0ff; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #e6f0ff; }
 
-        .hero-btn {
-            background-color: var(--blue-accent); color: var(--blue-dark);
-            padding: 15px 35px; border-radius: 5px; text-decoration: none;
-            font-weight: 800; display: inline-block;
-        }
+        /* ABOUT SECTION */
+        .about-intro { padding: 80px 5% 40px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .about-intro h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--blue-dark); }
+        .about-intro p { font-size: 1.15rem; color: var(--text-grey); }
 
-        /* FOUNDERS */
-        .about-section { padding: 80px 5%; text-align: center; background-color: var(--blue-light); }
+        .founder-section { padding: 40px 5% 80px; background-color: var(--blue-light); }
         .founder-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px; max-width: 1100px; margin: 40px auto 0; text-align: left;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px; max-width: 1200px; margin: 0 auto;
         }
         .founder-card {
             background: var(--white); padding: 40px; border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--blue-primary);
         }
-        .founder-title { color: var(--blue-primary); font-weight: 700; display: block; margin-bottom: 15px; text-transform: uppercase; font-size: 0.9rem; }
+        .founder-name { font-size: 1.8rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 5px; }
+        .founder-title { color: var(--blue-primary); font-weight: 700; display: block; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        
+        .bio-text { margin-bottom: 25px; color: var(--text-dark); }
+        
+        .expertise-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--blue-accent); }
+        .expertise-box h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 8px; color: var(--blue-dark); }
+        
+        .edu-list { list-style: none; font-size: 0.95rem; margin-bottom: 20px; }
+        .edu-list li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
+        .edu-list i { color: var(--blue-accent); margin-top: 5px; }
 
-        /* PACKAGES */
-        .packages { padding: 80px 5%; }
-        .packages-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px; max-width: 1200px; margin: 40px auto;
-        }
-        .offer-card {
-            padding: 30px; border-radius: 8px; border: 1px solid #f1f5f9;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--blue-primary);
-        }
-        .offer-price { color: var(--blue-primary); font-weight: 800; margin-bottom: 10px; display: block; }
+        /* EDGE SECTION */
+        .edge-section { padding: 80px 5%; background: var(--blue-dark); color: white; text-align: center; }
+        .edge-content { max-width: 800px; margin: 0 auto; }
+        .edge-content h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--blue-accent); }
+        .edge-content p { font-size: 1.2rem; opacity: 0.9; line-height: 1.8; }
 
         /* CONTACT */
-        .contact-section { padding: 80px 5%; background: var(--blue-light); }
+        .contact-section { padding: 80px 5%; background: var(--white); }
         .contact-form {
-            max-width: 600px; margin: 0 auto; background: white;
+            max-width: 600px; margin: 0 auto; background: var(--blue-light);
             padding: 40px; border-radius: 8px; text-align: left;
         }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
-        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        .btn-submit { width: 100%; background: var(--blue-primary); color: white; padding: 15px; border: none; font-weight: 700; cursor: pointer; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; }
+        .btn-submit { width: 100%; background: var(--blue-primary); color: white; padding: 15px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { background: #0043a8; }
 
-        footer { background: var(--blue-dark); color: white; padding: 40px 5%; text-align: center; }
+        footer { background: #05142b; color: white; padding: 40px 5%; text-align: center; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .nav-links { display: none; }
+            .founder-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -108,72 +112,73 @@
     <header class="nav-bar">
         <a href="#" class="logo"><i class="fa-solid fa-layer-group"></i> EPC</a>
         <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#packages">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#founders">The Founders</a>
             <a href="#contact" class="btn-contact-nav">Book Audit</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Reduce Inefficiency. Improve Coordination.</h1>
+        <h1>Engineering Better Business.</h1>
         <p>Bridging the gap between strategy and execution through practical process mapping and hands-on implementation support.</p>
-        <a href="#contact" class="hero-btn">Book Your Process Audit</a>
     </section>
 
-    <section id="about" class="about-section">
-        <p style="color: var(--blue-primary); font-weight: 700; text-transform: uppercase;">Our Leadership</p>
-        <h2>The Founders</h2>
+    <section id="about" class="about-intro">
+        <p style="color: var(--blue-primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Our Mission</p>
+        <h2>About Elevate Process Consulting</h2>
+        <p>At EPC, we help SMEs reduce workflow inefficiency, improve operational coordination, and deliver change more effectively. Our approach combines engineering precision with strategic operational management to bridge the gap between strategy and execution.</p>
+    </section>
+
+    <section id="founders" class="founder-section">
         <div class="founder-grid">
             <div class="founder-card">
-                <h3>Archie Shim</h3>
-                <span class="founder-title">Managing Partner – Execution & Strategy</span>
-                <p>Over a decade of experience delivering high-value capital projects and driving operational excellence across industrial and manufacturing sectors.</p>
-                <ul style="list-style: none; margin-top: 15px; font-size: 0.9rem; color: var(--text-grey);">
-                    <li><i class="fa-solid fa-check" style="color: var(--blue-accent);"></i> B.Eng Mechanical Engineering</li>
-                    <li><i class="fa-solid fa-check" style="color: var(--blue-accent);"></i> PRINCE2 & Lean Six Sigma</li>
+                <h3 class="founder-name">Archie Shim</h3>
+                <span class="founder-title">Managing Partner – Execution & Strategy Lead</span>
+                
+                <p class="bio-text">Archie brings a decade of experience delivering high-value capital projects and driving operational excellence across industrial, construction, healthcare, and manufacturing sectors. With a background in mechanical engineering and a results-driven focus, he helps growing businesses simplify operations, remove bottlenecks, and build practical systems that support long-term growth.</p>
+                
+                <div class="expertise-box">
+                    <h4>Core Expertise</h4>
+                    <p>Project leadership, engineering process improvement, and strategic resource management.</p>
+                </div>
+
+                <ul class="edu-list">
+                    <li><i class="fa-solid fa-graduation-cap"></i> B.Eng Mechanical Engineering (Honours) – Curtin University</li>
+                    <li><i class="fa-solid fa-certificate"></i> PRINCE2 & Lean Six Sigma Certified</li>
+                    <li><i class="fa-solid fa-bolt"></i> <strong>Impact:</strong> Led multi-million-dollar projects and designed innovative automation and intralogistics solutions.</li>
                 </ul>
             </div>
+
             <div class="founder-card">
-                <h3>Vitória Silveira</h3>
-                <span class="founder-title">Managing Partner – Process & Optimization</span>
-                <p>A decade of experience streamlining business operations and untangling complex administrative workflows to enhance productivity.</p>
-                <ul style="list-style: none; margin-top: 15px; font-size: 0.9rem; color: var(--text-grey);">
-                    <li><i class="fa-solid fa-check" style="color: var(--blue-accent);"></i> B.Eng Production Engineering</li>
-                    <li><i class="fa-solid fa-check" style="color: var(--blue-accent);"></i> Workflow Optimization Expert</li>
+                <h3 class="founder-name">Vitória Silveira</h3>
+                <span class="founder-title">Managing Partner – Process & Optimization Lead</span>
+                
+                <p class="bio-text">Vitória is a results-driven professional with a decade of experience in streamlining business operations and providing executive support. Specialized in process optimization using Lean and Six Sigma principles, she excels at untangling complex administrative workflows to enhance productivity and reduce operational waste.</p>
+                
+                <div class="expertise-box">
+                    <h4>Core Expertise</h4>
+                    <p>Process mapping, strategic planning, financial process management, and stakeholder relationship building.</p>
+                </div>
+
+                <ul class="edu-list">
+                    <li><i class="fa-solid fa-graduation-cap"></i> B.Eng Production Engineering (Honours)</li>
+                    <li><i class="fa-solid fa-certificate"></i> CRM & Market Analysis Certifications</li>
+                    <li><i class="fa-solid fa-bolt"></i> <strong>Impact:</strong> Proven track record of aligning administrative functions with production workflows to improve efficiency.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="packages" class="packages">
-        <h2 style="text-align: center;">Our Consulting Packages</h2>
-        <div class="packages-grid">
-            <div class="offer-card">
-                <span class="offer-price">$1,500 Fixed Fee</span>
-                <h3>Process Mapping Diagnostic</h3>
-                <p>Discovery, critical workflow mapping, and a quick-win roadmap.</p>
-            </div>
-            <div class="offer-card">
-                <span class="offer-price">$3,500 Fixed Fee</span>
-                <h3>Market Research & Plan</h3>
-                <p>Competitor scan, customer analysis, and 60-day priority plan.</p>
-            </div>
-            <div class="offer-card">
-                <span class="offer-price">Custom Quote</span>
-                <h3>Ops Coordination Setup</h3>
-                <p>Establishing meeting cadences, accountability, and KPI tracking.</p>
-            </div>
-            <div class="offer-card">
-                <span class="offer-price">Monthly Retainer</span>
-                <h3>Project Delivery Support</h3>
-                <p>Hands-on coordination for major changes and capital projects.</p>
-            </div>
+    <section class="edge-section">
+        <div class="edge-content">
+            <h2>The EPC Edge</h2>
+            <p>Together, we bring an engineering mindset to business analysis and implementation support. By combining Archie’s strength in technical execution and strategy with Vitória’s expertise in process systems and optimization, EPC provides a comprehensive solution for businesses needing to move from chaotic guesswork to standardized, predictable growth.</p>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
         <div class="contact-form">
-            <h2 style="margin-bottom: 20px;">Book a Process Audit</h2>
+            <h2 style="margin-bottom: 20px; text-align: center;">Book a Process Audit</h2>
             <form>
                 <div class="form-group">
                     <label>Name</label>
@@ -184,23 +189,12 @@
                     <input type="email" placeholder="email@company.com.au" required>
                 </div>
                 <div class="form-group">
-                    <label>Package</label>
+                    <label>Inquiry Type</label>
                     <select>
-                        <option>Process Mapping Diagnostic</option>
-                        <option>Market Research & Plan</option>
-                        <option>Ops Coordination Setup</option>
-                        <option>Project Delivery Support</option>
+                        <option>Process Audit</option>
+                        <option>Operational Support</option>
+                        <option>Project Coordination</option>
+                        <option>General Inquiry</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-submit">Send Inquiry</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 EPC | Elevate Process Consulting | Perth, WA</p>
-        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">archie@elevateprocess.com.au | vitoria@elevateprocess.com.au</p>
-    </footer>
-
-</body>
-</html>
+                <button type="submit" class="btn-submit">Send
