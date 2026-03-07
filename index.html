@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | EPC | Elevate Process Consulting</title>
+    <title>EPC | Elevate Process Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* --- CORE STYLES & COLORS --- */
         :root {
             --blue-primary: #0052cc;
             --blue-dark: #091e42;
@@ -18,183 +19,833 @@
             --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
-        body { color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-        /* NAVIGATION */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
         header.nav-bar {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
-            width: 100%; top: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px 5%;
         }
 
-        .logo { font-size: 26px; font-weight: 800; color: var(--blue-dark); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.5px;
+        }
+
         .logo i { color: var(--blue-primary); }
 
-        .nav-links { display: flex; align-items: center; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--blue-primary); }
 
         .btn-contact-nav {
             background-color: var(--blue-primary);
             color: var(--white) !important;
-            padding: 10px 24px; border-radius: 5px;
+            padding: 10px 24px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
-        /* HERO */
+        .btn-contact-nav:hover { 
+            background-color: var(--blue-dark); 
+            transform: translateY(-2px);
+        }
+
+        /* --- HERO SECTION --- */
         .hero {
             margin-top: 75px;
             background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
-            padding: 100px 5%; text-align: center; color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+            color: var(--white);
         }
 
-        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #e6f0ff; }
-
-        /* ABOUT SECTION */
-        .about-intro { padding: 80px 5% 40px; text-align: center; max-width: 900px; margin: 0 auto; }
-        .about-intro h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--blue-dark); }
-        .about-intro p { font-size: 1.15rem; color: var(--text-grey); }
-
-        .founder-section { padding: 40px 5% 80px; background-color: var(--blue-light); }
-        .founder-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px; max-width: 1200px; margin: 0 auto;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            line-height: 1.2;
         }
-        .founder-card {
-            background: var(--white); padding: 40px; border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--blue-primary);
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            color: #e6f0ff;
         }
-        .founder-name { font-size: 1.8rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 5px; }
-        .founder-title { color: var(--blue-primary); font-weight: 700; display: block; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+
+        .hero-btn {
+            background-color: var(--blue-accent);
+            color: var(--blue-dark);
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 184, 217, 0.3);
+        }
+
+        .hero-btn:hover {
+            background-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* --- POSITIONING / OUR APPROACH SECTION --- */
+        .positioning {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .section-label {
+            color: var(--blue-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--blue-dark);
+            margin-bottom: 20px;
+        }
+
+        .positioning p {
+            font-size: 1.15rem;
+            color: var(--text-grey);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- HOW IT WORKS SECTION --- */
+        .how-it-works {
+            padding: 80px 5%;
+            background-color: var(--blue-light);
+            text-align: center;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .step-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .step-card:hover { transform: translateY(-5px); }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue-primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 82, 204, 0.3);
+        }
+
+        .step-icon {
+            font-size: 3rem;
+            color: var(--blue-accent);
+            margin: 20px 0;
+        }
+
+        .step-card h3 {
+            font-size: 1.5rem;
+            color: var(--blue-dark);
+            margin-bottom: 15px;
+        }
+
+        .step-card p {
+            color: var(--text-grey);
+            font-size: 1rem;
+        }
+
+        /* --- BEFORE & AFTER SECTION --- */
+        .before-after {
+            padding: 80px 5%;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .ba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px auto 0;
+        }
+
+        .ba-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            position: relative;
+            background: var(--white);
+        }
+
+        .ba-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--blue-dark);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .ba-card.after .ba-label {
+            background: var(--blue-accent);
+            color: var(--blue-dark);
+        }
+
+        .ba-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--blue-dark);
+        }
+
+        .ba-card.after .ba-image {
+            border-bottom: 4px solid var(--blue-accent);
+        }
+
+        .ba-content { padding: 30px; }
         
-        .bio-text { margin-bottom: 25px; color: var(--text-dark); }
-        
-        .expertise-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--blue-accent); }
-        .expertise-box h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 8px; color: var(--blue-dark); }
-        
-        .edu-list { list-style: none; font-size: 0.95rem; margin-bottom: 20px; }
-        .edu-list li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
-        .edu-list i { color: var(--blue-accent); margin-top: 5px; }
-
-        /* EDGE SECTION */
-        .edge-section { padding: 80px 5%; background: var(--blue-dark); color: white; text-align: center; }
-        .edge-content { max-width: 800px; margin: 0 auto; }
-        .edge-content h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--blue-accent); }
-        .edge-content p { font-size: 1.2rem; opacity: 0.9; line-height: 1.8; }
-
-        /* CONTACT */
-        .contact-section { padding: 80px 5%; background: var(--white); }
-        .contact-form {
-            max-width: 600px; margin: 0 auto; background: var(--blue-light);
-            padding: 40px; border-radius: 8px; text-align: left;
+        .ba-content h3 {
+            font-size: 1.4rem;
+            color: var(--blue-dark);
+            margin-bottom: 10px;
         }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; }
-        .btn-submit { width: 100%; background: var(--blue-primary); color: white; padding: 15px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
-        .btn-submit:hover { background: #0043a8; }
 
-        footer { background: #05142b; color: white; padding: 40px 5%; text-align: center; }
+        .ba-content p { color: var(--text-grey); }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+        /* --- LEAD MAGNET SECTION --- */
+        .lead-magnet {
+            background: linear-gradient(135deg, #091e42 0%, #003380 100%);
+            padding: 70px 5%;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .lm-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .lm-container h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .lm-container h2 span { color: var(--blue-accent); }
+
+        .lm-container p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+        }
+
+        .lm-form {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .lm-form input {
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .lm-form button {
+            background-color: var(--blue-accent);
+            color: var(--blue-dark);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 800;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background-color 0.3s;
+        }
+
+        .lm-form button:hover { background-color: var(--white); }
+
+        /* --- ABOUT US SECTION --- */
+        .about-section {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--blue-light);
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: var(--blue-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-section p.intro-text {
+            font-size: 1.1rem;
+            color: var(--text-grey);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- OFFERS / PACKAGES GRID --- */
+        .packages {
+            padding: 80px 5%;
+            background-color: var(--white);
+        }
+
+        .packages-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .offer-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--blue-primary);
+            border-left: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.1); }
+        .offer-card:nth-child(2) { border-top-color: #0747a6; }
+        .offer-card:nth-child(3) { border-top-color: #4c9aff; }
+        .offer-card:nth-child(4) { border-top-color: var(--blue-accent); }
+
+        .offer-tag {
+            font-size: 0.9rem;
+            color: var(--text-grey);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            color: var(--blue-dark);
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .offer-time {
+            display: inline-block;
+            background-color: #e6f0ff;
+            color: var(--blue-primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .offer-best-for {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-left: 4px solid var(--blue-primary);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .offer-list {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .offer-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-grey);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .offer-list li i { color: var(--blue-accent); margin-top: 4px; }
+
+        /* --- CONTACT FORM SECTION --- */
+        .contact-section {
+            padding: 80px 5%;
+            background-color: var(--blue-light);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--blue-primary);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .btn-submit {
+            background-color: var(--blue-primary);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover { background-color: var(--blue-dark); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--blue-dark);
+            color: var(--white);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; }
+        .footer-col h3 i { color: var(--blue-accent); }
+        .footer-col p { color: #94a3b8; margin-bottom: 10px; }
+        
+        .footer-col a {
+            color: var(--blue-accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover { color: var(--white); }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 850px) {
             .nav-links { display: none; }
-            .founder-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .packages-grid, .steps-grid, .ba-grid { grid-template-columns: 1fr; }
+            .lm-form { flex-direction: column; }
+            .contact-form-container { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
     <header class="nav-bar">
-        <a href="#" class="logo"><i class="fa-solid fa-layer-group"></i> EPC</a>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-layer-group"></i> EPC
+        </a>
         <nav class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#packages">Consulting Packages</a>
             <a href="#about">About Us</a>
-            <a href="#founders">The Founders</a>
-            <a href="#contact" class="btn-contact-nav">Book Audit</a>
+            <a href="#audit" class="btn-contact-nav">Book a Process Audit</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Engineering Better Business.</h1>
-        <p>Bridging the gap between strategy and execution through practical process mapping and hands-on implementation support.</p>
+        <h1>Reduce Inefficiency.<br>Improve Coordination.<br>Deliver Change.</h1>
+        <p>We help growing businesses bridge the gap between strategy and execution through practical process mapping, business analysis, and hands-on implementation support.</p>
+        <a href="#audit" class="hero-btn">Book a Process Audit</a>
     </section>
 
-    <section id="about" class="about-intro">
-        <p style="color: var(--blue-primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Our Mission</p>
-        <h2>About Elevate Process Consulting</h2>
-        <p>At EPC, we help SMEs reduce workflow inefficiency, improve operational coordination, and deliver change more effectively. Our approach combines engineering precision with strategic operational management to bridge the gap between strategy and execution.</p>
+    <section id="positioning" class="positioning">
+        <div class="section-header">
+            <span class="section-label">Our Approach</span>
+            <h2>Bridging the Gap Between Strategy and Execution</h2>
+        </div>
+        <p>Whether work is getting delayed, repeated, or stuck, we provide the clarity and structure you need. From diagnosing deep-rooted workflow issues to setting up market plans and delivering complex projects, we implement solutions that actually work.</p>
     </section>
 
-    <section id="founders" class="founder-section">
-        <div class="founder-grid">
-            <div class="founder-card">
-                <h3 class="founder-name">Archie Shim</h3>
-                <span class="founder-title">Managing Partner – Execution & Strategy Lead</span>
-                
-                <p class="bio-text">Archie brings a decade of experience delivering high-value capital projects and driving operational excellence across industrial, construction, healthcare, and manufacturing sectors. With a background in mechanical engineering and a results-driven focus, he helps growing businesses simplify operations, remove bottlenecks, and build practical systems that support long-term growth.</p>
-                
-                <div class="expertise-box">
-                    <h4>Core Expertise</h4>
-                    <p>Project leadership, engineering process improvement, and strategic resource management.</p>
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <span class="section-label">Our Process</span>
+            <h2>How It Works</h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <i class="fa-solid fa-magnifying-glass step-icon"></i>
+                <h3>Discovery</h3>
+                <p>We start by analysing your current operations, uncovering the hidden root causes of delays, bottlenecks, and profit leaks.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <i class="fa-solid fa-sitemap step-icon"></i>
+                <h3>Mapping</h3>
+                <p>We translate messy, undocumented routines into crystal-clear digital workflows, defining who is responsible for what.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <i class="fa-solid fa-chart-line step-icon"></i>
+                <h3>Optimisation</h3>
+                <p>We streamline the process, eliminating redundancies and building an operational rhythm that allows your organisation to scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="before-after">
+        <div class="section-header">
+            <span class="section-label">The Transformation</span>
+            <h2>Stop Guessing. Start Executing.</h2>
+            <p style="color: var(--text-grey); margin-top: 10px;">From chaotic guesswork to standardised, predictable digital workflows.</p>
+        </div>
+        <div class="ba-grid">
+            
+            <div class="ba-card before">
+                <span class="ba-label">Before</span>
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Messy Whiteboard with sticky notes" class="ba-image">
+                <div class="ba-content">
+                    <h3>The Messy Whiteboard</h3>
+                    <p>Unclear responsibilities, scattered information across emails, constant delays, and disconnected team efforts causing you to bleed margin.</p>
+                </div>
+            </div>
+
+            <div class="ba-card after">
+                <span class="ba-label">After</span>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clean BPMN 2.0 Digital Flowchart on a screen" class="ba-image">
+                <div class="ba-content">
+                    <h3>Clean BPMN 2.0 Digital Map</h3>
+                    <p>Standardised visual processes, crystal-clear accountability, streamlined communication, and measurable project tracking.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="lead-magnet">
+        <div class="lm-container">
+            <h2><span>Free Guide:</span> The 7 Hidden Bottlenecks Killing Your Profit Margins</h2>
+            <p>Don't let inefficiency drain your revenue. Enter your details below to receive our exclusive 3-page diagnostic PDF directly to your inbox.</p>
+            
+            <form action="#" method="POST" class="lm-form">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Send Me The PDF <i class="fa-solid fa-download" style="margin-left: 5px;"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <span class="section-label">Who We Are</span>
+        <h2>About EPC</h2>
+        <p class="intro-text">Elevate Process Consulting (EPC) is a dedicated consulting partner for growing businesses based in Perth, WA. We are passionate about taking the friction out of daily operations. Our team works closely with you to untangle complex workflows, creating transparent processes and building operational rhythm that allows your business to scale effortlessly.</p>
+
+        <div style="text-align: left; max-width: 800px; margin: 50px auto 0; background-color: var(--white); padding: 40px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+            <h3 style="color: var(--blue-dark); font-size: 1.8rem; margin-bottom: 15px;">The Founders Behind EPC</h3>
+            <p style="color: var(--text-grey); margin-bottom: 30px; font-size: 1.05rem;">At Elevate Process Consulting (EPC), we help SMEs reduce workflow inefficiency, improve operational coordination, and deliver change more effectively. Our approach combines engineering precision with strategic operational management to bridge the gap between strategy and execution.</p>
+
+            <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 10px;">Archie Shim | Managing Partner – Execution & Strategy Lead</h4>
+            <p style="color: var(--text-dark); margin-bottom: 15px; font-size: 1rem;">Archie brings a decade of experience delivering high-value capital projects and driving operational excellence across industrial, construction, healthcare, and manufacturing sectors. With a background in mechanical engineering and a results-driven focus, he helps growing businesses simplify operations, remove bottlenecks, and build practical systems that support long-term growth.</p>
+            <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 10px;">Vitória Silveira | Managing Partner – Process & Optimisation Lead</h4>
+            <p style="color: var(--text-dark); margin-bottom: 15px; font-size: 1rem;">Vitória is a results-driven professional with a decade of experience in streamlining business operations and providing executive support. Specialised in process optimisation using Lean and Six Sigma principles, she excels at untangling complex administrative workflows to enhance productivity and reduce operational waste.</p>
+                        </ul>
+            <h3 style="color: var(--blue-dark); font-size: 1.5rem; margin-bottom: 15px;">The EPC Edge: Engineering Better Business</h3>
+            <p style="color: var(--text-grey); font-size: 1.05rem;">Together, we bring an engineering mindset to business analysis and implementation support. By combining Archie’s strength in technical execution and strategy with Vitória’s expertise in process systems and optimisation, EPC provides a comprehensive solution for businesses needing to move from chaotic guesswork to standardised, predictable growth.</p>
+        </div>
+    </section>
+
+    <section id="packages" class="packages">
+        <div class="packages-header">
+            <span class="section-label">Service Ladder</span>
+            <h2>Our Consulting Offers</h2>
+        </div>
+
+        <div class="packages-grid">
+            <div class="offer-card" style="position: relative; border-top-color: var(--blue-accent);">
+                <div style="position: absolute; top: -15px; right: 20px; background: var(--blue-accent); color: var(--blue-dark); padding: 5px 15px; border-radius: 20px; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0, 184, 217, 0.3);">
+                    Low-Risk Entry
                 </div>
 
-                <ul class="edu-list">
-                    <li><i class="fa-solid fa-graduation-cap"></i> B.Eng Mechanical Engineering (Honours) – Curtin University</li>
-                    <li><i class="fa-solid fa-certificate"></i> PRINCE2 & Lean Six Sigma Certified</li>
-                    <li><i class="fa-solid fa-bolt"></i> <strong>Impact:</strong> Led multi-million-dollar projects and designed innovative automation and intralogistics solutions.</li>
+                <div class="offer-tag">Process Optimisation</div>
+                <h3 class="offer-title" style="margin-bottom: 5px;">Process Mapping Diagnostic</h3>
+                
+                <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 15px;">
+                    $1,500 <span style="font-size: 1rem; font-weight: 600; color: var(--text-grey);">fixed fee</span>
+                </div>
+
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 20 fixed value-added hours</div>
+                <div class="offer-best-for">
+                    <strong>The perfect low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck but cannot clearly see why.
+                </div>
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Discovery call and issue framing</li>
+                    <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop</li>
+                    <li><i class="fa-solid fa-check"></i> Critical process workflow</li>
+                    <li><i class="fa-solid fa-check"></i> Pain point and bottleneck summary</li>
+                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations</li>
+                    <li><i class="fa-solid fa-check"></i> Short action roadmap</li>
                 </ul>
             </div>
 
-            <div class="founder-card">
-                <h3 class="founder-name">Vitória Silveira</h3>
-                <span class="founder-title">Managing Partner – Process & Optimization Lead</span>
-                
-                <p class="bio-text">Vitória is a results-driven professional with a decade of experience in streamlining business operations and providing executive support. Specialized in process optimization using Lean and Six Sigma principles, she excels at untangling complex administrative workflows to enhance productivity and reduce operational waste.</p>
-                
-                <div class="expertise-box">
-                    <h4>Core Expertise</h4>
-                    <p>Process mapping, strategic planning, financial process management, and stakeholder relationship building.</p>
+            <div class="offer-card">
+                <div class="offer-tag">Market Strategy</div>
+                <h3 class="offer-title">Market Research & Plan</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 40 fixed value-added hours</div>
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Clients that need clearer direction on target market, customer demand, competitor positioning, and practical growth actions.
                 </div>
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Business and market context review</li>
+                    <li><i class="fa-solid fa-check"></i> Target customer and segment analysis</li>
+                    <li><i class="fa-solid fa-check"></i> Competitor scan and positioning insights</li>
+                    <li><i class="fa-solid fa-check"></i> Market opportunity summary</li>
+                    <li><i class="fa-solid fa-check"></i> Practical marketing and growth action plan</li>
+                    <li><i class="fa-solid fa-check"></i> 30-60 day priority roadmap</li>
+                </ul>
+            </div>
 
-                <ul class="edu-list">
-                    <li><i class="fa-solid fa-graduation-cap"></i> B.Eng Production Engineering (Honours)</li>
-                    <li><i class="fa-solid fa-certificate"></i> CRM & Market Analysis Certifications</li>
-                    <li><i class="fa-solid fa-bolt"></i> <strong>Impact:</strong> Proven track record of aligning administrative functions with production workflows to improve efficiency.</li>
+            <div class="offer-card">
+                <div class="offer-tag">Operational Structure</div>
+                <h3 class="offer-title">Operations Coordination Setup</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> 25 - 50 value-added hours</div>
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Businesses that need more structure in planning, meetings, scheduling, accountability, and follow-up.
+                </div>
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Responsibility matrix</li>
+                    <li><i class="fa-solid fa-check"></i> Meeting cadence and agenda templates</li>
+                    <li><i class="fa-solid fa-check"></i> Task and action tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Weekly coordination rhythm</li>
+                    <li><i class="fa-solid fa-check"></i> Simple KPI and reporting structure</li>
+                    <li><i class="fa-solid fa-check"></i> Admin and filing discipline</li>
+                </ul>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-tag">Implementation Support</div>
+                <h3 class="offer-title">Project Management Delivery</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on project</div>
+                <div class="offer-best-for">
+                    <strong>Best for:</strong> Defined operational changes, implementation work, installations, upgrades, or business improvement projects.
+                </div>
+                <ul class="offer-list">
+                    <li><i class="fa-solid fa-check"></i> Project charter or brief</li>
+                    <li><i class="fa-solid fa-check"></i> Timeline and milestone tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Risk and issue register</li>
+                    <li><i class="fa-solid fa-check"></i> Stakeholder coordination</li>
+                    <li><i class="fa-solid fa-check"></i> Execution follow-up</li>
+                    <li><i class="fa-solid fa-check"></i> Close-out and lessons learned</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="edge-section">
-        <div class="edge-content">
-            <h2>The EPC Edge</h2>
-            <p>Together, we bring an engineering mindset to business analysis and implementation support. By combining Archie’s strength in technical execution and strategy with Vitória’s expertise in process systems and optimization, EPC provides a comprehensive solution for businesses needing to move from chaotic guesswork to standardized, predictable growth.</p>
+    <section id="audit" class="contact-section">
+        <div class="contact-header">
+            <span class="section-label">Take the Next Step</span>
+            <h2>Book a Process Audit</h2>
+            <p style="color: #5e6c84; margin-top: 10px;">Fill out the form below to connect with our team and schedule an initial diagnostic of your workflows.</p>
         </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-form">
-            <h2 style="margin-bottom: 20px; text-align: center;">Book a Process Audit</h2>
-            <form>
+        <div class="contact-form-container">
+            <form action="#" method="POST">
+                
                 <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" placeholder="Your Name" required>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="email@company.com.au" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@yourcompany.com.au" required>
                 </div>
+
                 <div class="form-group">
-                    <label>Inquiry Type</label>
-                    <select>
-                        <option>Process Audit</option>
-                        <option>Operational Support</option>
-                        <option>Project Coordination</option>
-                        <option>General Inquiry</option>
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your Business Pty Ltd">
+                </div>
+
+                <div class="form-group">
+                    <label for="package">Which area are you interested in?</label>
+                    <select id="package" name="package">
+                        <option value="Not Sure">Not Sure Yet / Let's Discuss</option>
+                        <option value="Process Mapping Diagnostic">Process Mapping Diagnostic</option>
+                        <option value="Market Research & Plan">Market Research & Plan</option>
+                        <option value="Operations Coordination Setup">Operations Coordination Setup</option>
+                        <option value="Project Management Delivery">Project Management Delivery</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-submit">Send
+
+                <div class="form-group">
+                    <label for="message">Message details</label>
+                    <textarea id="message" name="message" placeholder="Briefly describe the operational bottlenecks or projects you need help with..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Book a Process Audit <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+                
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-layer-group"></i> EPC</h3>
+                <p>Helping businesses reduce workflow inefficiency, improve operational coordination, and deliver change more effectively.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3 style="font-size: 1.2rem; color: #fff;">Contact Details</h3>
+                <p><i class="fa-solid fa-users" style="margin-right: 10px;"></i> Our Team</p>
+                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Perth, WA Australia</p>
+                <p style="margin-top: 15px;">
+                    <a href="mailto:archie@elevateprocess.com.au"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> archie@elevateprocess.com.au</a>
+                </p>
+                <p>
+                    <a href="mailto:vitoria@elevateprocess.com.au"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> vitoria@elevateprocess.com.au</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 EPC | Elevate Process Consulting. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
