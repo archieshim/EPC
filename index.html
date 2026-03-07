@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPC | Elevate Process Consulting</title>
-    <!-- Modern Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -350,7 +348,7 @@
 
         .lm-form button:hover { background-color: var(--white); }
 
-        /* --- ABOUT US SECTION --- */
+        /* --- ABOUT US SECTION (EXPANDED) --- */
         .about-section {
             padding: 80px 5%;
             text-align: center;
@@ -371,6 +369,65 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px auto 0;
+            text-align: left;
+        }
+
+        .founder-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .founder-card h3 {
+            color: var(--blue-dark);
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .founder-title {
+            color: var(--blue-primary);
+            font-weight: 700;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .founder-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .founder-card ul {
+            list-style: none;
+            margin-top: auto;
+        }
+
+        .founder-card ul li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-grey);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .founder-card ul li i { color: var(--blue-accent); font-size: 0.8rem; }
 
         /* --- OFFERS / PACKAGES GRID --- */
         .packages {
@@ -569,7 +626,7 @@
         @media (max-width: 850px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
-            .packages-grid, .steps-grid, .ba-grid { grid-template-columns: 1fr; }
+            .packages-grid, .steps-grid, .ba-grid, .founder-grid { grid-template-columns: 1fr; }
             .lm-form { flex-direction: column; }
             .contact-form-container { padding: 20px; }
         }
@@ -577,7 +634,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <header class="nav-bar">
         <a href="#" class="logo">
             <i class="fa-solid fa-layer-group"></i> EPC
@@ -590,14 +646,12 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <h1>Reduce Inefficiency.<br>Improve Coordination.<br>Deliver Change.</h1>
         <p>We help growing businesses bridge the gap between strategy and execution through practical process mapping, business analysis, and hands-on implementation support.</p>
         <a href="#audit" class="hero-btn">Book a Process Audit</a>
     </section>
 
-    <!-- OUR APPROACH SECTION -->
     <section id="positioning" class="positioning">
         <div class="section-header">
             <span class="section-label">Our Approach</span>
@@ -606,28 +660,24 @@
         <p>Whether work is getting delayed, repeated, or stuck, we provide the clarity and structure you need. From diagnosing deep-rooted workflow issues to setting up market plans and delivering complex projects, we implement solutions that actually work.</p>
     </section>
 
-    <!-- HOW IT WORKS SECTION -->
     <section id="how-it-works" class="how-it-works">
         <div class="section-header">
             <span class="section-label">Our Process</span>
             <h2>How It Works</h2>
         </div>
         <div class="steps-grid">
-            <!-- Step 1 -->
             <div class="step-card">
                 <div class="step-number">1</div>
                 <i class="fa-solid fa-magnifying-glass step-icon"></i>
                 <h3>Discovery</h3>
                 <p>We start by analysing your current operations, uncovering the hidden root causes of delays, bottlenecks, and profit leaks.</p>
             </div>
-            <!-- Step 2 -->
             <div class="step-card">
                 <div class="step-number">2</div>
                 <i class="fa-solid fa-sitemap step-icon"></i>
                 <h3>Mapping</h3>
                 <p>We translate messy, undocumented routines into crystal-clear digital workflows, defining who is responsible for what.</p>
             </div>
-            <!-- Step 3 -->
             <div class="step-card">
                 <div class="step-number">3</div>
                 <i class="fa-solid fa-chart-line step-icon"></i>
@@ -637,7 +687,6 @@
         </div>
     </section>
 
-    <!-- BEFORE & AFTER VISUAL SECTION -->
     <section class="before-after">
         <div class="section-header">
             <span class="section-label">The Transformation</span>
@@ -646,7 +695,6 @@
         </div>
         <div class="ba-grid">
             
-            <!-- Before Card -->
             <div class="ba-card before">
                 <span class="ba-label">Before</span>
                 <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Messy Whiteboard with sticky notes" class="ba-image">
@@ -656,7 +704,6 @@
                 </div>
             </div>
 
-            <!-- After Card -->
             <div class="ba-card after">
                 <span class="ba-label">After</span>
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clean BPMN 2.0 Digital Flowchart on a screen" class="ba-image">
@@ -669,7 +716,6 @@
         </div>
     </section>
 
-    <!-- LEAD MAGNET CAPTURE -->
     <section class="lead-magnet">
         <div class="lm-container">
             <h2><span>Free Guide:</span> The 7 Hidden Bottlenecks Killing Your Profit Margins</h2>
@@ -683,14 +729,38 @@
         </div>
     </section>
 
-    <!-- ABOUT US SECTION -->
     <section id="about" class="about-section">
         <span class="section-label">Who We Are</span>
         <h2>About EPC</h2>
-        <p>Elevate Process Consulting (EPC) is a dedicated consulting partner for growing businesses based in Perth, WA. We are passionate about taking the friction out of daily operations. Our team works closely with you to untangle complex workflows, creating transparent processes and building operational rhythm that allows your business to scale effortlessly.</p>
+        <p style="margin-bottom: 40px;">Elevate Process Consulting (EPC) is a dedicated consulting partner for growing businesses based in Perth, WA. We are passionate about taking the friction out of daily operations. Our team works closely with you to untangle complex workflows, creating transparent processes and building operational rhythm that allows your business to scale effortlessly.</p>
+        
+        <div class="founder-grid">
+            
+            <div class="founder-card">
+                <h3>Archie Shim</h3>
+                <span class="founder-title">Managing Partner – Execution & Strategy Lead</span>
+                <p>Archie brings a decade of experience delivering high-value capital projects and driving operational excellence across industrial, construction, healthcare, and manufacturing sectors. With a background in mechanical engineering and a results-driven focus, he helps businesses simplify operations, remove bottlenecks, and build practical systems that support long-term growth.</p>
+                <ul>
+                    <li><i class="fa-solid fa-caret-right"></i> Bachelor of Mechanical Engineering (Honours) [cite: 401]</li>
+                    <li><i class="fa-solid fa-caret-right"></i> PRINCE2 & Lean Six Sigma Certified [cite: 405]</li>
+                    <li><i class="fa-solid fa-caret-right"></i> Expert in Project Leadership & Site Coordination [cite: 337, 395]</li>
+                </ul>
+            </div>
+
+            <div class="founder-card">
+                <h3>Vitória Silveira</h3>
+                <span class="founder-title">Managing Partner – Process & Optimization Lead</span>
+                <p>Vitória is a results-driven professional with a decade of experience in streamlining business operations and providing executive support. Specialized in process optimization using Lean and Six Sigma principles, she excels at untangling complex administrative workflows to enhance productivity and reduce operational waste across cross-functional teams.</p>
+                <ul>
+                    <li><i class="fa-solid fa-caret-right"></i> Bachelor of Production Engineering (Honours) [cite: 305]</li>
+                    <li><i class="fa-solid fa-caret-right"></i> CRM & Market Analysis Certified [cite: 309, 310]</li>
+                    <li><i class="fa-solid fa-caret-right"></i> Expert in Workflow Optimization & Strategic Planning [cite: 265, 302]</li>
+                </ul>
+            </div>
+
+        </div>
     </section>
 
-    <!-- PACKAGES SECTION -->
     <section id="packages" class="packages">
         <div class="packages-header">
             <span class="section-label">Service Ladder</span>
@@ -698,9 +768,7 @@
         </div>
 
         <div class="packages-grid">
-            <!-- PACKAGE 1 (UPDATED) -->
             <div class="offer-card" style="position: relative; border-top-color: var(--blue-accent);">
-                <!-- Low Risk Badge -->
                 <div style="position: absolute; top: -15px; right: 20px; background: var(--blue-accent); color: var(--blue-dark); padding: 5px 15px; border-radius: 20px; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0, 184, 217, 0.3);">
                     Low-Risk Entry
                 </div>
@@ -708,82 +776,77 @@
                 <div class="offer-tag">Process Optimisation</div>
                 <h3 class="offer-title" style="margin-bottom: 5px;">Process Mapping Diagnostic</h3>
                 
-                <!-- Pricing -->
                 <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 15px;">
                     $1,500 <span style="font-size: 1rem; font-weight: 600; color: var(--text-grey);">fixed fee</span>
                 </div>
 
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 20 fixed value-added hours</div>
                 <div class="offer-best-for">
-                    <strong>The perfect low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck but cannot clearly see why.
+                    <strong>The perfect low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck but cannot clearly see why. [cite: 214]
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Discovery call and issue framing</li>
-                    <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop</li>
-                    <li><i class="fa-solid fa-check"></i> Critical process workflow</li>
-                    <li><i class="fa-solid fa-check"></i> Pain point and bottleneck summary</li>
-                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations</li>
-                    <li><i class="fa-solid fa-check"></i> Short action roadmap</li>
+                    <li><i class="fa-solid fa-check"></i> Discovery call and issue framing [cite: 216]</li>
+                    <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop [cite: 217]</li>
+                    <li><i class="fa-solid fa-check"></i> Critical process workflow [cite: 218]</li>
+                    <li><i class="fa-solid fa-check"></i> Pain point and bottleneck summary [cite: 219]</li>
+                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations [cite: 220]</li>
+                    <li><i class="fa-solid fa-check"></i> Short action roadmap [cite: 221]</li>
                 </ul>
             </div>
 
-            <!-- PACKAGE 2 -->
             <div class="offer-card">
                 <div class="offer-tag">Market Strategy</div>
                 <h3 class="offer-title">Market Research & Plan</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 40 fixed value-added hours</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Clients that need clearer direction on target market, customer demand, competitor positioning, and practical growth actions.
+                    <strong>Best for:</strong> Clients that need clearer direction on target market, customer demand, and practical growth actions. [cite: 223]
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Business and market context review</li>
-                    <li><i class="fa-solid fa-check"></i> Target customer and segment analysis</li>
-                    <li><i class="fa-solid fa-check"></i> Competitor scan and positioning insights</li>
-                    <li><i class="fa-solid fa-check"></i> Market opportunity summary</li>
-                    <li><i class="fa-solid fa-check"></i> Practical marketing and growth action plan</li>
-                    <li><i class="fa-solid fa-check"></i> 30-60 day priority roadmap</li>
+                    <li><i class="fa-solid fa-check"></i> Business and market context review [cite: 225]</li>
+                    <li><i class="fa-solid fa-check"></i> Target customer and segment analysis [cite: 226]</li>
+                    <li><i class="fa-solid fa-check"></i> Competitor scan and positioning insights [cite: 227]</li>
+                    <li><i class="fa-solid fa-check"></i> Market opportunity summary [cite: 228]</li>
+                    <li><i class="fa-solid fa-check"></i> Practical marketing and growth action plan [cite: 229]</li>
+                    <li><i class="fa-solid fa-check"></i> 30-60 day priority roadmap [cite: 230]</li>
                 </ul>
             </div>
 
-            <!-- PACKAGE 3 -->
             <div class="offer-card">
                 <div class="offer-tag">Operational Structure</div>
                 <h3 class="offer-title">Operations Coordination Setup</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 25 - 50 value-added hours</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Businesses that need more structure in planning, meetings, scheduling, accountability, and follow-up.
+                    <strong>Best for:</strong> Businesses that need more structure in planning, meetings, and accountability. [cite: 232]
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Responsibility matrix</li>
-                    <li><i class="fa-solid fa-check"></i> Meeting cadence and agenda templates</li>
-                    <li><i class="fa-solid fa-check"></i> Task and action tracking</li>
-                    <li><i class="fa-solid fa-check"></i> Weekly coordination rhythm</li>
-                    <li><i class="fa-solid fa-check"></i> Simple KPI and reporting structure</li>
-                    <li><i class="fa-solid fa-check"></i> Admin and filing discipline</li>
+                    <li><i class="fa-solid fa-check"></i> Responsibility matrix [cite: 234]</li>
+                    <li><i class="fa-solid fa-check"></i> Meeting cadence and agenda templates [cite: 235]</li>
+                    <li><i class="fa-solid fa-check"></i> Task and action tracking [cite: 236]</li>
+                    <li><i class="fa-solid fa-check"></i> Weekly coordination rhythm [cite: 237]</li>
+                    <li><i class="fa-solid fa-check"></i> Simple KPI and reporting structure [cite: 238]</li>
+                    <li><i class="fa-solid fa-check"></i> Admin and filing discipline [cite: 239]</li>
                 </ul>
             </div>
 
-            <!-- PACKAGE 4 -->
             <div class="offer-card">
                 <div class="offer-tag">Implementation Support</div>
                 <h3 class="offer-title">Project Management Delivery</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on project</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Defined operational changes, implementation work, installations, upgrades, or business improvement projects.
+                    <strong>Best for:</strong> Defined operational changes, implementation work, or business improvement projects. [cite: 241]
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Project charter or brief</li>
-                    <li><i class="fa-solid fa-check"></i> Timeline and milestone tracking</li>
-                    <li><i class="fa-solid fa-check"></i> Risk and issue register</li>
-                    <li><i class="fa-solid fa-check"></i> Stakeholder coordination</li>
-                    <li><i class="fa-solid fa-check"></i> Execution follow-up</li>
-                    <li><i class="fa-solid fa-check"></i> Close-out and lessons learned</li>
+                    <li><i class="fa-solid fa-check"></i> Project charter or brief [cite: 243]</li>
+                    <li><i class="fa-solid fa-check"></i> Timeline and milestone tracking [cite: 244]</li>
+                    <li><i class="fa-solid fa-check"></i> Risk and issue register [cite: 245]</li>
+                    <li><i class="fa-solid fa-check"></i> Stakeholder coordination [cite: 246]</li>
+                    <li><i class="fa-solid fa-check"></i> Execution follow-up [cite: 247]</li>
+                    <li><i class="fa-solid fa-check"></i> Close-out and lessons learned [cite: 248]</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT / AUDIT FORM SECTION -->
     <section id="audit" class="contact-section">
         <div class="contact-header">
             <span class="section-label">Take the Next Step</span>
@@ -831,12 +894,11 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <h3><i class="fa-solid fa-layer-group"></i> EPC</h3>
-                <p>Helping businesses reduce workflow inefficiency, improve operational coordination, and deliver change more effectively.</p>
+                <p>Helping businesses reduce workflow inefficiency, improve operational coordination, and deliver change more effectively. [cite: 211]</p>
             </div>
             
             <div class="footer-col">
