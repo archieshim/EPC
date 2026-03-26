@@ -293,7 +293,7 @@
         .ba-content h3 { font-size: 1.4rem; color: var(--blue-dark); margin-bottom: 10px; }
         .ba-content p { color: var(--text-grey); }
 
-        .lead-magnet { background: linear-gradient(135deg, #091e42 0%, #003380 100%); padding: 70px 4%; color: var(--white); text-align: center; }
+        .lead-magnet { background: linear-gradient(135deg, #091e42 0%, #003380 100%); padding: 70px 4%; color: var(--white); text-align: center; position: relative; z-index: 1; }
         .lm-container { max-width: 800px; margin: 0 auto; }
         .lm-container h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
         .lm-container h2 span { color: var(--blue-accent); }
@@ -371,6 +371,25 @@
             color: var(--text-grey);
         }
 
+
+
+        .proof-strip { padding: 18px 4% 42px; background-color: var(--white); position: relative; z-index: 2; }
+        .proof-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: 1020px; margin: -8px auto 0; position: relative; z-index: 2; }
+        .proof-card { background: #f8fbff; border: 1px solid #d8e3f2; border-radius: 12px; padding: 24px; text-align: left; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
+        .proof-card h3 { font-size: 1.05rem; color: var(--blue-dark); margin-bottom: 10px; }
+        .proof-card p { color: var(--text-grey); font-size: 0.98rem; }
+
+        .easy-yes { padding: 80px 4%; background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%); }
+        .easy-yes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1100px; margin: 45px auto 0; }
+        .easy-card { background: var(--white); border: 1px solid #dce6f3; border-radius: 12px; padding: 28px; box-shadow: 0 10px 24px rgba(0,0,0,0.05); }
+        .easy-card h3 { font-size: 1.3rem; color: var(--blue-dark); margin-bottom: 14px; }
+        .easy-card p { color: var(--text-grey); margin-bottom: 14px; }
+        .easy-card ul { list-style: none; padding: 0; margin: 0; }
+        .easy-card li { color: var(--text-dark); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
+        .easy-card li i { color: var(--blue-accent); margin-top: 4px; }
+
+        .contact-trust-note { margin: 0 auto 18px; max-width: 700px; text-align: center; color: var(--text-grey); font-size: 0.98rem; }
+
         /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 850px) {
             .nav-links { display: none; }
@@ -378,7 +397,7 @@
             .hero h1 { font-size: 2.8rem; }
             .hero-buttons { flex-direction: column; width: 100%; }
             .hero-btn, .hero-btn-secondary { width: 100%; justify-content: center; }
-            .packages-grid, .steps-grid, .ba-grid { grid-template-columns: 1fr; max-width: 100%; }
+            .packages-grid, .steps-grid, .ba-grid, .proof-grid, .easy-yes-grid { grid-template-columns: 1fr; max-width: 100%; }
             .lm-form { flex-direction: column; }
             .contact-form-container { padding: 20px; }
         }
@@ -392,8 +411,8 @@
         </a>
         <nav class="nav-links">
             <a href="#how-it-works">How It Works</a>
-            <a href="#about">About Us</a>
-            <a href="#packages">Consulting Packages</a>
+            <a href="#about">Founders</a>
+            <a href="#packages">Start Here</a>
             <a href="#audit" class="btn-contact-nav">Book a Process Review</a>
         </nav>
     </header>
@@ -403,23 +422,19 @@
             <div class="hero-badge animate-up">
                 <i class="fa-solid fa-bolt" style="margin-right: 5px;"></i> Process Mapping • Optimisation • Delivery
             </div>
-            <h1>Where Complexity Meets Clarity</h1>
-            <p class="animate-up delay-2">We help growing businesses streamline processes, improve operations, and bridge the gap between strategy and execution through practical process mapping, business analysis, and hands-on implementation support.</p>
+            <h1>Where Complexity Meets Clarity<br><span class="text-gradient">Find the bottlenecks slowing your business down.</span></h1>
+            <p class="animate-up delay-2">We help growing businesses turn delays, rework, unclear handovers, and operational friction into clear workflows, stronger accountability, and a practical action plan you can move on quickly.</p>
             
             <div class="hero-buttons animate-up delay-3">
                 <a href="#audit" class="hero-btn">Book a Process Review <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#packages" class="hero-btn-secondary">Explore Packages</a>
+                <a href="#packages" class="hero-btn-secondary">See the Low-Risk Offer</a>
             </div>
 
             <div class="hero-social-proof animate-up delay-4">
                 <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-check-circle"></i>
                 </div>
-                <span>Trusted by growing businesses in Perth, WA</span>
+                <span>Low-risk first engagement • Clear deliverables • Practical recommendations</span>
             </div>
         </div>
     </section>
@@ -427,15 +442,15 @@
     <section id="positioning" class="positioning">
         <div class="section-header">
             <span class="section-label">Our Approach</span>
-            <h2>Bridging the Gap Between Strategy and Execution</h2>
+            <h2>Clarity first. Action second. Progress that actually sticks.</h2>
         </div>
-        <p>Whether work is getting delayed, repeated, or stuck, we provide the clarity and structure you need. From diagnosing deep-rooted workflow issues to setting up market plans and delivering complex projects, we implement solutions that actually work.</p>
+        <p>Most growing businesses do not have an effort problem. They have a process visibility problem. EPC helps you see where work is breaking down, why it keeps happening, and what should be fixed first—so your team can stop firefighting and start moving with more structure.</p>
     </section>
 
     <section class="diagnostic-checklist-section" style="padding: 20px 20px 0 20px; background-color: var(--white);">
         <div style="max-width: 820px; margin: 0 auto 20px auto; background-color: var(--blue-light); padding: 30px 34px; border-radius: 8px; border-left: 5px solid var(--blue-accent); text-align: left;">
             <h3 style="color: var(--blue-dark); margin-bottom: 15px; font-size: 1.4rem;">Diagnostic Checklist: Is it time for a process review?</h3>
-            <p style="color: var(--text-grey); margin-bottom: 20px; font-size: 1rem;">If you find yourself nodding to three or more of these points, your operations are leaking time and margin:</p>
+            <p style="color: var(--text-grey); margin-bottom: 20px; font-size: 1rem;">If three or more of these feel familiar, there is a strong chance your business is losing time, margin, and momentum inside the workflow:</p>
             <ul style="list-style: none; color: var(--text-dark);">
                 <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>Work gets delayed, repeated, or stuck, but you cannot clearly see where or why.</li>
                 <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>Your team relies on &quot;tribal knowledge&quot;—if a key person is away, things grind to a halt.</li>
@@ -450,32 +465,32 @@
         <div class="section-header">
             <span class="section-label">Our Process</span>
             <h2>How It Works</h2>
-            <p style="color: var(--text-grey); max-width: 820px; margin: 10px auto 0 auto;">Our approach is designed to move you from operational confusion to practical, measurable improvement—without overcomplicating the process.</p>
+            <p style="color: var(--text-grey); max-width: 820px; margin: 10px auto 0 auto;">Our process is designed to get you from uncertainty to clarity quickly—without turning the engagement into drawn-out consulting theatre.</p>
         </div>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
                 <i class="fa-solid fa-magnifying-glass step-icon"></i>
-                <h3>Discovery</h3>
-                <p>We begin by reviewing how your business currently runs, identifying the root causes behind delays, bottlenecks, duplicated effort, and communication breakdowns.</p>
+                <h3>Discover</h3>
+                <p>We identify where the friction is showing up, what is causing the most frustration, and which workflow or handover deserves attention first.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
                 <i class="fa-solid fa-sitemap step-icon"></i>
-                <h3>Mapping</h3>
-                <p>We turn messy, undocumented routines into clear visual workflows, showing each step, decision point, handover, and responsibility across the process.</p>
+                <h3>Map</h3>
+                <p>We document the current-state process so you can see how work is really moving today—not just how it is supposed to move on paper.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
                 <i class="fa-solid fa-chart-line step-icon"></i>
-                <h3>Optimisation</h3>
-                <p>We simplify and strengthen the workflow by removing inefficiencies, clarifying ownership, reducing rework, and building systems that support smoother execution.</p>
+                <h3>Diagnose</h3>
+                <p>We pinpoint bottlenecks, duplication, unclear ownership, delays, and communication gaps that are slowing delivery and creating rework.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">4</div>
                 <i class="fa-solid fa-bullseye step-icon"></i>
-                <h3>Result</h3>
-                <p>You walk away with clearer processes, stronger accountability, better visibility across operations, and a practical foundation for consistent delivery and growth.</p>
+                <h3>Improve</h3>
+                <p>You receive practical recommendations, quick wins, and a prioritised action plan so the next step feels obvious—not overwhelming.</p>
             </div>
         </div>
     </section>
@@ -483,8 +498,8 @@
     <section class="before-after">
         <div class="section-header">
             <span class="section-label">The Transformation</span>
-            <h2>Stop Guessing. Start Executing.</h2>
-            <p style="color: var(--text-grey); margin-top: 10px;">From chaotic guesswork to standardised, predictable digital workflows.</p>
+            <h2>From Operational Guesswork to Execution Clarity</h2>
+            <p style="color: var(--text-grey); margin-top: 10px;">The goal is simple: make the workflow visible, the ownership clear, and the next move easier to execute.</p>
         </div>
         <div class="ba-grid">
             
@@ -493,7 +508,7 @@
                 <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Messy Whiteboard with sticky notes" class="ba-image">
                 <div class="ba-content">
                     <h3>The Messy Whiteboard</h3>
-                    <p>Unclear responsibilities, scattered information across emails, constant delays, and disconnected team efforts causing you to bleed margin.</p>
+                    <p>Unclear responsibilities, scattered information, repeated follow-up, and too much time spent reacting instead of improving.</p>
                 </div>
             </div>
 
@@ -502,33 +517,50 @@
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clean BPMN 2.0 Digital Flowchart on a screen" class="ba-image">
                 <div class="ba-content">
                     <h3>Clean BPMN 2.0 Digital Map</h3>
-                    <p>Standardised visual processes, crystal-clear accountability, streamlined communication, and measurable project tracking.</p>
+                    <p>Clear visual workflows, stronger accountability, cleaner handovers, and a more reliable rhythm for delivery and decision-making.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <section class="proof-strip">
+        <div class="proof-grid">
+            <div class="proof-card">
+                <h3>Execution-minded, not theory-heavy</h3>
+                <p>We focus on outputs your team can actually use: mapped workflows, clearer ownership, bottleneck diagnosis, and practical next steps.</p>
+            </div>
+            <div class="proof-card">
+                <h3>Built on real project and operations experience</h3>
+                <p>EPC combines a decade of experience across industrial, construction, healthcare, and manufacturing environments.</p>
+            </div>
+            <div class="proof-card">
+                <h3>A practical first step</h3>
+                <p>Our diagnostic is designed to lower risk, create clarity quickly, and help you decide what is worth fixing before you commit bigger time or money.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="lead-magnet">
         <div class="lm-container">
-            <h2><span>Free Guide:</span> The 7 Hidden Bottlenecks Killing Your Profit Margins</h2>
-            <p>Don't let inefficiency drain your revenue. Enter your details below to receive our exclusive 3-page diagnostic PDF directly to your inbox.</p>
+            <h2><span>Not ready for a diagnostic yet?</span> Start with our free bottleneck guide.</h2>
+            <p>Get our short guide on the hidden workflow issues that quietly damage time, margin, accountability, and delivery rhythm.</p>
             
             <form action="https://formspree.io/f/mdawdddj" method="POST" class="lm-form">
                 <input type="text" name="firstName" placeholder="First Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Send Me The PDF <i class="fa-solid fa-download" style="margin-left: 5px;"></i></button>
+                <button type="submit">Send Me The Guide <i class="fa-solid fa-download" style="margin-left: 5px;"></i></button>
             </form>
         </div>
     </section>
 
     <section id="about" class="about-section">
-        <span class="section-label">Who We Are</span>
-        <h2>About EPC</h2>
-        <p style="margin-bottom: 50px;">Elevate Process Consulting (EPC) is a dedicated consulting partner for growing businesses based in Perth, WA. We are passionate about taking the friction out of daily operations. Our team works closely with you to untangle complex workflows, creating transparent processes and building operational rhythm that allows your business to scale effortlessly.</p>
+        <span class="section-label">The Founders Behind EPC</span>
+        <h2>Built to turn operational friction into structured progress</h2>
+        <p style="margin-bottom: 50px;">Elevate Process Consulting exists to help growing businesses create more clarity, stronger accountability, and better operational flow. We work closely with clients to expose what is really happening inside the workflow, simplify the moving parts, and build practical structure that supports delivery and growth.</p>
 
         <div style="text-align: left; max-width: 900px; margin: 0 auto; background-color: var(--white); padding: 40px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-            <h3 style="color: var(--blue-dark); font-size: 1.8rem; margin-bottom: 15px;">Meet the Founders Behind EPC</h3>
+            <h3 style="color: var(--blue-dark); font-size: 1.8rem; margin-bottom: 15px;">Meet the team behind the work</h3>
             <p style="color: var(--text-grey); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8;">EPC was built by two professionals who understand that operational friction rarely comes from just one issue. It usually sits between people, process, communication, and execution. That is why our work is practical, hands-on, and grounded in real business environments. We do not just point out what is wrong—we help you create a clearer way forward.</p>
 
             <div class="founders-showcase">
@@ -538,7 +570,7 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-bottom: 30px; align-items: stretch;">
                 <div style="background-color: #f8fafc; padding: 28px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; height: 100%;">
-                    <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 8px;">Archie S</h4>
+                    <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 8px;">Archie Shim</h4>
                     <p style="color: var(--blue-dark); font-weight: 700; margin-bottom: 14px; font-size: 0.98rem;">Co-Founder &amp; Managing Partner — Project Delivery &amp; Operations</p>
                     <p style="color: var(--text-dark); margin-bottom: 18px; font-size: 1rem; line-height: 1.75;">Archie brings a decade of experience leading projects, coordinating stakeholders, and delivering operational improvements across industrial, construction, healthcare, and manufacturing environments. He helps clients bring structure to complexity—turning moving parts into clear plans, stronger accountability, and practical momentum that keeps work moving.</p>
                     <ul style="list-style: none; color: var(--text-grey); font-size: 0.95rem; padding-left: 0; margin-top: auto;">
@@ -549,7 +581,7 @@
                 </div>
 
                 <div style="background-color: #f8fafc; padding: 28px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; height: 100%;">
-                    <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 8px;">Vitória S</h4>
+                    <h4 style="color: var(--blue-primary); font-size: 1.2rem; margin-bottom: 8px;">Vitória Silveira</h4>
                     <p style="color: var(--blue-dark); font-weight: 700; margin-bottom: 14px; font-size: 0.98rem;">Co-Founder &amp; Managing Partner — Process Improvement &amp; Strategy</p>
                     <p style="color: var(--text-dark); margin-bottom: 18px; font-size: 1rem; line-height: 1.75;">Vitória brings a decade of experience improving the day-to-day systems that keep businesses running. She works closely with teams to untangle inefficient workflows, strengthen coordination, and turn operational friction into clearer, more consistent ways of working. Her focus is on building practical structure that is easier to follow, easier to manage, and strong enough to support sustainable growth.</p>
                     <ul style="list-style: none; color: var(--text-grey); font-size: 0.95rem; padding-left: 0; margin-top: auto;">
@@ -569,8 +601,8 @@
 
     <section id="packages" class="packages">
         <div class="packages-header">
-            <span class="section-label">Service Ladder</span>
-            <h2>Our Consulting Offers</h2>
+            <span class="section-label">Start Here</span>
+            <h2>The easiest first step into EPC</h2>
         </div>
 
         <div class="packages-grid">
@@ -579,25 +611,25 @@
                     Low-Risk Entry
                 </div>
 
-                <div class="offer-tag">Process Optimisation</div>
-                <h3 class="offer-title" style="margin-bottom: 5px;">Process Mapping Diagnostic</h3>
+                <div class="offer-tag">Flagship Entry Offer</div>
+                <h3 class="offer-title" style="margin-bottom: 5px;">Process Mapping Diagnostic Review</h3>
                 
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 20 fixed value-added hours</div>
                 <div class="offer-best-for">
-                    <strong>The perfect low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck but cannot clearly see why.
+                    <strong>A low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck, and need a clear process mapping review before making bigger operational decisions.
                 </div>
                 <ul class="offer-list">
                     <li><i class="fa-solid fa-check"></i> Discovery call and issue framing</li>
                     <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop</li>
-                    <li><i class="fa-solid fa-check"></i> Critical process workflow</li>
-                    <li><i class="fa-solid fa-check"></i> Pain point and bottleneck summary</li>
-                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations</li>
-                    <li><i class="fa-solid fa-check"></i> Short action roadmap</li>
+                    <li><i class="fa-solid fa-check"></i> Current-state workflow map of the selected process</li>
+                    <li><i class="fa-solid fa-check"></i> Bottleneck summary with at least 3 practical improvement opportunities</li>
+                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations and a prioritised action roadmap</li>
+                    <li><i class="fa-solid fa-check"></i> Review session with clear next-step guidance</li>
                 </ul>
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Market Strategy</div>
+                <div class="offer-tag">Next Step Support</div>
                 <h3 class="offer-title">Market Research & Plan</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 40 fixed value-added hours</div>
                 <div class="offer-best-for">
@@ -614,7 +646,7 @@
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Operational Structure</div>
+                <div class="offer-tag">Next Step Support</div>
                 <h3 class="offer-title">Operations Coordination Setup</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> 25 - 50 value-added hours</div>
                 <div class="offer-best-for">
@@ -631,7 +663,7 @@
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Implementation Support</div>
+                <div class="offer-tag">Next Step Support</div>
                 <h3 class="offer-title">Project Management Delivery</h3>
                 <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on project</div>
                 <div class="offer-best-for">
@@ -649,12 +681,45 @@
         </div>
     </section>
 
+    <section class="easy-yes">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-label">Why This Is Easy To Say Yes To</span>
+            <h2>A professional, low-risk first step for both sides</h2>
+            <p style="color: var(--text-grey); max-width: 860px; margin: 10px auto 0;">The offer is built to reduce uncertainty, increase clarity, and protect both the client and the project from vague scope and vague expectations.</p>
+        </div>
+        <div class="easy-yes-grid">
+            <div class="easy-card">
+                <h3>What you walk away with</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>A clear view of how the selected workflow is actually operating today</li>
+                    <li><i class="fa-solid fa-check"></i>Visibility on where delays, handover gaps, and duplication are coming from</li>
+                    <li><i class="fa-solid fa-check"></i>A prioritised action plan so the next move feels obvious</li>
+                </ul>
+            </div>
+            <div class="easy-card">
+                <h3>Included to make action easier</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Quick-win priority list for the most practical first fixes</li>
+                    <li><i class="fa-solid fa-check"></i>Responsibility clarity view to expose ownership gaps</li>
+                    <li><i class="fa-solid fa-check"></i>Review session so your team understands what matters most</li>
+                </ul>
+            </div>
+            <div class="easy-card">
+                <h3>Client Assurance</h3>
+                <p>If you attend the agreed sessions, provide the requested information on time, and make the relevant stakeholders available, we guarantee to deliver the agreed diagnostic outputs within the agreed timeframe for the original scope.</p>
+                <p style="margin-bottom: 0;">If we do not, we continue working at no extra cost until those agreed deliverables are completed.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="audit" class="contact-section">
         <div class="contact-header">
             <span class="section-label">Take the Next Step</span>
             <h2>Book a Process Review</h2>
-            <p style="color: #5e6c84; margin-top: 10px;">Fill out the form below to connect with our team and schedule an initial diagnostic of your workflows.</p>
+            <p style="color: #5e6c84; margin-top: 10px;">In one short conversation, we will determine whether the diagnostic is the right fit, what workflow should be reviewed first, and what a sensible next step looks like.</p>
         </div>
+
+        <p class="contact-trust-note">Simple first step. Clear scope. Honest advice. If the diagnostic is not the right fit, we will tell you.</p>
 
         <div class="contact-form-container">
             <form action="https://formspree.io/f/mojklnwg" method="POST">
@@ -678,7 +743,7 @@
                     <label for="package">Which area are you interested in?</label>
                     <select id="package" name="package">
                         <option value="Not Sure">Not Sure Yet / Let's Discuss</option>
-                        <option value="Process Mapping Diagnostic">Process Mapping Diagnostic</option>
+                        <option value="Process Mapping Diagnostic Review">Process Mapping Diagnostic Review</option>
                         <option value="Market Research & Plan">Market Research & Plan</option>
                         <option value="Operations Coordination Setup">Operations Coordination Setup</option>
                         <option value="Project Management Delivery">Project Management Delivery</option>
@@ -687,10 +752,10 @@
 
                 <div class="form-group">
                     <label for="message">Message details</label>
-                    <textarea id="message" name="message" placeholder="Briefly describe the operational bottlenecks or projects you need help with..." required></textarea>
+                    <textarea id="message" name="message" placeholder="Briefly describe where work is getting delayed, repeated, unclear, or difficult to manage..." required></textarea>
                 </div>
 
-                <button type="submit" class="btn-submit">Book a Process Review <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+                <button type="submit" class="btn-submit">Request My Process Review <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
                 
             </form>
         </div>
@@ -705,7 +770,7 @@
             
             <div class="footer-col">
                 <h3 style="font-size: 1.2rem; color: #fff;">Contact Details</h3>
-                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> 66 Cargill St,Victoria Park,WA Australia</p>
+                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> 66 Cargill St, Victoria Park, WA Australia</p>
                 <p style="margin-top: 15px;">
                     <a href="mailto:archie@elevateprocessco.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> archie@elevateprocessco.com</a>
                 </p>
