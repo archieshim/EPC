@@ -390,6 +390,19 @@
 
         .contact-trust-note { margin: 0 auto 18px; max-width: 700px; text-align: center; color: var(--text-grey); font-size: 0.98rem; }
 
+
+        .linkedin-section { padding: 80px 4%; background: linear-gradient(135deg, #091e42 0%, #003380 100%); color: var(--white); }
+        .linkedin-card { max-width: 980px; margin: 0 auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 40px; display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 30px; align-items: center; box-shadow: 0 16px 35px rgba(0,0,0,0.12); }
+        .linkedin-copy h2 { font-size: 2.2rem; margin-bottom: 14px; color: var(--white); }
+        .linkedin-copy p { color: #dbe7ff; font-size: 1.05rem; line-height: 1.8; margin-bottom: 14px; }
+        .linkedin-points { list-style: none; padding: 0; margin: 18px 0 0 0; }
+        .linkedin-points li { margin-bottom: 10px; color: #eaf2ff; display: flex; align-items: flex-start; gap: 10px; }
+        .linkedin-points li i { color: var(--blue-accent); margin-top: 4px; }
+        .linkedin-cta-wrap { text-align: center; }
+        .linkedin-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--blue-accent); color: var(--blue-dark); padding: 16px 26px; border-radius: 8px; text-decoration: none; font-weight: 800; box-shadow: 0 8px 22px rgba(0, 184, 217, 0.25); transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; }
+        .linkedin-cta:hover { transform: translateY(-3px); background: var(--white); box-shadow: 0 14px 28px rgba(0,0,0,0.18); }
+        .linkedin-side-note { margin-top: 14px; color: #c7d7ff; font-size: 0.95rem; }
+
         /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 850px) {
             .nav-links { display: none; }
@@ -398,6 +411,8 @@
             .hero-buttons { flex-direction: column; width: 100%; }
             .hero-btn, .hero-btn-secondary { width: 100%; justify-content: center; }
             .packages-grid, .steps-grid, .ba-grid, .proof-grid, .easy-yes-grid { grid-template-columns: 1fr; max-width: 100%; }
+            .linkedin-card { grid-template-columns: 1fr; padding: 24px; }
+            .linkedin-copy h2 { font-size: 1.9rem; }
             .lm-form { flex-direction: column; }
             .contact-form-container { padding: 20px; }
         }
@@ -412,7 +427,7 @@
         <nav class="nav-links">
             <a href="#how-it-works">How It Works</a>
             <a href="#about">Founders</a>
-            <a href="#packages">Start Here</a>
+            <a href="#packages">Services</a>
             <a href="#audit" class="btn-contact-nav">Book a Process Review</a>
         </nav>
     </header>
@@ -427,7 +442,7 @@
             
             <div class="hero-buttons animate-up delay-3">
                 <a href="#audit" class="hero-btn">Book a Process Review <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#packages" class="hero-btn-secondary">See the Low-Risk Offer</a>
+                <a href="#packages" class="hero-btn-secondary">Explore Our Services</a>
             </div>
 
             <div class="hero-social-proof animate-up delay-4">
@@ -601,8 +616,9 @@
 
     <section id="packages" class="packages">
         <div class="packages-header">
-            <span class="section-label">Start Here</span>
-            <h2>The easiest first step into EPC</h2>
+            <span class="section-label">Our Services</span>
+            <h2>Four focused ways we support growing businesses</h2>
+            <p style="color: var(--text-grey); max-width: 860px; margin: 12px auto 0;">Our core offer is <strong>Business Process Mapping (BPM) & Diagnosis</strong>. It is positioned as a <strong>low-risk entry point</strong> for clients who want clarity before committing to broader strategy, implementation, or team redesign.</p>
         </div>
 
         <div class="packages-grid">
@@ -611,71 +627,70 @@
                     Low-Risk Entry
                 </div>
 
-                <div class="offer-tag">Flagship Entry Offer</div>
-                <h3 class="offer-title" style="margin-bottom: 5px;">Process Mapping Diagnostic Review</h3>
-                
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> 20 fixed value-added hours</div>
+                <div class="offer-tag">Core Flagship Service</div>
+                <h3 class="offer-title">Business Process Mapping (BPM) &amp; Diagnosis</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on workflow complexity and scope</div>
                 <div class="offer-best-for">
-                    <strong>A low-risk first engagement.</strong> Best for businesses that know work is getting delayed, repeated, or stuck, and need a clear process mapping review before making bigger operational decisions.
+                    <strong>Best for:</strong> Businesses dealing with delays, rework, unclear ownership, messy handovers, or workflow bottlenecks and needing clarity before making bigger operational decisions.
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Discovery call and issue framing</li>
-                    <li><i class="fa-solid fa-check"></i> 1 site visit or virtual workshop</li>
-                    <li><i class="fa-solid fa-check"></i> Current-state workflow map of the selected process</li>
-                    <li><i class="fa-solid fa-check"></i> Bottleneck summary with at least 3 practical improvement opportunities</li>
-                    <li><i class="fa-solid fa-check"></i> Quick-win recommendations and a prioritised action roadmap</li>
-                    <li><i class="fa-solid fa-check"></i> Review session with clear next-step guidance</li>
+                    <li><i class="fa-solid fa-check"></i>Operational audit and bottleneck identification</li>
+                    <li><i class="fa-solid fa-check"></i>Current-state and future-state process mapping</li>
+                    <li><i class="fa-solid fa-check"></i>Gap analysis across people, process, and systems</li>
+                    <li><i class="fa-solid fa-check"></i>Ownership, accountability, and handover clarity</li>
+                    <li><i class="fa-solid fa-check"></i>Practical quick wins and prioritised improvement roadmap</li>
+                    <li><i class="fa-solid fa-check"></i>Review session with recommended next-phase actions</li>
                 </ul>
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Next Step Support</div>
-                <h3 class="offer-title">Market Research & Plan</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> 40 fixed value-added hours</div>
+                <div class="offer-tag">Strategic Advisory</div>
+                <h3 class="offer-title">Strategy &amp; Market Intelligence</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on strategic depth and business goals</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Clients that need clearer direction on target market, customer demand, competitor positioning, and practical growth actions.
+                    <strong>Best for:</strong> Businesses that need clearer positioning, sharper market insight, and a more structured growth direction.
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Business and market context review</li>
-                    <li><i class="fa-solid fa-check"></i> Target customer and segment analysis</li>
-                    <li><i class="fa-solid fa-check"></i> Competitor scan and positioning insights</li>
-                    <li><i class="fa-solid fa-check"></i> Market opportunity summary</li>
-                    <li><i class="fa-solid fa-check"></i> Practical marketing and growth action plan</li>
-                    <li><i class="fa-solid fa-check"></i> 30-60 day priority roadmap</li>
+                    <li><i class="fa-solid fa-check"></i>Competitor benchmarking and market opportunity review</li>
+                    <li><i class="fa-solid fa-check"></i>Ideal customer profile and positioning analysis</li>
+                    <li><i class="fa-solid fa-check"></i>SWOT and TOWS strategic diagnosis</li>
+                    <li><i class="fa-solid fa-check"></i>12–36 month roadmap and OKR direction</li>
+                    <li><i class="fa-solid fa-check"></i>Go-to-market and messaging recommendations</li>
+                    <li><i class="fa-solid fa-check"></i>Executive improvement priorities for growth</li>
                 </ul>
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Next Step Support</div>
-                <h3 class="offer-title">Operations Coordination Setup</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> 25 - 50 value-added hours</div>
+                <div class="offer-tag">Execution Support</div>
+                <h3 class="offer-title">Implementation &amp; Process Improvement</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on implementation scope and change effort</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Businesses that need more structure in planning, meetings, scheduling, accountability, and follow-up.
+                    <strong>Best for:</strong> Businesses ready to move beyond diagnosis and actively fix bottlenecks, redesign workflows, and embed better ways of working.
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Responsibility matrix</li>
-                    <li><i class="fa-solid fa-check"></i> Meeting cadence and agenda templates</li>
-                    <li><i class="fa-solid fa-check"></i> Task and action tracking</li>
-                    <li><i class="fa-solid fa-check"></i> Weekly coordination rhythm</li>
-                    <li><i class="fa-solid fa-check"></i> Simple KPI and reporting structure</li>
-                    <li><i class="fa-solid fa-check"></i> Admin and filing discipline</li>
+                    <li><i class="fa-solid fa-check"></i>Execution of agreed improvement priorities</li>
+                    <li><i class="fa-solid fa-check"></i>Workflow optimisation into the live environment</li>
+                    <li><i class="fa-solid fa-check"></i>Stakeholder coordination and rollout planning</li>
+                    <li><i class="fa-solid fa-check"></i>Change management to support adoption</li>
+                    <li><i class="fa-solid fa-check"></i>Issue tracking, decision support, and follow-up</li>
+                    <li><i class="fa-solid fa-check"></i>Implementation reviews and continuous improvement actions</li>
                 </ul>
             </div>
 
             <div class="offer-card">
-                <div class="offer-tag">Next Step Support</div>
-                <h3 class="offer-title">Project Management Delivery</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on project</div>
+                <div class="offer-tag">People &amp; Structure</div>
+                <h3 class="offer-title">HR &amp; Organisational Design</h3>
+                <div class="offer-time"><i class="fa-regular fa-clock"></i> Customised hours based on team structure and business stage</div>
                 <div class="offer-best-for">
-                    <strong>Best for:</strong> Defined operational changes, implementation work, installations, upgrades, or business improvement projects.
+                    <strong>Best for:</strong> Growing businesses that need stronger team structure, clearer roles, better accountability, and scalable people systems.
                 </div>
                 <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i> Project charter or brief</li>
-                    <li><i class="fa-solid fa-check"></i> Timeline and milestone tracking</li>
-                    <li><i class="fa-solid fa-check"></i> Risk and issue register</li>
-                    <li><i class="fa-solid fa-check"></i> Stakeholder coordination</li>
-                    <li><i class="fa-solid fa-check"></i> Execution follow-up</li>
-                    <li><i class="fa-solid fa-check"></i> Close-out and lessons learned</li>
+                    <li><i class="fa-solid fa-check"></i>Organisational structure and role clarity design</li>
+                    <li><i class="fa-solid fa-check"></i>KPI and performance system development</li>
+                    <li><i class="fa-solid fa-check"></i>Responsibilities and accountability framework</li>
+                    <li><i class="fa-solid fa-check"></i>Hiring and onboarding blueprint development</li>
+                    <li><i class="fa-solid fa-check"></i>Team growth structure aligned to business goals</li>
+                    <li><i class="fa-solid fa-check"></i>Practical recommendations for sustainable scale</li>
                 </ul>
             </div>
         </div>
@@ -712,11 +727,33 @@
         </div>
     </section>
 
+    <section id="linkedin" class="linkedin-section">
+        <div class="linkedin-card">
+            <div class="linkedin-copy">
+                <span class="section-label" style="color: var(--blue-accent);">Follow Our Journey</span>
+                <h2>Connect with Elevate Process Consulting on LinkedIn</h2>
+                <p>Follow our LinkedIn page for business updates, practical process improvement insights, and a closer look at how EPC helps growing businesses turn complexity into clarity.</p>
+                <p>It is also the best place to stay connected with our thinking, service updates, and the kind of operational conversations we care about most.</p>
+                <ul class="linkedin-points">
+                    <li><i class="fa-solid fa-check"></i>Process improvement insights and workflow thinking</li>
+                    <li><i class="fa-solid fa-check"></i>Business updates, positioning, and service evolution</li>
+                    <li><i class="fa-solid fa-check"></i>A simple way to stay connected with EPC between conversations</li>
+                </ul>
+            </div>
+            <div class="linkedin-cta-wrap">
+                <a class="linkedin-cta" href="https://www.linkedin.com/company/elevate-process-consulting/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i> Visit Our LinkedIn Page
+                </a>
+                <p class="linkedin-side-note">Follow EPC and keep up with our latest updates.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="audit" class="contact-section">
         <div class="contact-header">
             <span class="section-label">Take the Next Step</span>
             <h2>Book a Process Review</h2>
-            <p style="color: #5e6c84; margin-top: 10px;">In one short conversation, we will determine whether the diagnostic is the right fit, what workflow should be reviewed first, and what a sensible next step looks like.</p>
+            <p style="color: #5e6c84; margin-top: 10px;">In one short conversation, we will determine which of the four services is the best fit, where the biggest opportunity sits, and what a sensible next step looks like.</p>
         </div>
 
         <p class="contact-trust-note">Simple first step. Clear scope. Honest advice. If the diagnostic is not the right fit, we will tell you.</p>
@@ -740,13 +777,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="package">Which area are you interested in?</label>
+                    <label for="package">Which service are you interested in?</label>
                     <select id="package" name="package">
                         <option value="Not Sure">Not Sure Yet / Let's Discuss</option>
-                        <option value="Process Mapping Diagnostic Review">Process Mapping Diagnostic Review</option>
-                        <option value="Market Research & Plan">Market Research & Plan</option>
-                        <option value="Operations Coordination Setup">Operations Coordination Setup</option>
-                        <option value="Project Management Delivery">Project Management Delivery</option>
+                        <option value="Business Process Mapping (BPM) & Diagnosis">Business Process Mapping (BPM) & Diagnosis</option>
+                        <option value="Strategy & Market Intelligence">Strategy & Market Intelligence</option>
+                        <option value="Implementation & Process Improvement">Implementation & Process Improvement</option>
+                        <option value="HR & Organisational Design">HR & Organisational Design</option>
                     </select>
                 </div>
 
@@ -776,6 +813,9 @@
                 </p>
                 <p>
                     <a href="mailto:vitoria@elevateprocessco.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> vitoria@elevateprocessco.com</a>
+                </p>
+                <p style="margin-top: 15px;">
+                    <a href="https://www.linkedin.com/company/elevate-process-consulting/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="margin-right: 8px;"></i> Elevate Process Consulting on LinkedIn</a>
                 </p>
             </div>
         </div>
