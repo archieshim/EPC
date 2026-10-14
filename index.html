@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0052cc">
+    <meta name="theme-color" content="#091e42">
 
     <!-- Primary SEO -->
     <title>Business Process Consulting Perth WA | EPC — Elevate Process Consulting</title>
-    <meta name="description" content="EPC helps owner-led service businesses sort the admin, tighten the systems, and get the owner out of the day-to-day. Process consulting, systems & automation, and program management — built on our LIFT methodology. Based in Perth, WA.">
-    <meta name="keywords" content="business process consulting Perth, process consultant WA, business systems consulting Australia, operations consulting Perth, accounting practice consulting, financial advisory business consulting, LIFT methodology, small business systems consultant">
+    <meta name="description" content="EPC maps how work really moves through your business using your own data, then designs and builds the fix — with automation where it earns its keep. Data-led process consulting for owner-led service businesses in Perth, WA.">
+    <meta name="keywords" content="business process consulting Perth, process consultant WA, business process automation Perth, data-driven process improvement, operations consulting Perth, accounting practice consulting, LIFT methodology, small business systems consultant">
     <meta name="author" content="Elevate Process Consulting">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://elevateprocessco.com/">
 
-    <!-- Open Graph (LinkedIn, Facebook) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elevateprocessco.com/">
     <meta property="og:title" content="Business Process Consulting Perth WA | EPC">
-    <meta property="og:description" content="Growth shouldn't feel like more chaos. EPC helps owner-led businesses find where time and money are leaking, then fixes it — no platform to sell you, no corporate fluff.">
+    <meta property="og:description" content="No off-the-shelf playbook. EPC uses your real data and real processes to find where time and money leak — then builds the fix with you.">
     <meta property="og:site_name" content="Elevate Process Consulting">
     <meta property="og:locale" content="en_AU">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Business Process Consulting Perth WA | EPC">
-    <meta name="twitter:description" content="Growth shouldn't feel like more chaos. EPC helps owner-led businesses find where time and money are leaking, then fixes it properly.">
+    <meta name="twitter:description" content="Data-led process consulting. We find where your business leaks time and money — then fix it properly.">
 
-    <!-- Structured Data (Schema.org ProfessionalService) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Elevate Process Consulting",
       "alternateName": "EPC",
-      "description": "Process and systems consulting for owner-led service businesses. Business health checks, process & operations consulting, systems & automation, and program management — built on the LIFT methodology.",
+      "description": "Data-led process and systems consulting for owner-led service businesses. Business health checks, process & operations consulting, systems & automation, and program management — built on the LIFT methodology.",
       "url": "https://elevateprocessco.com/",
       "email": "archie@elevateprocessco.com",
       "address": {
@@ -48,12 +47,10 @@
         { "@type": "Country", "name": "Australia" }
       ],
       "founder": [
-        { "@type": "Person", "name": "Archie Shim", "jobTitle": "Co-Founder" },
-        { "@type": "Person", "name": "Vit\u00f3ria Silveira", "jobTitle": "Co-Founder" }
+        { "@type": "Person", "name": "Archie Shim", "jobTitle": "Managing Partner" },
+        { "@type": "Person", "name": "Vitória Silveira", "jobTitle": "Managing Partner" }
       ],
-      "sameAs": [
-        "https://www.linkedin.com/company/elevate-process-consulting/"
-      ],
+      "sameAs": ["https://www.linkedin.com/company/elevate-process-consulting/"],
       "serviceType": [
         "Business process consulting",
         "Systems, data & automation",
@@ -65,1076 +62,1559 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
-        /* --- CORE STYLES & COLORS --- */
         :root {
-            --blue-primary: #0052cc;
-            --blue-dark: #091e42;
-            --blue-light: #f4f7fa;
-            --blue-accent: #00b8d9;
-            --text-dark: #172b4d;
-            --text-grey: #5e6c84;
+            --navy: #091e42;
+            --navy-2: #0f2a5c;
+            --blue: #0052cc;
+            --blue-2: #2f6fe0;
+            --cyan: #00b8d9;
+            --cyan-soft: #e3f8fc;
+            --ink: #172b4d;
+            --grey: #5e6c84;
+            --line: #e2e8f0;
+            --bg-soft: #f4f7fa;
             --white: #ffffff;
+            --red: #de350b;
+            --red-soft: #ffebe6;
+            --green: #00875a;
+            --green-soft: #e3fcef;
+            --radius: 14px;
+            --shadow: 0 12px 30px rgba(9, 30, 66, 0.08);
+            --wrap: 1140px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body {
-            color: var(--text-dark);
-            background-color: var(--white);
-            line-height: 1.6;
-        }
-
-        /* --- GLOBAL ANIMATIONS --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-up {
-            opacity: 0;
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.3s; }
-        .delay-3 { animation-delay: 0.5s; }
-        .delay-4 { animation-delay: 0.7s; }
-
-        /* --- NAVIGATION --- */
-        header.nav-bar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            transition: all 0.3s ease;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--blue-dark);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .logo i { color: var(--blue-primary); }
-
-        .logo img {
-            height: 44px;
-            width: auto;
-            display: block;
-        }
-
-        .footer-logo {
-            height: 52px;
-            width: auto;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--blue-primary); }
-
-        /* Mobile hamburger button — hidden on desktop */
-        .nav-toggle {
-            display: none;
-            background: transparent;
-            border: 0;
-            padding: 10px;
-            cursor: pointer;
-            color: var(--blue-dark);
-            font-size: 1.5rem;
-            line-height: 1;
-            min-width: 44px;
-            min-height: 44px;
-            align-items: center;
-            justify-content: center;
-        }
-        .nav-toggle:focus-visible { outline: 2px solid var(--blue-primary); outline-offset: 2px; border-radius: 4px; }
-
-        /* Mobile nav slide-in panel */
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: min(85vw, 320px);
-            height: 100vh;
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--ink);
             background: var(--white);
-            box-shadow: -8px 0 32px rgba(0,0,0,0.15);
-            z-index: 1100;
-            padding: 90px 30px 30px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            flex-direction: column;
-            gap: 4px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        .mobile-nav.is-open { transform: translateX(0); }
-        .mobile-nav a {
-            display: block;
-            padding: 14px 8px;
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            border-bottom: 1px solid #eef2f7;
-            min-height: 44px;
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+
+        .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+        section { padding: 96px 0; }
+
+        /* Typography */
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--blue); font-weight: 700; font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 1.6px; margin-bottom: 14px;
         }
-        .mobile-nav a.btn-contact-mobile {
-            background: var(--blue-primary);
-            color: var(--white);
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 18px;
-            border: 0;
-            padding: 14px 20px;
+        .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--cyan); }
+        h1, h2, h3 { color: var(--navy); letter-spacing: -0.02em; line-height: 1.15; }
+        h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
+        h3 { font-weight: 700; }
+        .lead { font-size: 1.12rem; color: var(--grey); max-width: 720px; }
+        .center { text-align: center; }
+        .center .lead { margin: 0 auto; }
+        .section-head { margin-bottom: 56px; }
+
+        /* Marker highlight on key words */
+        .mark {
+            background: linear-gradient(transparent 62%, rgba(0, 184, 217, 0.35) 62%);
+            padding: 0 2px;
         }
-        .mobile-nav-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(9, 30, 66, 0.5);
-            z-index: 1050;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .on-dark .mark { background: linear-gradient(transparent 62%, rgba(0, 184, 217, 0.45) 62%); color: var(--white); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 15px 28px; border-radius: 8px; font-weight: 700; font-size: 1rem;
+            text-decoration: none; border: 2px solid transparent; cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+            min-height: 48px; font-family: inherit;
         }
-        .mobile-nav-backdrop.is-open { opacity: 1; }
-        .nav-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: 0;
-            font-size: 1.4rem;
-            color: var(--blue-dark);
-            cursor: pointer;
-            min-width: 44px;
-            min-height: 44px;
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--blue); color: var(--white); box-shadow: 0 8px 20px rgba(0, 82, 204, 0.25); }
+        .btn-primary:hover { background: var(--navy); }
+        .btn-cyan { background: var(--cyan); color: var(--navy); box-shadow: 0 8px 22px rgba(0, 184, 217, 0.35); }
+        .btn-cyan:hover { background: var(--white); }
+        .btn-ghost { border-color: var(--line); color: var(--navy); background: var(--white); }
+        .btn-ghost:hover { border-color: var(--navy); }
+        .btn-ghost-dark { border-color: rgba(255,255,255,0.3); color: var(--white); }
+        .btn-ghost-dark:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+        /* Reveal on scroll (only when JS is running) */
+        .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s cubic-bezier(.16,1,.3,1); }
+        .js .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .js .reveal { opacity: 1; transform: none; transition: none; }
         }
 
-        .btn-contact-nav {
-            background-color: var(--blue-primary);
-            color: var(--white) !important;
-            padding: 10px 24px;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        /* ---------- NAV ---------- */
+        .topbar {
+            background: var(--navy); color: #c7d5ee; font-size: 0.85rem; text-align: center;
+            padding: 8px 16px;
         }
-
-        .btn-contact-nav:hover { 
-            background-color: var(--blue-dark); 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 82, 204, 0.2);
+        .topbar a { color: var(--cyan); font-weight: 600; text-decoration: none; }
+        header.nav {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
         }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo img { height: 40px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--ink); transition: color .2s; }
+        .nav-links a:hover { color: var(--blue); }
+        .nav-links .btn { padding: 10px 20px; min-height: 0; color: var(--white); }
+        .nav-toggle {
+            display: none; background: none; border: 0; font-size: 1.5rem; color: var(--navy);
+            min-width: 44px; min-height: 44px; cursor: pointer;
+        }
+        .mobile-nav {
+            position: fixed; top: 0; right: 0; height: 100vh; width: min(85vw, 320px);
+            background: var(--white); z-index: 1100; padding: 88px 28px 28px;
+            transform: translateX(100%); transition: transform .3s ease;
+            box-shadow: -8px 0 32px rgba(0,0,0,.15); display: flex; flex-direction: column;
+        }
+        .mobile-nav.open { transform: none; }
+        .mobile-nav a { padding: 14px 6px; border-bottom: 1px solid #eef2f7; text-decoration: none; font-weight: 600; }
+        .mobile-nav .btn { margin-top: 20px; border: 0; color: var(--white); }
+        .nav-close { position: absolute; top: 18px; right: 18px; background: none; border: 0; font-size: 1.4rem; min-width: 44px; min-height: 44px; cursor: pointer; color: var(--navy); }
+        .backdrop { position: fixed; inset: 0; background: rgba(9,30,66,.5); z-index: 1050; display: none; }
+        .backdrop.open { display: block; }
 
-        /* --- HERO SECTION --- */
+        /* ---------- HERO ---------- */
         .hero {
-            position: relative;
-            margin-top: 75px;
-            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
-            padding: 140px 5% 120px;
-            text-align: center;
-            color: var(--white);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 85vh;
+            position: relative; overflow: hidden;
+            background: radial-gradient(1200px 600px at 85% -10%, rgba(0,184,217,0.18), transparent 60%),
+                        linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, #0b3a8c 100%);
+            color: var(--white); padding: 96px 0 110px;
         }
-
-        /* Hero Background Effects */
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.4;
-            z-index: 1;
+            content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
+            background-size: 28px 28px; pointer-events: none;
+            mask-image: linear-gradient(to bottom, black, transparent 85%);
+            -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
+        }
+        .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; }
+        .hero .pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06);
+            color: var(--cyan); padding: 7px 16px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 24px;
+        }
+        .hero h1 { color: var(--white); font-size: clamp(2.4rem, 5.2vw, 4rem); font-weight: 900; margin-bottom: 22px; }
+        .hero h1 .accent { color: var(--cyan); }
+        .hero p.sub { font-size: 1.18rem; color: #d3def2; max-width: 560px; margin-bottom: 34px; }
+        .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+        .hero-trust { display: flex; flex-wrap: wrap; gap: 8px 22px; color: #aebfdd; font-size: 0.92rem; }
+        .hero-trust span { display: inline-flex; align-items: center; gap: 8px; }
+        .hero-trust i { color: var(--cyan); }
+
+        /* Progress bars (used by the quiz results) */
+        .bar { height: 10px; border-radius: 10px; background: var(--bg-soft); overflow: hidden; }
+        .bar span { display: block; height: 100%; border-radius: 10px; background: var(--blue-2); }
+
+        /* Hero before/after flow card */
+        .flowcard {
+            background: var(--white); color: var(--ink); border-radius: 20px; padding: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+        }
+        .fc-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .fc-head strong { font-size: 1rem; color: var(--navy); display: flex; gap: 8px; align-items: center; }
+        .fc-head strong i { color: var(--blue); }
+        .fc-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--grey); background: var(--bg-soft); padding: 4px 10px; border-radius: 50px; white-space: nowrap; }
+        .fc-panel { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 16px; }
+        .fc-panel.after { border-color: #bfe9f2; background: linear-gradient(180deg, #f3fcfe 0%, var(--white) 100%); }
+        .fc-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--grey); }
+        .after .fc-label { color: #0087a3; }
+        .fc-track { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); position: relative; padding-top: 30px; margin: 2px 0 14px; }
+        .fc-track::before {
+            content: ''; position: absolute; left: 10%; right: 10%; top: 36px; height: 3px; border-radius: 3px;
+            background: repeating-linear-gradient(90deg, #c9d2df 0 6px, transparent 6px 10px);
+        }
+        .after .fc-track::before { background: linear-gradient(90deg, var(--blue), var(--cyan)); }
+        .fc-track li { position: relative; display: flex; flex-direction: column; align-items: center; gap: 7px; font-size: 0.8rem; font-weight: 600; color: var(--ink); text-align: center; }
+        .fc-dot { width: 15px; height: 15px; border-radius: 50%; background: var(--white); border: 3px solid #c1c9d6; position: relative; z-index: 1; }
+        .before .wait .fc-dot { border-color: #ff991f; background: #fff4e5; }
+        .after .fc-dot { border-color: var(--blue); background: var(--blue); }
+        .after li:last-child .fc-dot { border-color: var(--cyan); background: var(--cyan); }
+        .fc-badge {
+            position: absolute; top: -28px; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase;
+            padding: 3px 8px; border-radius: 50px; white-space: nowrap;
+        }
+        .before .fc-badge { background: #fff4e5; color: #b65c02; }
+        .after .fc-badge { background: var(--cyan-soft); color: #00718a; }
+        .fc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .fc-stats div { background: var(--bg-soft); border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
+        .fc-stats strong { font-size: 1.6rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; color: #b65c02; }
+        .fc-stats span { font-size: 0.78rem; color: var(--grey); line-height: 1.3; }
+        .after .fc-stats div { background: var(--green-soft); }
+        .after .fc-stats strong { color: var(--green); }
+        .fc-divider { position: relative; height: 14px; }
+        .fc-divider span {
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+            width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: var(--cyan);
+            display: grid; place-items: center; font-size: 0.8rem; box-shadow: 0 0 0 4px var(--white);
+        }
+        .fc-result { margin-top: 14px; display: flex; gap: 10px; align-items: center; background: var(--navy); color: #dbe5f6; border-radius: 12px; padding: 12px 16px; font-size: 0.9rem; }
+        .fc-result i { color: var(--cyan); }
+        .fc-result b { color: var(--white); }
+        /* the "after" line draws in when the card appears */
+        .js .flowcard .after .fc-track::before { transform: scaleX(0); transform-origin: left; transition: transform 1.1s cubic-bezier(.16,1,.3,1) .5s; }
+        .js .flowcard.in .after .fc-track::before { transform: scaleX(1); }
+        @media (prefers-reduced-motion: reduce) {
+            .js .flowcard .after .fc-track::before { transform: none; transition: none; }
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            width: 150vw; height: 150vw;
-            transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(0, 184, 217, 0.15) 0%, transparent 50%);
-            z-index: 1;
-            pointer-events: none;
+        /* ---------- TOOLS STRIP ---------- */
+        .tools { padding: 26px 0; border-top: 1px solid var(--line); }
+        .tools-inner { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
+        .tools-label { font-size: 0.85rem; font-weight: 600; color: var(--grey); }
+        .tool-list { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: center; }
+        .tool-list span { color: #8993a4; font-weight: 700; font-size: 1rem; display: inline-flex; gap: 8px; align-items: center; }
+
+        /* ---------- CLIENT LOGOS ---------- */
+        .clients { padding: 44px 0 38px; }
+        .clients-label { text-align: center; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--grey); margin-bottom: 22px; }
+        .client-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px 72px; }
+        .client { height: 72px; display: flex; align-items: center; }
+        .client img { max-height: 64px; width: auto; }
+        .client img.sunshine { max-height: 54px; }
+        img.sunshine { mix-blend-mode: multiply; } /* the JPG has a white background */
+        .elae-mark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; font-weight: 500; letter-spacing: 0.25em; color: #2c1f14; white-space: nowrap; line-height: 1.1; text-align: center; }
+        .elae-mark span { color: #b05a3a; font-style: italic; }
+        .elae-mark small { display: block; font-family: 'Inter', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #8a7a6a; margin-top: 4px; }
+
+        /* ---------- PROBLEM ---------- */
+        .problem { background: var(--bg-soft); }
+        .wrap.narrow { max-width: 820px; }
+        .problem-copy p { color: var(--grey); font-size: 1.08rem; margin-bottom: 18px; }
+        .problem-copy p strong { color: var(--ink); }
+        .problem-copy .btn { margin-top: 10px; }
+
+        /* ---------- OWNER DEPENDENCY SCORE ---------- */
+        .score-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
+        .pillars { list-style: none; display: grid; gap: 12px; margin: 28px 0 24px; }
+        .pillars li { display: flex; gap: 14px; align-items: flex-start; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+        .pillars i { width: 36px; height: 36px; border-radius: 10px; background: #e6efff; color: var(--blue); display: grid; place-items: center; flex: 0 0 auto; }
+        .pillars strong { display: block; color: var(--navy); }
+        .pillars span { font-size: 0.92rem; color: var(--grey); }
+        .score-meta { display: flex; gap: 10px 20px; flex-wrap: wrap; font-size: 0.9rem; color: var(--grey); font-weight: 600; }
+        .score-meta i { color: var(--cyan); margin-right: 6px; }
+
+        .quiz { background: var(--white); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--line); padding: 34px; min-height: 520px; display: flex; flex-direction: column; }
+        .quiz h3:focus { outline: none; }
+        .quiz-intro { margin: auto; text-align: center; max-width: 400px; }
+        .quiz-intro-icon { width: 76px; height: 76px; border-radius: 22px; background: var(--cyan-soft); color: #0087a3; display: grid; place-items: center; font-size: 2rem; margin: 0 auto 22px; }
+        .quiz-intro h3 { font-size: 1.5rem; }
+        .quiz-intro p { color: var(--grey); margin: 10px 0 26px; }
+        .quiz-progress { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: var(--grey); margin-bottom: 10px; }
+        .quiz-bar { height: 6px; background: var(--bg-soft); border-radius: 6px; overflow: hidden; margin-bottom: 28px; }
+        .quiz-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width .35s ease; }
+        .quiz-pillar { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+        .quiz-q { font-size: 1.4rem; margin-bottom: 22px; }
+        .options { display: grid; gap: 10px; }
+        .option {
+            text-align: left; width: 100%; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--white);
+            font: inherit; font-size: 0.98rem; color: var(--ink); cursor: pointer; display: flex; gap: 14px; align-items: center;
+            transition: border-color .15s, background-color .15s; min-height: 52px;
         }
+        .option:hover { border-color: var(--blue); background: #f5f9ff; }
+        .option:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+        .option .key { flex: 0 0 28px; height: 28px; border-radius: 8px; background: var(--bg-soft); display: grid; place-items: center; font-weight: 800; font-size: 0.8rem; color: var(--grey); transition: all .15s; }
+        .option.selected { border-color: var(--blue); background: #eef4ff; }
+        .option.selected .key { background: var(--blue); color: var(--white); }
+        .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 22px; }
+        .link-btn { background: none; border: 0; font: inherit; font-weight: 700; color: var(--grey); cursor: pointer; display: inline-flex; gap: 8px; align-items: center; min-height: 44px; padding: 0 4px; }
+        .link-btn:hover { color: var(--navy); }
+        .link-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 820px;
-            margin: 0 auto;
+        .result-top { display: grid; grid-template-columns: 180px 1fr; gap: 24px; align-items: center; margin-bottom: 26px; }
+        .gauge { position: relative; width: 180px; }
+        .gauge svg { width: 100%; display: block; overflow: visible; }
+        .gauge-fill { transition: stroke-dashoffset 1.1s cubic-bezier(.16,1,.3,1); }
+        .gauge-num { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; }
+        .gauge-num strong { font-size: 2.6rem; font-weight: 900; color: var(--navy); line-height: 1; display: block; font-variant-numeric: tabular-nums; }
+        .gauge-num span { font-size: 0.7rem; color: var(--grey); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .tier { display: inline-block; padding: 5px 12px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 8px; }
+        .result-top h3 { font-size: 1.3rem; margin-bottom: 6px; }
+        .result-top p { color: var(--grey); font-size: 0.94rem; }
+        .breakdown { display: grid; gap: 12px; margin-bottom: 22px; }
+        .bd-row { display: grid; grid-template-columns: 120px 1fr 44px; gap: 12px; align-items: center; font-size: 0.9rem; font-weight: 600; }
+        .bd-row .bar span { width: 0; transition: width .9s cubic-bezier(.16,1,.3,1); }
+        .bd-row b { text-align: right; font-variant-numeric: tabular-nums; }
+        .next-step { background: var(--navy); color: #dbe5f6; border-radius: 14px; padding: 18px 20px; font-size: 0.95rem; margin-bottom: 18px; }
+        .next-step strong { color: var(--white); display: block; margin-bottom: 4px; }
+        .next-step .svc-name { color: var(--cyan); font-weight: 700; }
+        .result-actions { display: flex; gap: 12px 18px; flex-wrap: wrap; align-items: center; }
+        .quiz-fine { font-size: 0.78rem; color: var(--grey); margin-top: 14px; }
+
+        /* ---------- TESTIMONIALS ---------- */
+        .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .t-card { margin: 0; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; position: relative; }
+        .t-card::before { content: '\201C'; position: absolute; top: 10px; right: 24px; font-size: 5rem; line-height: 1; color: rgba(0, 184, 217, 0.3); font-family: Georgia, serif; }
+        .t-logo { height: 64px; display: flex; align-items: center; margin-bottom: 14px; }
+        .t-logo img { max-height: 56px; width: auto; }
+        .t-logo img.sunshine { max-height: 46px; }
+        .t-logo .elae-mark { font-size: 1.45rem; text-align: left; }
+        .t-ind { font-size: 0.78rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+        .t-card blockquote { font-size: 1.02rem; color: var(--ink); line-height: 1.7; flex-grow: 1; margin-bottom: 22px; }
+        .t-person { display: flex; gap: 12px; align-items: center; border-top: 1px solid var(--line); padding-top: 18px; }
+        .t-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); color: var(--cyan); display: grid; place-items: center; font-weight: 800; font-size: 0.85rem; flex: 0 0 auto; }
+        .t-person strong { display: block; color: var(--navy); font-size: 0.95rem; }
+        .t-person small { font-size: 0.85rem; color: var(--grey); }
+        .t-grid { grid-template-columns: 1.6fr 1fr; }
+        .t-card.featured { grid-row: span 2; background: var(--white); border-color: #cfe3f5; box-shadow: var(--shadow); padding: 40px; }
+        .t-card.featured::before { font-size: 7rem; top: 14px; right: 30px; }
+        .t-card.featured blockquote { font-size: 1.2rem; line-height: 1.75; }
+        .t-card.featured blockquote strong { color: var(--navy); background: linear-gradient(transparent 62%, rgba(0, 184, 217, 0.25) 62%); }
+        .t-card.pending { border-style: dashed; justify-content: center; }
+        .t-card.pending::before { display: none; }
+        .t-card.pending .t-logo { margin-bottom: 10px; }
+        .t-soon { color: var(--grey); font-size: 0.95rem; display: flex; gap: 8px; align-items: center; margin-bottom: 16px; }
+        .t-card.pending .t-person { padding-top: 14px; }
+        .t-card.pending .t-avatar { width: 38px; height: 38px; font-size: 0.78rem; }
+        .t-soon i { color: var(--cyan); }
+
+        /* ---------- TWO WAYS ---------- */
+        .ways { background: var(--bg-soft); }
+        .ways-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+        .way { border-radius: 18px; padding: 36px; background: var(--white); border: 1px solid var(--line); }
+        .way.epc { background: var(--navy); color: var(--white); border-color: var(--navy); box-shadow: 0 24px 50px rgba(9,30,66,0.25); position: relative; }
+        .way-label { font-size: 0.78rem; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+        .way.epc .way-label { color: var(--cyan); }
+        .way h3 { font-size: 1.55rem; margin-bottom: 22px; }
+        .way.epc h3 { color: var(--white); }
+        .way ul { list-style: none; }
+        .way li { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-top: 1px solid var(--line); color: var(--grey); }
+        .way.epc li { border-top-color: rgba(255,255,255,0.12); color: #dbe5f6; }
+        .way li i { margin-top: 5px; flex: 0 0 auto; }
+        .way.generic li i { color: #c1c7d0; }
+        .way.epc li i { color: var(--cyan); }
+        .way li strong { color: var(--ink); display: block; }
+        .way.epc li strong { color: var(--white); }
+
+        /* ---------- DATA > PROCESS > AUTOMATION ---------- */
+        .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 18px; align-items: stretch; }
+        .flow-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 26px; background: var(--white); box-shadow: var(--shadow); }
+        .flow-icon {
+            width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center;
+            font-size: 1.4rem; margin-bottom: 18px; background: var(--cyan-soft); color: #0087a3;
         }
+        .flow-card:nth-child(3) .flow-icon { background: #e6efff; color: var(--blue); }
+        .flow-card:nth-child(5) .flow-icon { background: var(--navy); color: var(--cyan); }
+        .flow-step { font-size: 0.75rem; font-weight: 800; color: var(--grey); letter-spacing: 1.2px; text-transform: uppercase; }
+        .flow-card h3 { font-size: 1.3rem; margin: 4px 0 10px; }
+        .flow-card p { color: var(--grey); font-size: 0.97rem; margin-bottom: 14px; }
+        .flow-card .examples { display: flex; flex-wrap: wrap; gap: 6px; }
+        .flow-card .examples span { font-size: 0.78rem; font-weight: 600; background: var(--bg-soft); color: var(--ink); padding: 4px 10px; border-radius: 50px; }
+        .flow-arrow { display: grid; place-items: center; color: var(--cyan); font-size: 1.4rem; }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--blue-accent);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 25px;
-            backdrop-filter: blur(5px);
+        /* ---------- LIFT ---------- */
+        .lift { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+        .lift h2 { color: var(--white); }
+        .lift .lead { color: #c3d1ea; }
+        .lift .eyebrow { color: var(--cyan); }
+        .lift-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+        .lift-track::before {
+            content: ''; position: absolute; top: 36px; left: 12%; right: 12%; height: 2px;
+            background: linear-gradient(90deg, var(--cyan), var(--blue-2));
+            opacity: .5;
         }
-
-        .hero h1 {
-            font-size: 4.2rem;
-            font-weight: 800;
-            margin: 0 auto 25px auto;
-            line-height: 1.15;
-            letter-spacing: -1px;
+        .lift-step { position: relative; text-align: center; }
+        .lift-letter {
+            width: 72px; height: 72px; margin: 0 auto 22px; border-radius: 50%;
+            display: grid; place-items: center; font-size: 1.9rem; font-weight: 900;
+            background: var(--navy); border: 2px solid var(--cyan); color: var(--cyan); position: relative;
         }
-
-        .text-gradient {
-            background: linear-gradient(to right, #00b8d9, #4c9aff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
+        .lift-step h3 { color: var(--white); font-size: 1.35rem; margin-bottom: 10px; }
+        .lift-step > p { color: #c3d1ea; font-size: 0.97rem; margin-bottom: 18px; min-height: 76px; }
+        .lift-out {
+            text-align: left; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px; padding: 16px; font-size: 0.88rem; color: #e1e9f8;
         }
+        .lift-out b { display: block; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 6px; }
 
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            color: #e6f0ff;
-            line-height: 1.7;
-            font-weight: 300;
+        /* ---------- CALCULATOR ---------- */
+        .calc-card {
+            display: grid; grid-template-columns: 1.1fr 0.9fr; border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--line); box-shadow: var(--shadow);
         }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 30px;
+        .calc-inputs { padding: 40px; background: var(--white); }
+        .calc-inputs h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+        .calc-inputs > p { color: var(--grey); margin-bottom: 28px; }
+        .field { margin-bottom: 24px; }
+        .field-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; gap: 12px; }
+        .field label { font-weight: 600; font-size: 0.95rem; }
+        .field output { font-weight: 800; color: var(--blue); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        /* Sliders: tall touch area, big thumb, filled track (--pct set by JS) */
+        input[type=range] {
+            -webkit-appearance: none; appearance: none; width: 100%; height: 40px; background: transparent; cursor: pointer;
+            --pct: 50%;
         }
-
-        .hero-btn {
-            background-color: var(--blue-accent);
-            color: var(--blue-dark);
-            padding: 16px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(0, 184, 217, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 8px; border-radius: 8px;
+            background: linear-gradient(90deg, var(--blue) 0 var(--pct), #dfe5ee var(--pct) 100%);
         }
-
-        .hero-btn:hover {
-            background-color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        input[type=range]::-moz-range-track { height: 8px; border-radius: 8px; background: #dfe5ee; }
+        input[type=range]::-moz-range-progress { height: 8px; border-radius: 8px; background: var(--blue); }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; width: 26px; height: 26px; margin-top: -9px; border-radius: 50%;
+            background: var(--white); border: 3px solid var(--blue); box-shadow: 0 2px 8px rgba(9, 30, 66, 0.25);
         }
-
-        .hero-btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            padding: 14px 33px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: all 0.3s;
+        input[type=range]::-moz-range-thumb {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--white); border: 3px solid var(--blue); box-shadow: 0 2px 8px rgba(9, 30, 66, 0.25);
         }
-
-        .hero-btn-secondary:hover {
-            background-color: rgba(255,255,255,0.1);
-            border-color: var(--white);
-            transform: translateY(-3px);
+        input[type=range]:focus-visible { outline: none; }
+        input[type=range]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 5px rgba(0, 82, 204, 0.25); }
+        input[type=range]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 5px rgba(0, 82, 204, 0.25); }
+        .calc-out {
+            background: linear-gradient(160deg, var(--navy), #0b3a8c); color: var(--white);
+            padding: 40px; display: flex; flex-direction: column; justify-content: center;
         }
+        .calc-out .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.4px; color: var(--cyan); font-weight: 700; }
+        .big-num { font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.1; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
+        .calc-out .muted { color: #b9c8e4; font-size: 0.95rem; margin-bottom: 26px; }
+        .calc-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+        .calc-split div { background: rgba(255,255,255,0.07); border-radius: 12px; padding: 14px; }
+        .calc-split strong { display: block; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+        .calc-split span { font-size: 0.82rem; color: #b9c8e4; }
+        .calc-note { font-size: 0.78rem; color: #93a6c9; margin-top: 14px; }
+        .calc-group { border: 0; margin-bottom: 10px; }
+        .calc-group legend { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--grey); margin-bottom: 14px; display: flex; gap: 8px; align-items: center; }
+        .calc-group legend i { color: var(--cyan); }
+        .calc-inputs .field { margin-bottom: 18px; }
+        .compare { display: grid; gap: 10px; margin-bottom: 24px; }
+        .compare-row { display: grid; grid-template-columns: 104px 1fr; gap: 12px; align-items: center; font-size: 0.85rem; color: #b9c8e4; }
+        .compare-track { height: 28px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden; }
+        .compare-fill { height: 100%; min-width: 84px; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding: 0 10px; font-weight: 800; font-size: 0.82rem; color: var(--navy); white-space: nowrap; transition: width .35s ease; font-variant-numeric: tabular-nums; }
+        .compare-fill.inv { background: #b9c8e4; }
+        .compare-fill.val { background: var(--cyan); }
+        .calc-out .muted b { color: var(--white); }
 
-        .hero-social-proof {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        /* ---------- SERVICES ---------- */
+        .services { background: var(--bg-soft); }
+        .svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .svc {
+            background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px;
+            display: flex; flex-direction: column; position: relative; transition: transform .25s, box-shadow .25s;
         }
-
-        .hero-social-proof i {
-            color: #ffc400;
+        .svc:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .svc.featured { border: 2px solid var(--cyan); }
+        .badge {
+            position: absolute; top: -13px; left: 28px; background: var(--cyan); color: var(--navy);
+            font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase;
+            padding: 5px 12px; border-radius: 50px;
         }
+        .svc-top { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+        .svc-icon { width: 48px; height: 48px; border-radius: 12px; background: #e6efff; color: var(--blue); display: grid; place-items: center; font-size: 1.2rem; flex: 0 0 auto; }
+        .svc.featured .svc-icon { background: var(--cyan-soft); color: #0087a3; }
+        .svc-phase { font-size: 0.74rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--grey); }
+        .svc h3 { font-size: 1.35rem; }
+        .svc-for { font-size: 0.95rem; color: var(--grey); margin-bottom: 18px; }
+        .svc-for strong { color: var(--ink); }
+        .svc ul { list-style: none; margin-bottom: 24px; flex-grow: 1; }
+        .svc li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; padding: 6px 0; color: var(--ink); }
+        .svc li i { color: var(--cyan); margin-top: 5px; }
+        .svc .btn { align-self: flex-start; }
+        .svc-link { color: var(--blue); font-weight: 700; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; min-height: 44px; }
+        .svc-link:hover { gap: 12px; }
 
-        /* --- REST OF THE STYLES REMAIN THE SAME --- */
-        .positioning { padding: 80px 4%; text-align: center; background-color: var(--white); }
-        .section-label { color: var(--blue-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; display: block; margin-bottom: 10px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--blue-dark); margin-bottom: 20px; }
-        .positioning p { font-size: 1.15rem; color: var(--text-grey); max-width: 760px; margin: 0 auto; }
+        /* ---------- FINDINGS ---------- */
+        .finds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .find { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); display: flex; flex-direction: column; }
+        .find-head { padding: 22px 24px; background: var(--bg-soft); border-bottom: 1px solid var(--line); }
+        .find-head .ind { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); }
+        .find-head h3 { font-size: 1.12rem; margin-top: 6px; }
+        .find-body { padding: 22px 24px; display: grid; gap: 14px; flex-grow: 1; }
+        .find-row { display: grid; grid-template-columns: 70px 1fr; gap: 12px; font-size: 0.93rem; color: var(--grey); }
+        .find-row b { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); padding-top: 3px; }
+        .find-result { margin: 0 24px 24px; padding: 12px 14px; border-radius: 10px; background: var(--green-soft); color: #064e33; font-weight: 600; font-size: 0.92rem; display: flex; gap: 10px; align-items: flex-start; }
+        .find-result i { color: var(--green); margin-top: 3px; }
+        .disclaimer { text-align: center; color: var(--grey); font-size: 0.85rem; margin-top: 22px; }
 
-        /* --- THE DISTINCTION SECTION --- */
-        .distinction-section { padding: 70px 4%; background-color: var(--blue-light); text-align: center; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-        .distinction-section h2 { font-size: 2.2rem; color: var(--blue-dark); margin-bottom: 15px; }
-        .distinction-section p.lead { color: var(--text-grey); max-width: 760px; margin: 0 auto 35px; font-size: 1.08rem; line-height: 1.8; }
-        .distinction-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; max-width: 960px; margin: 0 auto; }
-        .distinction-chip { background: var(--white); border: 1px solid #d8e3f2; border-radius: 50px; padding: 12px 22px; color: var(--blue-dark); font-weight: 700; font-size: 0.98rem; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .distinction-chip:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
-        .distinction-chip i { color: var(--blue-accent); }
-
-        .how-it-works { padding: 80px 4%; background-color: var(--blue-light); text-align: center; }
-        .steps-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 960px; margin: 50px auto 0; position: relative; }
-        .step-card { background: var(--white); padding: 36px 28px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; transition: transform 0.3s ease; border: 1px solid #e2e8f0; }
-        .step-card:hover { transform: translateY(-5px); }
-        .step-number { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--blue-primary); color: var(--white); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0, 82, 204, 0.3); }
-        .step-icon { font-size: 3rem; color: var(--blue-accent); margin: 20px 0; }
-        .step-card h3 { font-size: 1.5rem; color: var(--blue-dark); margin-bottom: 15px; }
-        .step-card p { color: var(--text-grey); font-size: 1rem; }
-
-        .before-after { padding: 80px 4%; background-color: var(--white); text-align: center; }
-        .ba-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; max-width: 980px; margin: 50px auto 0; }
-        .ba-card { border-radius: 12px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); position: relative; background: var(--white); }
-        .ba-label { position: absolute; top: 20px; left: 20px; background: var(--blue-dark); color: var(--white); padding: 8px 16px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; z-index: 10; }
-        .ba-card.after .ba-label { background: var(--blue-accent); color: var(--blue-dark); }
-        .ba-visual { width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; border-bottom: 4px solid var(--blue-dark); background: linear-gradient(135deg, #eef2f7 0%, #dbe4f0 100%); color: var(--blue-dark); }
-        .ba-card.after .ba-visual { border-bottom: 4px solid var(--blue-accent); background: linear-gradient(135deg, #e6fbff 0%, #d8f3fa 100%); color: #0087a3; }
-        .ba-content { padding: 30px; }
-        .ba-content h3 { font-size: 1.4rem; color: var(--blue-dark); margin-bottom: 10px; }
-        .ba-content p { color: var(--text-grey); }
-
-        .lead-magnet { background: linear-gradient(135deg, #091e42 0%, #003380 100%); padding: 70px 4%; color: var(--white); text-align: center; position: relative; z-index: 1; }
-        .lm-container { max-width: 800px; margin: 0 auto; }
-        .lm-container h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
-        .lm-container h2 span { color: var(--blue-accent); }
-        .lm-container p { font-size: 1.1rem; margin-bottom: 30px; color: #cbd5e1; }
-        .lm-form { display: flex; gap: 15px; justify-content: center; max-width: 700px; margin: 0 auto; }
-        .lm-form input { padding: 15px; border-radius: 5px; border: none; width: 100%; font-size: 1rem; outline: none; }
-        .lm-form button { background-color: var(--blue-accent); color: var(--blue-dark); border: none; padding: 15px 30px; font-size: 1rem; font-weight: 800; border-radius: 5px; cursor: pointer; white-space: nowrap; transition: background-color 0.3s; }
-        .lm-form button:hover { background-color: var(--white); }
-
-        .about-section { padding: 80px 4%; text-align: center; background-color: var(--blue-light); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-        .about-section h2 { font-size: 2.5rem; color: var(--blue-dark); margin-bottom: 20px; }
-        .about-section p { font-size: 1.1rem; color: var(--text-grey); max-width: 760px; margin: 0 auto; }
-
-        .packages { padding: 80px 4%; background-color: var(--white); }
-        .packages-header { text-align: center; margin-bottom: 60px; }
-        .packages-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; max-width: 1020px; margin: 0 auto; }
-        .offer-card { background-color: var(--white); border-radius: 8px; padding: 34px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 6px solid var(--blue-primary); border-left: 1px solid #f1f5f9; border-right: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; display: grid; grid-template-rows: subgrid; grid-row: span 5; align-content: start; transition: transform 0.3s ease; }
-        @supports not (grid-template-rows: subgrid) {
-            .offer-card { display: flex; flex-direction: column; }
+        /* ---------- FOUNDERS ---------- */
+        .founders { background: var(--white); }
+        #findings, #faq { background: var(--bg-soft); }
+        .founders-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+        .founders-photo { position: relative; }
+        .founders-photo img { border-radius: 20px; box-shadow: var(--shadow); aspect-ratio: 4 / 3.3; object-fit: cover; width: 100%; }
+        .founders-photo .stamp {
+            position: absolute; right: -14px; bottom: -18px; background: var(--white); border-radius: 14px; padding: 14px 18px;
+            box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; font-size: 0.88rem;
         }
-        .offer-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.1); }
-        .offer-card:nth-child(2) { border-top-color: #0747a6; }
-        .offer-card:nth-child(3) { border-top-color: #4c9aff; }
-        .offer-card:nth-child(4) { border-top-color: var(--blue-accent); }
-        .offer-tag { font-size: 0.9rem; color: var(--text-grey); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; }
-        .offer-title { font-size: 1.5rem; color: var(--blue-dark); font-weight: 800; margin-bottom: 15px; line-height: 1.3; }
-        .offer-time { display: inline-block; justify-self: start; background-color: #e6f0ff; color: var(--blue-primary); padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; }
-        .offer-best-for { background-color: #f8fafc; padding: 15px; border-left: 4px solid var(--blue-primary); font-size: 0.95rem; margin-bottom: 25px; }
-        .offer-list { list-style: none; flex-grow: 1; }
-        .offer-list li { margin-bottom: 12px; font-size: 0.95rem; color: var(--text-grey); display: flex; align-items: flex-start; gap: 10px; }
-        .offer-list li i { color: var(--blue-accent); margin-top: 4px; }
+        .stamp i { color: var(--blue); font-size: 1.3rem; }
+        .stamp strong { display: block; color: var(--navy); }
+        .founders-copy > p { color: var(--grey); font-size: 1.06rem; margin-bottom: 26px; }
+        .people { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .person { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+        .person h3 { font-size: 1.1rem; color: var(--blue); }
+        .person .role { font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+        .person p { font-size: 0.92rem; color: var(--grey); }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+        .stat { border-left: 3px solid var(--cyan); padding-left: 14px; }
+        .stat strong { display: block; font-size: 1.6rem; font-weight: 900; color: var(--navy); line-height: 1.2; }
+        .stat span { font-size: 0.85rem; color: var(--grey); }
 
-        .contact-section { padding: 80px 4%; background-color: var(--blue-light); }
-        .contact-header { text-align: center; margin-bottom: 40px; }
-        .contact-form-container { max-width: 700px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--blue-dark); }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 15px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--blue-primary); }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .btn-submit { background-color: var(--blue-primary); color: var(--white); border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 700; border-radius: 5px; cursor: pointer; width: 100%; transition: background-color 0.3s; }
-        .btn-submit:hover { background-color: var(--blue-dark); }
-
-        footer { background-color: var(--blue-dark); color: var(--white); padding: 60px 4% 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1020px; margin: 0 auto; }
-        .footer-col h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; }
-        .footer-col h3 i { color: var(--blue-accent); }
-        .footer-col p { color: #94a3b8; margin-bottom: 10px; }
-        .footer-col a { color: var(--blue-accent); text-decoration: none; font-weight: 600; display: block; margin-bottom: 8px; }
-        .footer-col a:hover { color: var(--white); }
-        .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.9rem; }
-
-
-        .founders-showcase {
-            max-width: 720px;
-            margin: 26px auto 32px;
-            background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
-            border: 1px solid #d9e3f0;
-            border-radius: 14px;
-            padding: 14px;
-            box-shadow: 0 12px 24px rgba(9, 30, 66, 0.08);
+        /* ---------- GUARANTEE ---------- */
+        .guarantee { padding: 0; }
+        .guarantee-card {
+            display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center;
+            background: var(--white); border: 2px dashed #b3d9e3; border-radius: 20px; padding: 34px 40px;
         }
+        .shield { width: 76px; height: 76px; border-radius: 50%; background: var(--cyan-soft); color: #0087a3; display: grid; place-items: center; font-size: 2rem; }
+        .guarantee-card h3 { font-size: 1.4rem; margin-bottom: 6px; }
+        .guarantee-card p { color: var(--grey); }
 
-        .founders-showcase img {
-            display: block;
-            width: 100%;
-            margin: 0 auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 22px rgba(9, 30, 66, 0.12);
+        /* ---------- FAQ ---------- */
+        .faq-list { max-width: 860px; margin: 0 auto; }
+        details { border-bottom: 1px solid var(--line); }
+        summary {
+            list-style: none; cursor: pointer; padding: 22px 4px; font-weight: 700; font-size: 1.08rem; color: var(--navy);
+            display: flex; justify-content: space-between; gap: 20px; align-items: center;
         }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--blue); transition: transform .25s; flex: 0 0 auto; }
+        details[open] summary::after { transform: rotate(45deg); }
+        summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
+        details p { color: var(--grey); padding: 0 4px 22px; max-width: 760px; }
 
-        .founders-showcase p {
-            text-align: center;
-            margin: 14px auto 0;
-            max-width: 470px;
-            font-size: 0.98rem;
-            color: var(--text-grey);
+        /* ---------- FINAL CTA + FORM ---------- */
+        .cta { background: linear-gradient(160deg, var(--navy) 0%, #0b3a8c 100%); color: var(--white); }
+        .cta-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; align-items: start; }
+        .cta h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3rem); }
+        .cta .lead { color: #c9d6ee; margin-bottom: 30px; }
+        .cta .eyebrow { color: var(--cyan); }
+        .cta-steps { list-style: none; counter-reset: s; margin-bottom: 34px; }
+        .cta-steps li { counter-increment: s; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; color: #dbe5f6; }
+        .cta-steps li::before {
+            content: counter(s); flex: 0 0 34px; height: 34px; border-radius: 50%; background: rgba(0,184,217,0.15);
+            color: var(--cyan); font-weight: 800; display: grid; place-items: center;
         }
-
-
-
-        .proof-strip { padding: 18px 4% 42px; background-color: var(--white); position: relative; z-index: 2; }
-        .proof-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: 1020px; margin: -8px auto 0; position: relative; z-index: 2; }
-        .proof-card { background: #f8fbff; border: 1px solid #d8e3f2; border-radius: 12px; padding: 24px; text-align: left; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
-        .proof-card h3 { font-size: 1.05rem; color: var(--blue-dark); margin-bottom: 10px; }
-        .proof-card p { color: var(--text-grey); font-size: 0.98rem; }
-
-        .easy-yes { padding: 80px 4%; background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%); }
-        .easy-yes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1100px; margin: 45px auto 0; }
-        .easy-card { background: var(--white); border: 1px solid #dce6f3; border-radius: 12px; padding: 28px; box-shadow: 0 10px 24px rgba(0,0,0,0.05); }
-        .easy-card h3 { font-size: 1.3rem; color: var(--blue-dark); margin-bottom: 14px; }
-        .easy-card p { color: var(--text-grey); margin-bottom: 14px; }
-        .easy-card ul { list-style: none; padding: 0; margin: 0; }
-        .easy-card li { color: var(--text-dark); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
-        .easy-card li i { color: var(--blue-accent); margin-top: 4px; }
-
-        .contact-trust-note { margin: 0 auto 18px; max-width: 700px; text-align: center; color: var(--text-grey); font-size: 0.98rem; }
-
-        /* --- FAQ SECTION --- */
-        .faq-section { padding: 80px 4%; background-color: var(--white); }
-        .faq-header { text-align: center; margin-bottom: 45px; }
-        .faq-header h2 { font-size: 2.5rem; color: var(--blue-dark); margin-bottom: 15px; }
-        .faq-header p { color: var(--text-grey); max-width: 680px; margin: 0 auto; }
-        .faq-grid { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-        .faq-item { background: #f8fbff; border: 1px solid #d8e3f2; border-radius: 10px; padding: 24px 28px; transition: box-shadow 0.2s ease; }
-        .faq-item:hover { box-shadow: 0 8px 18px rgba(0,0,0,0.05); }
-        .faq-item h3 { font-size: 1.1rem; color: var(--blue-dark); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 12px; }
-        .faq-item h3 i { color: var(--blue-accent); margin-top: 3px; }
-        .faq-item p { color: var(--text-grey); font-size: 1rem; line-height: 1.7; padding-left: 28px; }
-
-        .linkedin-section { padding: 80px 4%; background: linear-gradient(135deg, #091e42 0%, #003380 100%); color: var(--white); }
-        .linkedin-card { max-width: 980px; margin: 0 auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 40px; display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 30px; align-items: center; box-shadow: 0 16px 35px rgba(0,0,0,0.12); }
-        .linkedin-copy h2 { font-size: 2.2rem; margin-bottom: 14px; color: var(--white); }
-        .linkedin-copy p { color: #dbe7ff; font-size: 1.05rem; line-height: 1.8; margin-bottom: 14px; }
-        .linkedin-points { list-style: none; padding: 0; margin: 18px 0 0 0; }
-        .linkedin-points li { margin-bottom: 10px; color: #eaf2ff; display: flex; align-items: flex-start; gap: 10px; }
-        .linkedin-points li i { color: var(--blue-accent); margin-top: 4px; }
-        .linkedin-cta-wrap { text-align: center; }
-        .linkedin-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--blue-accent); color: var(--blue-dark); padding: 16px 26px; border-radius: 8px; text-decoration: none; font-weight: 800; box-shadow: 0 8px 22px rgba(0, 184, 217, 0.25); transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; }
-        .linkedin-cta:hover { transform: translateY(-3px); background: var(--white); box-shadow: 0 14px 28px rgba(0,0,0,0.18); }
-        .linkedin-side-note { margin-top: 14px; color: #c7d7ff; font-size: 0.95rem; }
-
-        /* --- FOUNDER CARDS (dedicated class for consistency) --- */
-        .founders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-bottom: 30px; }
-        .founder-card { background-color: #f8fafc; padding: 28px; border-radius: 10px; border: 1px solid #e2e8f0; display: grid; grid-template-rows: subgrid; grid-row: span 4; text-align: left; }
-        .founder-card * { text-align: left; }
-        @supports not (grid-template-rows: subgrid) {
-            .founder-card { display: flex; flex-direction: column; }
+        .cta-steps strong { color: var(--white); display: block; }
+        .magnet { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 24px; }
+        .magnet h3 { color: var(--white); font-size: 1.15rem; margin-bottom: 6px; }
+        .magnet p { color: #c9d6ee; font-size: 0.93rem; margin-bottom: 14px; }
+        .magnet form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .magnet input { padding: 13px 14px; border-radius: 8px; border: 0; font-size: 16px; font-family: inherit; min-height: 48px; }
+        .magnet button { grid-column: 1 / -1; }
+        .form-card { background: var(--white); color: var(--ink); border-radius: 20px; padding: 36px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+        .form-card h3 { font-size: 1.4rem; margin-bottom: 4px; }
+        .form-card > p { color: var(--grey); font-size: 0.93rem; margin-bottom: 22px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .fg { margin-bottom: 16px; }
+        .fg label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--navy); }
+        .fg input, .fg select, .fg textarea {
+            width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 8px;
+            font-size: 16px; font-family: inherit; min-height: 48px; background: var(--white); color: var(--ink);
+            transition: border-color .2s, box-shadow .2s;
         }
-        .founder-name { color: var(--blue-primary); font-size: 1.2rem; font-weight: 800; margin: 0 0 8px 0; }
-        .founder-title { color: var(--blue-dark); font-weight: 700; font-size: 0.98rem; margin: 0 0 14px 0; }
-        .founder-bio { color: var(--text-dark); font-size: 1rem; line-height: 1.75; margin: 0 0 18px 0; }
-        .founder-list { list-style: none; color: var(--text-grey); font-size: 0.95rem; padding: 0; margin: 0; }
-        .founder-list li { margin: 0 0 10px 0; display: flex; align-items: flex-start; }
-        .founder-list li:last-child { margin-bottom: 0; }
-        .founder-list li i { display: none; }
-        .founder-list li::before { content: "\2713"; color: var(--blue-accent); font-weight: 800; margin-right: 10px; flex-shrink: 0; }
+        .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,82,204,0.15); }
+        .fg textarea { min-height: 110px; resize: vertical; }
+        .form-card .btn { width: 100%; }
+        .form-note { text-align: center; font-size: 0.85rem; color: var(--grey); margin-top: 12px; }
 
-        /* --- MOBILE RESPONSIVE --- */
-        @media (max-width: 850px) {
+        /* ---------- FOOTER ---------- */
+        footer { background: #06152f; color: #94a3b8; padding: 64px 0 28px; }
+        .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 36px; }
+        .foot-brand img { height: 42px; width: auto; background: var(--white); padding: 6px 10px; border-radius: 8px; margin-bottom: 14px; }
+        footer h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 14px; }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 9px; font-size: 0.93rem; }
+        footer a { color: #c7d2e3; text-decoration: none; }
+        footer a:hover { color: var(--cyan); }
+        footer i { color: var(--cyan); width: 18px; margin-right: 6px; }
+        .foot-bottom { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 44px; padding-top: 22px; font-size: 0.85rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 1080px) {
             .nav-links { display: none; }
-            .nav-toggle { display: inline-flex; }
-            .mobile-nav { display: flex; }
-            .mobile-nav-backdrop.is-open { display: block; }
-            .hero { padding: 100px 5% 80px; min-height: auto; }
-            .hero h1 { font-size: 2.4rem; line-height: 1.15; }
-            .hero p { font-size: 1.05rem; }
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .hero-btn, .hero-btn-secondary { width: 100%; justify-content: center; min-height: 48px; }
-            .packages-grid, .steps-grid, .ba-grid, .proof-grid, .easy-yes-grid, .faq-grid { grid-template-columns: 1fr; max-width: 100%; }
-            .linkedin-card { grid-template-columns: 1fr; padding: 24px; }
-            .linkedin-copy h2 { font-size: 1.7rem; }
-            .lm-form { flex-direction: column; }
-            .contact-form-container { padding: 22px; }
-            .section-header h2, .packages-header h2, .faq-header h2 { font-size: 1.9rem; }
-            .distinction-grid { gap: 8px; }
-            .distinction-chip { padding: 8px 14px; font-size: 0.9rem; }
-            .ba-visual { height: 160px; font-size: 3.2rem; }
-            .btn-submit, .form-group input, .form-group select, .form-group textarea { font-size: 16px; min-height: 48px; }
-            .form-group textarea { min-height: 120px; }
+            .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+        }
+        @media (max-width: 1000px) {
+            .hero-grid, .score-grid, .founders-grid, .cta-grid, .calc-card { grid-template-columns: 1fr; }
+            .t-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+            .t-card.featured { grid-row: auto; padding: 30px; }
+            .t-card.featured blockquote { font-size: 1.08rem; }
+            .flow { grid-template-columns: 1fr; }
+            .flow-arrow { transform: rotate(90deg); padding: 2px 0; }
+            .lift-track { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+            .lift-track::before { display: none; }
+            .lift-step > p { min-height: 0; }
+            .finds-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+            .foot-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 860px) {
+            section { padding: 72px 0; }
+            .hero { padding: 64px 0 84px; }
+            .ways-grid, .svc-grid, .people { grid-template-columns: 1fr; }
+            .guarantee-card { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 30px 22px; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 16px; }
+            .hero-ctas .btn { width: 100%; }
+            .flowcard { padding: 16px; }
+            .fc-panel { padding: 12px 10px 12px; }
+            .fc-track li { font-size: 0.68rem; }
+            .fc-badge { font-size: 0.56rem; padding: 2px 6px; }
+            .fc-stats div { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .fc-stats strong { font-size: 1.35rem; }
+            .fc-result { font-size: 0.84rem; }
+            .lift-track { grid-template-columns: 1fr; }
+            .way, .svc, .calc-inputs, .calc-out, .form-card { padding: 24px; }
+            .form-row, .magnet form, .calc-split { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+            .stat strong { font-size: 1.25rem; }
+            .foot-grid { grid-template-columns: 1fr; }
+            .founders-photo .stamp { right: 10px; }
+            .quiz { padding: 22px; min-height: 0; }
+            .quiz-q { font-size: 1.2rem; }
+            .result-top { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+            .bd-row { grid-template-columns: 96px 1fr 40px; font-size: 0.85rem; }
+            .client-logos { gap: 20px 40px; }
+            .client { height: 60px; }
+            .client img { max-height: 52px; }
+            .client img.sunshine { max-height: 44px; }
         }
     </style>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-    <header class="nav-bar">
-        <a href="#" class="logo" aria-label="EPC home">
-            <i class="fa-solid fa-layer-group"></i> EPC
-        </a>
-        <nav class="nav-links">
-            <a href="#how-it-works">How It Works</a>
-            <a href="#about">Who We Are</a>
-            <a href="#packages">Services</a>
-            <a href="#faq">FAQ</a>
-            <a href="#audit" class="btn-contact-nav">Book a Free Chat</a>
-        </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-            <i class="fa-solid fa-bars" aria-hidden="true"></i>
-        </button>
+    <div class="topbar">Perth-based process consultants for owner-led service businesses · <a href="#contact">Book a free 20-min chat →</a></div>
+
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="#" class="logo" aria-label="EPC home"><img src="logo.png" alt="EPC — Elevate Process Consulting"></a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#approach">Approach</a>
+                <a href="#services">Services</a>
+                <a href="#score">Owner Score</a>
+                <a href="#calculator">ROI Calculator</a>
+                <a href="#testimonials">Clients</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="btn btn-primary">Book a Free Chat</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
     </header>
 
-    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-        <button class="nav-close" id="navClose" aria-label="Close menu">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
-        <a href="#how-it-works">How It Works</a>
+        <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <a href="#approach">Our Approach</a>
+        <a href="#lift">LIFT Method</a>
+        <a href="#services">Services</a>
+        <a href="#score">Owner Dependency Score</a>
+        <a href="#calculator">ROI Calculator</a>
+        <a href="#testimonials">Clients</a>
         <a href="#about">Who We Are</a>
-        <a href="#packages">Services</a>
         <a href="#faq">FAQ</a>
-        <a href="#audit" class="btn-contact-mobile">Book a Free Chat</a>
+        <a href="#contact" class="btn btn-primary">Book a Free Chat</a>
     </nav>
 
+    <main>
+
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge animate-up">
-                <i class="fa-solid fa-bolt" style="margin-right: 5px;"></i> Process Consulting for Service Businesses
-            </div>
-            <h1>We turn complexity<br><span class="text-gradient">into clarity.</span></h1>
-            <p class="animate-up delay-2">Running a business shouldn't mean carrying it all in your head. We help service business owners untangle the day-to-day — so the business runs smoothly, the team knows what to do, and you get your time back.</p>
-            
-            <div class="hero-buttons animate-up delay-3">
-                <a href="#audit" class="hero-btn">Book a Free 20-Min Chat <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#how-it-works" class="hero-btn-secondary">See How It Works</a>
-            </div>
-
-            <div class="hero-social-proof animate-up delay-4">
-                <div class="stars">
-                    <i class="fa-solid fa-check-circle"></i>
+        <div class="wrap hero-grid">
+            <div>
+                <span class="pill"><i class="fa-solid fa-chart-simple"></i> Data-led process consulting</span>
+                <h1>Stop guessing where your business <span class="accent">leaks time and money.</span></h1>
+                <p class="sub">We map how work really moves through your business — using your own data — then design and build the fix with your team. Automation where it earns its keep. No off-the-shelf playbook. No software to sell you.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-cyan">Book a Free 20-Min Chat <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#approach" class="btn btn-ghost-dark">See how we're different</a>
                 </div>
-                <span>Low-risk first step • Clear scope • Straight answers</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="positioning" class="positioning">
-        <div class="section-header">
-            <span class="section-label">The Problem We Fix</span>
-            <h2>Your business works — because you never stop working.</h2>
-        </div>
-        <p>The client details live in your head. The processes only run smoothly when you're watching. The team is good, but everything still comes back to you. That's not a badly run business — it's a growing one that never got the systems to match. That's what we fix.</p>
-    </section>
-
-    <section id="distinction" class="distinction-section">
-        <h2>We're process consultants — not an AI company, not a software vendor.</h2>
-        <p class="lead">We're Archie and Vitória. We look at how your business actually runs, find what's slowing it down, and fix it with you. Data and automation are tools we sometimes use. They're never the product. You're working with people, not buying a platform.</p>
-        <div class="distinction-grid">
-            <div class="distinction-chip"><i class="fa-solid fa-people-group"></i> Real people, not a chatbot</div>
-            <div class="distinction-chip"><i class="fa-solid fa-toolbox"></i> Tools chosen for you, not sold to you</div>
-            <div class="distinction-chip"><i class="fa-solid fa-handshake"></i> Someone you can actually ring</div>
-        </div>
-    </section>
-
-    <section class="diagnostic-checklist-section" style="padding: 40px 20px 0 20px; background-color: var(--white);">
-        <div style="max-width: 820px; margin: 0 auto 20px auto; background-color: var(--blue-light); padding: 30px 34px; border-radius: 8px; border-left: 5px solid var(--blue-accent); text-align: left;">
-            <h3 style="color: var(--blue-dark); margin-bottom: 15px; font-size: 1.4rem;">Is this you?</h3>
-            <p style="color: var(--text-grey); margin-bottom: 20px; font-size: 1rem;">If three or more of these ring true, we should talk.</p>
-            <ul style="list-style: none; color: var(--text-dark);">
-                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>You're the one everyone comes to when something goes wrong — even on your day off.</li>
-                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>Most of how the business runs lives in your head, not written down anywhere.</li>
-                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>Training someone new takes months, because there's no system for them to follow.</li>
-                <li style="margin-bottom: 12px; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>Busy periods feel like bracing for impact instead of good news.</li>
-                <li style="margin-bottom: 0; display: flex; align-items: flex-start;"><i class="fa-regular fa-square-check" style="color: var(--blue-accent); margin-top: 4px; margin-right: 12px; font-size: 1.2rem;"></i>You'd love a real holiday — but the business wobbles the moment you step away.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="how-it-works" class="how-it-works">
-        <div class="section-header">
-            <span class="section-label">How We Work</span>
-            <h2>LIFT — four simple steps from chaos to clarity</h2>
-            <p style="color: var(--text-grey); max-width: 820px; margin: 10px auto 0 auto;">Everything we do follows the same method. It's simple on purpose.</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">L</div>
-                <i class="fa-solid fa-magnifying-glass step-icon"></i>
-                <h3>Locate</h3>
-                <p>We find what's actually slowing you down — where work gets stuck, dropped, or depends on you.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">I</div>
-                <i class="fa-solid fa-lightbulb step-icon"></i>
-                <h3>Innovate</h3>
-                <p>We design the fix — a simpler way of working that suits your team, not a textbook.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">F</div>
-                <i class="fa-solid fa-gears step-icon"></i>
-                <h3>Fix</h3>
-                <p>We put it in place with you and train your team, so it works in real life, not just on paper.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">T</div>
-                <i class="fa-solid fa-chart-line step-icon"></i>
-                <h3>Track</h3>
-                <p>We check what's changed and keep it on course, so the improvement lasts.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="before-after">
-        <div class="section-header">
-            <span class="section-label">What That Means For You</span>
-            <h2>Same business. Same team. A lot less on your shoulders.</h2>
-            <p style="color: var(--text-grey); margin-top: 10px;">This is the value, in plain terms:</p>
-        </div>
-        <div class="ba-grid">
-            
-            <div class="ba-card before">
-                <span class="ba-label">Before</span>
-                <div class="ba-visual" aria-hidden="true"><i class="fa-solid fa-shuffle"></i></div>
-                <div class="ba-content">
-                    <h3>Everything runs through you</h3>
-                    <p>Work tracked in your head and your inbox. Every question comes to you. Growth just means more chaos and later nights.</p>
+                <div class="hero-trust">
+                    <span><i class="fa-solid fa-location-dot"></i> Perth, WA</span>
+                    <span><i class="fa-solid fa-scale-balanced"></i> Tool-agnostic</span>
+                    <span><i class="fa-solid fa-file-signature"></i> Fixed scope before we start</span>
                 </div>
             </div>
 
-            <div class="ba-card after">
-                <span class="ba-label">After</span>
-                <div class="ba-visual" aria-hidden="true"><i class="fa-solid fa-route"></i></div>
-                <div class="ba-content">
-                    <h3>The business runs itself day to day</h3>
-                    <p>Clear steps everyone follows. Your team handles things without asking you. Fewer dropped balls, faster invoicing, more time — and more revenue as a result of all of it.</p>
+            <div class="flowcard reveal" role="img" aria-label="Typical example: enquiry to cash takes 23 days with 3 steps waiting on the owner; after EPC it takes 12 days with none.">
+                <div class="fc-head">
+                    <strong><i class="fa-solid fa-route"></i> Enquiry to cash</strong>
+                    <span class="fc-tag">Typical example</span>
+                </div>
+
+                <div class="fc-panel before">
+                    <div class="fc-label">Today</div>
+                    <ol class="fc-track">
+                        <li><span class="fc-dot"></span>Enquiry</li>
+                        <li class="wait"><span class="fc-badge">You</span><span class="fc-dot"></span>Quote</li>
+                        <li class="wait"><span class="fc-badge">You</span><span class="fc-dot"></span>Job</li>
+                        <li class="wait"><span class="fc-badge">You</span><span class="fc-dot"></span>Invoice</li>
+                        <li><span class="fc-dot"></span>Paid</li>
+                    </ol>
+                    <div class="fc-stats">
+                        <div><strong>23</strong><span>days from enquiry to cash</span></div>
+                        <div><strong>3</strong><span>steps waiting on you</span></div>
+                    </div>
+                </div>
+
+                <div class="fc-divider" aria-hidden="true"><span><i class="fa-solid fa-arrow-down"></i></span></div>
+
+                <div class="fc-panel after">
+                    <div class="fc-label">After EPC</div>
+                    <ol class="fc-track">
+                        <li><span class="fc-dot"></span>Enquiry</li>
+                        <li><span class="fc-badge">Rules</span><span class="fc-dot"></span>Quote</li>
+                        <li><span class="fc-badge">Team</span><span class="fc-dot"></span>Job</li>
+                        <li><span class="fc-badge">Auto</span><span class="fc-dot"></span>Invoice</li>
+                        <li><span class="fc-dot"></span>Paid</li>
+                    </ol>
+                    <div class="fc-stats">
+                        <div><strong>12</strong><span>days from enquiry to cash</span></div>
+                        <div><strong>0</strong><span>steps waiting on you</span></div>
+                    </div>
+                </div>
+
+                <div class="fc-result"><i class="fa-solid fa-bolt"></i><span><b>11 days faster to cash</b> — and you're out of the loop.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT LOGOS -->
+    <section class="clients" aria-label="Our clients">
+        <div class="wrap">
+            <p class="clients-label">Trusted by owner-led businesses across Perth</p>
+            <div class="client-logos">
+                <div class="client"><img src="clients/sunshine-advisors.jpg" alt="Sunshine Advisors" class="sunshine"></div>
+                <div class="client"><img src="clients/cleanscape-collective.png" alt="CleanScape Collective"></div>
+                <div class="client"><span class="elae-mark" role="img" aria-label="ELAÉ Creative Studio">ELA<span>É</span><small>Creative Studio</small></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS STRIP -->
+    <div class="tools">
+        <div class="wrap tools-inner">
+            <span class="tools-label">We work with what you already run:</span>
+            <div class="tool-list">
+                <span><i class="fa-brands fa-microsoft"></i> Microsoft 365</span>
+                <span><i class="fa-solid fa-table"></i> Excel</span>
+                <span><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+                <span><i class="fa-solid fa-calculator"></i> Xero &amp; MYOB</span>
+                <span><i class="fa-brands fa-google"></i> Google Workspace</span>
+                <span><i class="fa-solid fa-diagram-project"></i> Power Automate &amp; Zapier</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section id="problem" class="problem">
+        <div class="wrap narrow center problem-copy reveal">
+            <span class="eyebrow">The real problem</span>
+            <h2>Your business works — <span class="mark">because you never stop working.</span></h2>
+            <p>The client details live in your head. The processes only run smoothly when you're watching. The team is good, but everything still comes back to you.</p>
+            <p>That's not a badly run business. <strong>It's a growing one that never got the systems to match.</strong> Most owners can feel the drag — but can't put a number on where it's coming from.</p>
+            <p>That's where we start: not with a template, but with <strong>evidence from your own business</strong>.</p>
+            <a href="#score" class="btn btn-ghost">Check your Owner Dependency Score <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- OWNER DEPENDENCY SCORE -->
+    <section id="score">
+        <div class="wrap score-grid">
+            <div class="reveal">
+                <span class="eyebrow">Free assessment</span>
+                <h2>What's your <span class="mark">Owner Dependency Score?</span></h2>
+                <p class="lead">8 quick questions. You'll get a score from 0 to 100 showing how much your business relies on you — and which area to fix first.</p>
+                <ul class="pillars">
+                    <li><i class="fa-solid fa-hourglass-half"></i><span><strong>Owner time</strong>How much of your week the business swallows.</span></li>
+                    <li><i class="fa-solid fa-diagram-project"></i><span><strong>Process</strong>Whether "how we do it" lives on paper or in your head.</span></li>
+                    <li><i class="fa-solid fa-people-group"></i><span><strong>People</strong>Whether the team can decide and deliver without you.</span></li>
+                    <li><i class="fa-solid fa-database"></i><span><strong>Data &amp; systems</strong>Whether you can see what's happening without asking.</span></li>
+                </ul>
+                <div class="score-meta">
+                    <span><i class="fa-regular fa-clock"></i>About 1 minute</span>
+                    <span><i class="fa-solid fa-bolt"></i>Instant result</span>
+                    <span><i class="fa-solid fa-lock"></i>No email needed</span>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section class="proof-strip">
-        <div class="proof-grid">
-            <div class="proof-card">
-                <h3>Real operational experience — not textbook theory</h3>
-                <p>A decade between us in projects, site delivery, and operations. We've been in the weeds with owners and their teams. We know where the pain actually sits.</p>
-            </div>
-            <div class="proof-card">
-                <h3>Plain English. No corporate fluff.</h3>
-                <p>You won't get a SWOT analysis or a 60-slide deck. You'll get a short list of what's costing you, what to fix first, and how to do it.</p>
-            </div>
-            <div class="proof-card">
-                <h3>Low-risk first step</h3>
-                <p>Our Health Check is built to be an easy yes. Clear scope. Clear deliverables. If it's not the right fit, we'll tell you — no hard sell.</p>
+            <div class="quiz reveal" id="quiz">
+                <div class="quiz-intro">
+                    <div class="quiz-intro-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>How much does your business depend on you?</h3>
+                    <p>Pick the answer closest to a normal week. Be honest — nobody's watching.</p>
+                    <button type="button" class="btn btn-primary" data-act="start">Start the assessment <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="lead-magnet">
-        <div class="lm-container">
-            <h2><span>Not ready to book a chat?</span> Grab our free Business Bottleneck Cheatsheet.</h2>
-            <p>A short plain-English breakdown of the 7 spots where time, money, and consistency quietly slip through the cracks in growing businesses. No waffle. Takes 5 minutes to read.</p>
-            
-            <form action="https://formspree.io/f/mdawdddj" method="POST" class="lm-form">
-                <input type="text" name="firstName" placeholder="First Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Send Me The Cheatsheet <i class="fa-solid fa-download" style="margin-left: 5px;"></i></button>
-            </form>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <span class="section-label">Who You'd Be Working With</span>
-        <h2>Two operators who've spent a decade sorting out operational chaos</h2>
-        <p style="margin-bottom: 50px;">EPC is Archie and Vitória. We're not career consultants. We've come up through projects, delivery, and operations — which means we know what gets said on the ground vs what gets said in the boardroom. We help owner-led businesses run as tight as the work they actually do for their clients.</p>
-
-        <div class="founders-showcase">
-            <img src="founders.jpg" alt="Archie Shim and Vitória Silveira, co-founders of Elevate Process Consulting">
-            <p>Archie &amp; Vitória — the two people you'll actually be working with.</p>
-        </div>
-
-        <div style="text-align: left; max-width: 900px; margin: 0 auto; background-color: var(--white); padding: 40px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-            <h3 style="color: var(--blue-dark); font-size: 1.8rem; margin-bottom: 15px;">Why we're a good fit</h3>
-            <p style="color: var(--text-grey); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8;">Operational mess rarely comes from one thing. It sits between people, process, communication, and follow-through. We don't just point at what's broken — we help you fix it with stuff your team will actually use on a Monday morning. No theory. No paralysis. Just a clearer way to run the business.</p>
-
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <h4 class="founder-name">Archie Shim</h4>
-                    <p class="founder-title">Co-Founder — Project Delivery &amp; Operations</p>
-                    <p class="founder-bio">Archie's spent a decade running projects and sorting out operations across construction, industrial, and manufacturing. He's good at the thing most business owners wish they had more time for — turning moving parts into a clear plan and holding the pieces together when things get busy.</p>
-                    <ul class="founder-list">
-                        <li><i class="fa-solid fa-check"></i>Turning messy work into clear, running plans</li>
-                        <li><i class="fa-solid fa-check"></i>Getting timelines, teams, and stakeholders on the same page</li>
-                        <li><i class="fa-solid fa-check"></i>Helping owners move from reactive to structured</li>
+    <!-- TWO WAYS -->
+    <section id="approach" class="ways">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">Why EPC is different</span>
+                <h2>Two ways to fix how a business runs</h2>
+                <p class="lead">There's no shortage of programs that hand you a methodology and a stack of templates. They work for some owners. We do it the other way around.</p>
+            </div>
+            <div class="ways-grid">
+                <div class="way generic reveal">
+                    <div class="way-label">The template way</div>
+                    <h3>Make your business fit the system</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-xmark"></i><span><strong>Starts with a framework</strong>A pre-built method applied to every business the same way.</span></li>
+                        <li><i class="fa-solid fa-xmark"></i><span><strong>You do the heavy lifting</strong>Courses and templates — implementation is on you and your team.</span></li>
+                        <li><i class="fa-solid fa-xmark"></i><span><strong>Priorities based on what "usually" works</strong>Fix everything, in the order the program says.</span></li>
+                        <li><i class="fa-solid fa-xmark"></i><span><strong>Often software-first</strong>A platform or subscription is part of the package.</span></li>
                     </ul>
                 </div>
-
-                <div class="founder-card">
-                    <h4 class="founder-name">Vitória Silveira</h4>
-                    <p class="founder-title">Co-Founder — Process Improvement &amp; Strategy</p>
-                    <p class="founder-bio">Vitória's spent a decade fixing the day-to-day systems that keep businesses running. She's the one who untangles the enquiry-to-invoice mess, tightens up coordination across a team, and builds structures simple enough that people actually stick with them.</p>
-                    <ul class="founder-list">
-                        <li><i class="fa-solid fa-check"></i>Mapping workflows and spotting where work stalls</li>
-                        <li><i class="fa-solid fa-check"></i>Tightening up handovers across the team</li>
-                        <li><i class="fa-solid fa-check"></i>Building simple systems that teams actually use</li>
+                <div class="way epc reveal">
+                    <div class="way-label">The EPC way</div>
+                    <h3>Build the system around your business</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span><strong>Starts with your data</strong>Job records, CRM exports, timesheets, invoices — what actually happens.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>We build it with you</strong>We map, design and implement alongside your team, then train them.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>Priorities ranked by evidence</strong>Fix what costs you the most first. Leave what's working alone.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>Tool-agnostic, always</strong>We use what you already have. No kickbacks, no platform to sell.</span></li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div style="background: linear-gradient(135deg, #f4f7fa 0%, #eaf2ff 100%); padding: 24px 28px; border-radius: 10px; border-left: 5px solid var(--blue-accent);">
-                <h3 style="color: var(--blue-dark); font-size: 1.35rem; margin-bottom: 12px;">Why businesses pick EPC</h3>
-                <p style="color: var(--text-grey); font-size: 1.02rem; line-height: 1.8; margin-bottom: 0;">We combine delivery discipline with practical process thinking — and we speak like humans. If you're after a consultant who'll hand you a 60-page strategy document and disappear, that's not us. If you want someone who'll help you actually run the business better, you're in the right spot.</p>
+    <!-- DATA > PROCESS > AUTOMATION -->
+    <section id="how">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">Our principle</span>
+                <h2>Real data. Real processes. <span class="mark">Right automation.</span></h2>
+                <p class="lead">Automation is a tool, not the product. We only automate a process once the data shows it's worth it — and once the process itself is right.</p>
+            </div>
+            <div class="flow">
+                <div class="flow-card reveal">
+                    <div class="flow-icon"><i class="fa-solid fa-database"></i></div>
+                    <span class="flow-step">Step 1</span>
+                    <h3>Real data</h3>
+                    <p>We pull what your business already records and measure where time, rework and delay actually sit.</p>
+                    <div class="examples"><span>CRM exports</span><span>Job data</span><span>Timesheets</span><span>Invoices</span></div>
+                </div>
+                <div class="flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="flow-card reveal">
+                    <div class="flow-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <span class="flow-step">Step 2</span>
+                    <h3>Real processes</h3>
+                    <p>We map how work truly flows — not how the manual says it does — and redesign it with the people who do it.</p>
+                    <div class="examples"><span>Process maps</span><span>Handovers</span><span>Ownership</span><span>SOPs</span></div>
+                </div>
+                <div class="flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="flow-card reveal">
+                    <div class="flow-icon"><i class="fa-solid fa-gears"></i></div>
+                    <span class="flow-step">Step 3</span>
+                    <h3>Right automation</h3>
+                    <p>Then we automate the repetitive parts and build reporting you can trust — sized to your business, not a demo.</p>
+                    <div class="examples"><span>Workflows</span><span>Dashboards</span><span>Reminders</span><span>AI assist</span></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="packages" class="packages">
-        <div class="packages-header">
-            <span class="section-label">Our Services</span>
-            <h2>Four ways we help your business run properly</h2>
-            <p style="color: var(--text-grey); max-width: 860px; margin: 12px auto 0;">Start with the <strong>Business Health Check</strong>. It's the easiest, lowest-risk way to get clarity before you commit to anything bigger. Most clients start there, then pick the next service based on what they find.</p>
-        </div>
-
-        <div class="packages-grid">
-            <div class="offer-card" style="position: relative; border-top-color: var(--blue-accent);">
-                <div style="position: absolute; top: -15px; right: 20px; background: var(--blue-accent); color: var(--blue-dark); padding: 5px 15px; border-radius: 20px; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0, 184, 217, 0.3);">
-                    Start Here
-                </div>
-
-                <div class="offer-tag">Flagship — Low-Risk Entry</div>
-                <h3 class="offer-title">Business Health Check</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> Scoped around your business size and complexity</div>
-                <div class="offer-best-for">
-                    <strong>Best for:</strong> Owners who know something's off — bottlenecks, onboarding chaos, a team that can't run without you — but can't pinpoint exactly what's costing the most.
-                </div>
-                <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i>Full walk-through of your client journey, from first enquiry to ongoing service</li>
-                    <li><i class="fa-solid fa-check"></i>Where work stalls, gets double-handled, or slips through the cracks</li>
-                    <li><i class="fa-solid fa-check"></i>Gap check across people, process, and the systems you use</li>
-                    <li><i class="fa-solid fa-check"></i>Clear view of who owns what — and where the handover pain is</li>
-                    <li><i class="fa-solid fa-check"></i>Quick wins and a ranked list of bigger fixes</li>
-                    <li><i class="fa-solid fa-check"></i>Review session so you and your team are both clear on next steps</li>
-                </ul>
+    <!-- LIFT -->
+    <section id="lift" class="lift on-dark">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">The LIFT method</span>
+                <h2>Four steps from <span class="mark">chaos to clarity</span></h2>
+                <p class="lead">Every engagement follows the same simple method — and every step ends with something concrete in your hands.</p>
             </div>
-
-            <div class="offer-card">
-                <div class="offer-tag">Core Application — Locate &amp; Innovate</div>
-                <h3 class="offer-title">Process &amp; Operations Consulting</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> Scoped around what's actually breaking</div>
-                <div class="offer-best-for">
-                    <strong>Best for:</strong> Businesses where onboarding, handoffs, or day-to-day workflow depend too much on one person — usually you.
+            <div class="lift-track">
+                <div class="lift-step reveal">
+                    <div class="lift-letter">L</div>
+                    <h3>Locate</h3>
+                    <p>We find what's actually slowing you down — using your data and time with your team.</p>
+                    <div class="lift-out"><b>You get</b>A baseline of where time and money leak, ranked by cost.</div>
                 </div>
-                <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i>Mapping how a client actually moves through your business, not how it's meant to</li>
-                    <li><i class="fa-solid fa-check"></i>Finding where work stalls, gets redone, or only one person knows how to handle</li>
-                    <li><i class="fa-solid fa-check"></i>Redesigning the workflow so it holds up without you hovering over it</li>
-                    <li><i class="fa-solid fa-check"></i>Clear ownership at every handover point</li>
-                    <li><i class="fa-solid fa-check"></i>Practical, plain-English fixes your team will actually use</li>
-                    <li><i class="fa-solid fa-check"></i>Support putting it in place — not just a report and a handshake</li>
-                </ul>
-            </div>
-
-            <div class="offer-card">
-                <div class="offer-tag">Applied to Data &amp; Admin — Fix</div>
-                <h3 class="offer-title">Systems, Data &amp; Automation</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> Scoped around your data, tools, and admin load</div>
-                <div class="offer-best-for">
-                    <strong>Best for:</strong> Businesses sitting on plenty of client and operational data but making calls on gut feel, or repeating manual admin a system could handle instead.
+                <div class="lift-step reveal">
+                    <div class="lift-letter">I</div>
+                    <h3>Innovate</h3>
+                    <p>We design a simpler way of working that suits your team — not a textbook.</p>
+                    <div class="lift-out"><b>You get</b>The future-state process map and a clear plan to get there.</div>
                 </div>
-                <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i>Reviewing your CRM or practice management setup and how data actually flows through it</li>
-                    <li><i class="fa-solid fa-check"></i>Spotting manual, repetitive admin worth automating — and what's not worth it yet</li>
-                    <li><i class="fa-solid fa-check"></i>Reporting that gives you a real read on capacity, workload, and bottlenecks</li>
-                    <li><i class="fa-solid fa-check"></i>Automation where it earns its keep, never a platform for its own sake</li>
-                    <li><i class="fa-solid fa-check"></i>Tools: Excel, Power BI, whatever system you already run on, AI where it genuinely saves time</li>
-                    <li><i class="fa-solid fa-check"></i>Tool-agnostic — no kickbacks, no pushing you onto software we don't need to</li>
-                </ul>
-            </div>
-
-            <div class="offer-card">
-                <div class="offer-tag">Applied to Rollouts — Track</div>
-                <h3 class="offer-title">Program &amp; Project Management</h3>
-                <div class="offer-time"><i class="fa-regular fa-clock"></i> Scoped around the change you're rolling out</div>
-                <div class="offer-best-for">
-                    <strong>Best for:</strong> Businesses rolling out a specific change — new software, a merger, a new service line — who need someone to actually run it, not just recommend it.
+                <div class="lift-step reveal">
+                    <div class="lift-letter">F</div>
+                    <h3>Fix</h3>
+                    <p>We implement it with you — process, systems and automation — and train the team.</p>
+                    <div class="lift-out"><b>You get</b>Working workflows, documented SOPs and a team that owns them.</div>
                 </div>
-                <ul class="offer-list">
-                    <li><i class="fa-solid fa-check"></i>Defined scope, budget, and timeline before anything starts</li>
-                    <li><i class="fa-solid fa-check"></i>One point of accountability for the whole rollout</li>
-                    <li><i class="fa-solid fa-check"></i>Regular check-ins so nothing quietly stalls</li>
-                    <li><i class="fa-solid fa-check"></i>Handover and training so it sticks after we're gone</li>
-                    <li><i class="fa-solid fa-check"></i>Post-rollout review to confirm it's actually working</li>
-                    <li><i class="fa-solid fa-check"></i>No surprise invoices — you know the cost before you commit</li>
-                </ul>
+                <div class="lift-step reveal">
+                    <div class="lift-letter">T</div>
+                    <h3>Track</h3>
+                    <p>We measure what changed against the baseline and keep it on course.</p>
+                    <div class="lift-out"><b>You get</b>Before-and-after numbers and a dashboard to keep score.</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="easy-yes">
-        <div class="section-header" style="text-align: center;">
-            <span class="section-label">Why It's An Easy Yes</span>
-            <h2>Low risk. Clear scope. Nothing vague.</h2>
-            <p style="color: var(--text-grey); max-width: 860px; margin: 10px auto 0;">We've built the first step to be the easiest decision you make this quarter. You know what you're getting, what we're doing, and what you walk away with.</p>
-        </div>
-        <div class="easy-yes-grid">
-            <div class="easy-card">
-                <h3>What you walk away with</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i>A clear picture of how your business actually runs — not how you hope it does</li>
-                    <li><i class="fa-solid fa-check"></i>A list of where time, money, and margin are leaking</li>
-                    <li><i class="fa-solid fa-check"></i>A ranked action plan so the next move is obvious</li>
-                </ul>
-            </div>
-            <div class="easy-card">
-                <h3>What we throw in</h3>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i>Quick-win list — the easiest stuff to fix this month</li>
-                    <li><i class="fa-solid fa-check"></i>Ownership map — so you can see where the handover gaps are</li>
-                    <li><i class="fa-solid fa-check"></i>Review session with you and your right-hand person, not just you</li>
-                </ul>
-            </div>
-            <div class="easy-card">
-                <h3>Our Straight-Up Guarantee</h3>
-                <p>Show up to the sessions, give us the info we ask for on time, and make the right people available — and we'll deliver the agreed outputs within the agreed timeframe.</p>
-                <p style="margin-bottom: 0;">If we don't, we keep working at no extra cost until it's done. Simple.</p>
-            </div>
-        </div>
-    </section>
+    <!-- CALCULATOR -->
+    <section id="calculator">
+        <div class="wrap">
+            <div class="calc-card reveal">
+                <div class="calc-inputs">
+                    <span class="eyebrow">ROI calculator</span>
+                    <h2>What's fixing it actually worth?</h2>
+                    <p>Move the sliders to match your business. It's a rough estimate, but most owners are surprised by the number.</p>
 
-    <section id="faq" class="faq-section">
-        <div class="faq-header">
-            <span class="section-label">Straight Answers</span>
-            <h2>FAQs — The stuff owners actually ask</h2>
-            <p>Before you book a chat, here's what most owners want to know up front.</p>
-        </div>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> I'm probably too small for this, aren't I?</h3>
-                <p>Probably not. If you've got a handful of people relying on you to keep things running, there's already enough moving parts to untangle. Small doesn't mean simple — smaller businesses often lose the most, proportionally, to messy processes, because one dropped ball is a bigger deal.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> How much of my time is this going to eat?</h3>
-                <p>A few structured sessions, not weeks of workshops. We work around your schedule. We're not here to slow your business down; we're here to tighten it up.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> Do I have to stop working while you do this?</h3>
-                <p>Nope. The business keeps running. We work in parallel with what's already happening — no downing tools, no "transformation projects" that take six months.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> What if my numbers aren't all tidy?</h3>
-                <p>Join the club — that's most of the businesses we see. We can work with what you've got. If the numbers are messy, that's usually one of the first things we help you tidy up.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> Are you going to try to sell me software?</h3>
-                <p>No. We're tool-agnostic. If your current system works, we'll make it work harder. If it doesn't, we'll help you pick one that fits — but we don't take kickbacks from software vendors, and we've got no reason to push you onto anything specific.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> Is this really built for my industry?</h3>
-                <p>We've worked across construction, industrial, and operations for a decade, and we're now bringing that same approach to professional and financial services firms too. The underlying workflow mess looks pretty similar wherever it shows up — the specific fixes get tailored to how you actually run your business.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> What does it cost?</h3>
-                <p>Depends on scope — team size, workload, and what you want sorted. We scope and price every engagement upfront, so you know exactly what you're signing up for before you commit. No surprise invoices. That's a promise.</p>
-            </div>
-            <div class="faq-item">
-                <h3><i class="fa-solid fa-circle-question"></i> What if I book a chat and it's not the right fit?</h3>
-                <p>Then we'll say so. If we're not the right people for your situation, we'll tell you — and where we can, we'll point you at someone who might be. No hard sell, no pressure. The 20-minute chat costs you nothing except a coffee's worth of time.</p>
+                    <fieldset class="calc-group">
+                        <legend><i class="fa-solid fa-users"></i> Your team</legend>
+                        <div class="field">
+                            <div class="field-top"><label for="people">People doing repetitive admin</label><output id="peopleOut" for="people">4</output></div>
+                            <input type="range" id="people" min="1" max="30" value="4">
+                        </div>
+                        <div class="field">
+                            <div class="field-top"><label for="hours">Hours each per week re-keying, chasing &amp; doing manual reports</label><output id="hoursOut" for="hours">6 hrs</output></div>
+                            <input type="range" id="hours" min="1" max="20" value="6">
+                        </div>
+                        <div class="field">
+                            <div class="field-top"><label for="rate">Average cost per hour (wage + on-costs)</label><output id="rateOut" for="rate">$55</output></div>
+                            <input type="range" id="rate" min="30" max="150" step="5" value="55">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="calc-group">
+                        <legend><i class="fa-solid fa-user-tie"></i> You, the owner</legend>
+                        <div class="field">
+                            <div class="field-top"><label for="ownerHours">Hours a week you spend on work someone else could do</label><output id="ownerHoursOut" for="ownerHours">15 hrs</output></div>
+                            <input type="range" id="ownerHours" min="0" max="40" value="15">
+                        </div>
+                        <div class="field">
+                            <div class="field-top"><label for="ownerRate">What an hour of your time is worth on growth work</label><output id="ownerRateOut" for="ownerRate">$120</output></div>
+                            <input type="range" id="ownerRate" min="50" max="300" step="10" value="120">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="calc-group">
+                        <legend><i class="fa-solid fa-sliders"></i> The fix</legend>
+                        <div class="field">
+                            <div class="field-top"><label for="saving">Realistic improvement</label><output id="savingOut" for="saving">30%</output></div>
+                            <input type="range" id="saving" min="10" max="60" step="5" value="30">
+                        </div>
+                        <div class="field">
+                            <div class="field-top"><label for="invest">Try an investment amount</label><output id="investOut" for="invest">$10,000</output></div>
+                            <input type="range" id="invest" min="2500" max="50000" step="500" value="10000">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="calc-out">
+                    <span class="label">Estimated year-one value</span>
+                    <div class="big-num" id="yearValue" aria-live="polite">$44,928</div>
+                    <span class="muted">from fixing work that currently costs you <b id="annualCost">$149,760</b> a year</span>
+                    <div class="compare" aria-hidden="true">
+                        <div class="compare-row"><span>Investment</span><div class="compare-track"><div class="compare-fill inv" id="barInv" style="width: 22%">$10,000</div></div></div>
+                        <div class="compare-row"><span>Year-one value</span><div class="compare-track"><div class="compare-fill val" id="barVal" style="width: 100%">$44,928</div></div></div>
+                    </div>
+                    <div class="calc-split">
+                        <div><strong id="payback">2.7 mo</strong><span>payback period</span></div>
+                        <div><strong id="roi">349%</strong><span>first-year ROI</span></div>
+                        <div><strong id="recoverHours">562 hrs</strong><span>hours back per year</span></div>
+                        <div><strong id="ownerHoursBack">216 hrs</strong><span>of those are yours</span></div>
+                    </div>
+                    <a href="#contact" class="btn btn-cyan">Find my real number <i class="fa-solid fa-arrow-right"></i></a>
+                    <p class="calc-note">Estimate only, based on 48 working weeks. Every engagement is scoped and priced upfront. A Health Check measures this properly using your actual data.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="linkedin" class="linkedin-section">
-        <div class="linkedin-card">
-            <div class="linkedin-copy">
-                <span class="section-label" style="color: var(--blue-accent);">Stay In The Loop</span>
-                <h2>Follow EPC on LinkedIn</h2>
-                <p>Plain-English thoughts on running a tighter business. Practical process stuff. The occasional rant about why consulting doesn't need to be complicated.</p>
-                <p>It's the easiest way to stay connected between conversations — no spammy newsletters, just useful bits.</p>
-                <ul class="linkedin-points">
-                    <li><i class="fa-solid fa-check"></i>Workflow thinking you can actually use</li>
-                    <li><i class="fa-solid fa-check"></i>Updates from the business and the build</li>
-                    <li><i class="fa-solid fa-check"></i>A quick way to keep tabs on what we're up to</li>
-                </ul>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">How we can work together</span>
+                <h2>Start small. Go further when the data says so.</h2>
+                <p class="lead">Most clients start with a Business Health Check, then choose the next step based on what it uncovers. Every engagement is scoped and priced upfront.</p>
             </div>
-            <div class="linkedin-cta-wrap">
-                <a class="linkedin-cta" href="https://www.linkedin.com/company/elevate-process-consulting/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin"></i> Follow EPC
-                </a>
-                <p class="linkedin-side-note">Follow us and keep an eye on the latest.</p>
+            <div class="svc-grid">
+                <div class="svc featured reveal">
+                    <span class="badge">Start here</span>
+                    <div class="svc-top">
+                        <div class="svc-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                        <div><div class="svc-phase">Low-risk first step</div><h3>Business Health Check</h3></div>
+                    </div>
+                    <p class="svc-for"><strong>Best for:</strong> owners who know something's off but can't pinpoint what's costing the most.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Walk-through of your client journey, enquiry to ongoing service</li>
+                        <li><i class="fa-solid fa-check"></i>Data review to measure where work stalls or gets double-handled</li>
+                        <li><i class="fa-solid fa-check"></i>Gap check across people, process and systems</li>
+                        <li><i class="fa-solid fa-check"></i>Quick wins plus a ranked list of bigger fixes</li>
+                        <li><i class="fa-solid fa-check"></i>Review session with you and your right-hand person</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Book a Health Check chat</a>
+                </div>
+
+                <div class="svc reveal">
+                    <div class="svc-top">
+                        <div class="svc-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div><div class="svc-phase">Locate &amp; Innovate</div><h3>Process &amp; Operations Consulting</h3></div>
+                    </div>
+                    <p class="svc-for"><strong>Best for:</strong> businesses where onboarding, handovers or daily workflow depend too much on one person — usually you.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Map how clients actually move through your business</li>
+                        <li><i class="fa-solid fa-check"></i>Find the steps only one person knows how to handle</li>
+                        <li><i class="fa-solid fa-check"></i>Redesign workflow so it holds up without you hovering</li>
+                        <li><i class="fa-solid fa-check"></i>Clear ownership at every handover point</li>
+                        <li><i class="fa-solid fa-check"></i>Hands-on support putting it in place</li>
+                    </ul>
+                    <a href="#contact" class="svc-link">Talk to us about this <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="svc reveal">
+                    <div class="svc-top">
+                        <div class="svc-icon"><i class="fa-solid fa-gears"></i></div>
+                        <div><div class="svc-phase">Fix</div><h3>Systems, Data &amp; Automation</h3></div>
+                    </div>
+                    <p class="svc-for"><strong>Best for:</strong> businesses sitting on plenty of data but deciding on gut feel — or repeating admin a system could handle.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Review your CRM / practice management setup and data flow</li>
+                        <li><i class="fa-solid fa-check"></i>Automate repetitive admin that's proven worth automating</li>
+                        <li><i class="fa-solid fa-check"></i>Dashboards for capacity, workload and bottlenecks</li>
+                        <li><i class="fa-solid fa-check"></i>Excel, Power BI, Power Automate, AI where it genuinely helps</li>
+                        <li><i class="fa-solid fa-check"></i>Tool-agnostic — no kickbacks, ever</li>
+                    </ul>
+                    <a href="#contact" class="svc-link">Talk to us about this <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="svc reveal">
+                    <div class="svc-top">
+                        <div class="svc-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <div><div class="svc-phase">Track</div><h3>Program &amp; Project Management</h3></div>
+                    </div>
+                    <p class="svc-for"><strong>Best for:</strong> businesses rolling out a specific change — new software, a merger, a new service line — who need someone to run it.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Defined scope, budget and timeline before anything starts</li>
+                        <li><i class="fa-solid fa-check"></i>One point of accountability for the whole rollout</li>
+                        <li><i class="fa-solid fa-check"></i>Regular check-ins so nothing quietly stalls</li>
+                        <li><i class="fa-solid fa-check"></i>Handover and training so it sticks after we're gone</li>
+                        <li><i class="fa-solid fa-check"></i>Post-rollout review against the baseline</li>
+                    </ul>
+                    <a href="#contact" class="svc-link">Talk to us about this <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="audit" class="contact-section">
-        <div class="contact-header">
-            <span class="section-label">Next Step</span>
-            <h2>Book a Free 20-Minute Chat</h2>
-            <p style="color: #5e6c84; margin-top: 10px;">Quick conversation. Plain English. We'll work out together which service (if any) is the right first step — and what it'd take to get moving.</p>
-        </div>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">Client stories</span>
+                <h2>Real owners. Real businesses. <span class="mark">In their words.</span></h2>
+                <p class="lead">A few of the Perth businesses we've worked alongside.</p>
+            </div>
+            <div class="t-grid">
+                <figure class="t-card featured reveal">
+                    <div class="t-logo"><img src="clients/cleanscape-collective.png" alt="CleanScape Collective" loading="lazy"></div>
+                    <span class="t-ind">Cleaning services · Perth</span>
+                    <blockquote>Working with Archie and Vitoria has been a great experience. Their guidance provided much-needed clarity around my business operations and helped me identify and resolve <strong>key bottlenecks that were holding back my ability to scale</strong>. Their support has given me a clearer direction and stronger foundation for growing my business.</blockquote>
+                    <figcaption class="t-person">
+                        <span class="t-avatar" aria-hidden="true">AS</span>
+                        <span><strong>Aaron Sawmadal</strong><small>CEO, CleanScape Collective</small></span>
+                    </figcaption>
+                </figure>
 
-        <p class="contact-trust-note">No pressure. No hard sell. If it's not the right fit, we'll tell you straight.</p>
+                <!--
+                    When a testimonial arrives: remove the "pending" class, delete the <p class="t-soon">,
+                    and paste a <blockquote> + <figcaption class="t-person"> like the CleanScape card above.
+                -->
+                <figure class="t-card pending reveal">
+                    <div class="t-logo"><img src="clients/sunshine-advisors.jpg" alt="Sunshine Advisors" class="sunshine" loading="lazy"></div>
+                    <span class="t-ind">Bookkeeping &amp; BAS · Woodvale</span>
+                    <p class="t-soon"><i class="fa-regular fa-comment-dots"></i> Meena's story is coming soon.</p>
+                    <figcaption class="t-person">
+                        <span class="t-avatar" aria-hidden="true">MA</span>
+                        <span><strong>Meena Arya</strong><small>Principal, Sunshine Advisors</small></span>
+                    </figcaption>
+                </figure>
 
-        <div class="contact-form-container">
-            <form action="https://formspree.io/f/mojklnwg" method="POST">
-                
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="e.g. Dave Thompson" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="dave@yourbusiness.com.au" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="company">Business Name</label>
-                    <input type="text" id="company" name="company" placeholder="e.g. Thompson & Co Pty Ltd">
-                </div>
-
-                <div class="form-group">
-                    <label for="industry">Industry</label>
-                    <input type="text" id="industry" name="industry" placeholder="e.g. Accounting, Financial Advisory, Brokerage, Trade, Other">
-                </div>
-
-                <div class="form-group">
-                    <label for="source">How did you hear about us?</label>
-                    <select id="source" name="source">
-                        <option value="Not Sure">Not sure / other</option>
-                        <option value="BNI">BNI</option>
-                        <option value="Referral">Referral from someone I know</option>
-                        <option value="LinkedIn">LinkedIn</option>
-                        <option value="Search">Google / Search</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="package">Which service sounds most useful?</label>
-                    <select id="package" name="package">
-                        <option value="Not Sure">Not sure yet — let's have a chat</option>
-                        <option value="Business Health Check">Business Health Check (start here)</option>
-                        <option value="Process & Operations Consulting">Process &amp; Operations Consulting</option>
-                        <option value="Systems, Data & Automation">Systems, Data &amp; Automation</option>
-                        <option value="Program & Project Management">Program &amp; Project Management</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">What's the main thing doing your head in right now?</label>
-                    <textarea id="message" name="message" placeholder="In a few sentences — where's your business losing time, margin, or sleep? No polished pitch needed, just tell us straight..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Book My Free 20-Min Chat <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
-                
-            </form>
+                <figure class="t-card pending reveal">
+                    <div class="t-logo"><span class="elae-mark" role="img" aria-label="ELAÉ Creative Studio">ELA<span>É</span><small>Creative Studio</small></span></div>
+                    <span class="t-ind">Brand strategy studio · Perth</span>
+                    <p class="t-soon"><i class="fa-regular fa-comment-dots"></i> Katielle's story is coming soon.</p>
+                    <figcaption class="t-person">
+                        <span class="t-avatar" aria-hidden="true">KF</span>
+                        <span><strong>Katielle Firme</strong><small>Founder, ELAÉ Creative Studio</small></span>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </section>
+
+    <!-- EXAMPLE FINDINGS -->
+    <section id="findings">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">What the data usually shows</span>
+                <h2>The kind of things a Health Check uncovers</h2>
+                <p class="lead">Every business is different — that's the point. But these patterns come up again and again in owner-led service businesses.</p>
+            </div>
+            <div class="finds-grid">
+                <div class="find reveal">
+                    <div class="find-head"><span class="ind">Accounting practice</span><h3>Month-end chasing eats a week</h3></div>
+                    <div class="find-body">
+                        <div class="find-row"><b>Found</b><span>Staff manually emailing clients for the same documents every cycle.</span></div>
+                        <div class="find-row"><b>Fix</b><span>Standard request checklist + automated reminders from the practice system.</span></div>
+                    </div>
+                    <div class="find-result"><i class="fa-solid fa-arrow-trend-up"></i>Chasing time cut, fewer late lodgements</div>
+                </div>
+                <div class="find reveal">
+                    <div class="find-head"><span class="ind">Trade &amp; services</span><h3>Jobs done, invoices late</h3></div>
+                    <div class="find-body">
+                        <div class="find-row"><b>Found</b><span>Completed jobs sat for days waiting for paperwork before invoicing.</span></div>
+                        <div class="find-row"><b>Fix</b><span>Job close-out on mobile triggers the invoice in Xero automatically.</span></div>
+                    </div>
+                    <div class="find-result"><i class="fa-solid fa-arrow-trend-up"></i>Faster cash flow, less admin at night</div>
+                </div>
+                <div class="find reveal">
+                    <div class="find-head"><span class="ind">Financial advisory</span><h3>Onboarding lives in one head</h3></div>
+                    <div class="find-body">
+                        <div class="find-row"><b>Found</b><span>New-client onboarding depended on one senior adviser remembering every step.</span></div>
+                        <div class="find-row"><b>Fix</b><span>Mapped process, clear owners per step, task templates in the CRM.</span></div>
+                    </div>
+                    <div class="find-result"><i class="fa-solid fa-arrow-trend-up"></i>Consistent onboarding, adviser time freed</div>
+                </div>
+            </div>
+            <p class="disclaimer">Illustrative examples of common patterns — not specific client results.</p>
+        </div>
+    </section>
+
+    <!-- FOUNDERS -->
+    <section id="about" class="founders">
+        <div class="wrap founders-grid">
+            <div class="founders-photo reveal">
+                <img src="founders-landscape.jpg" alt="Archie Shim and Vitória Silveira, Managing Partners of EPC" loading="lazy">
+                <div class="stamp"><i class="fa-solid fa-handshake"></i><span><strong>Real people</strong>you can actually ring</span></div>
+            </div>
+            <div class="founders-copy reveal">
+                <span class="eyebrow">Who you'd be working with</span>
+                <h2>Operators, not career consultants.</h2>
+                <p>EPC is Archie and Vitória. We've come up through projects, delivery and operations — so we know the difference between what gets said in the boardroom and what happens on the ground. You won't get a 60-slide deck. You'll get a short list of what's costing you, what to fix first, and help doing it.</p>
+                <div class="people">
+                    <div class="person">
+                        <h3>Archie Shim</h3>
+                        <div class="role">Managing Partner — Delivery &amp; Operations</div>
+                        <p>A decade running projects across construction, industrial and manufacturing. Turns moving parts into a clear plan and keeps it on track when things get busy.</p>
+                    </div>
+                    <div class="person">
+                        <h3>Vitória Silveira</h3>
+                        <div class="role">Managing Partner — Process &amp; Strategy</div>
+                        <p>A decade fixing the systems that keep businesses running. Untangles enquiry-to-invoice, tightens handovers and builds structures people actually stick with.</p>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat"><strong>10+ yrs</strong><span>operations experience each</span></div>
+                    <div class="stat"><strong>$0</strong><span>software kickbacks</span></div>
+                    <div class="stat"><strong>100%</strong><span>scoped &amp; priced upfront</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="guarantee" style="padding: 80px 0;">
+        <div class="wrap">
+            <div class="guarantee-card reveal">
+                <div class="shield"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h3>Our straight-up guarantee</h3>
+                    <p>Show up to the sessions, get us the info we ask for, and make the right people available — and we'll deliver the agreed outputs in the agreed timeframe. If we don't, we keep working at no extra cost until it's done.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary">Start with a chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <span class="eyebrow">Straight answers</span>
+                <h2>The stuff owners actually ask</h2>
+            </div>
+            <div class="faq-list reveal">
+                <details>
+                    <summary>How is EPC different from a business coaching program?</summary>
+                    <p>Coaching programs teach you a method and leave the implementation to you. We do the opposite: we analyse your actual data and processes, design a solution specific to your business, and build it with your team — including the systems and automation. You're buying an outcome, not a course.</p>
+                </details>
+                <details>
+                    <summary>What data do you need — and what if mine is messy?</summary>
+                    <p>Whatever you already have: CRM or practice-management exports, job records, timesheets, invoices, even spreadsheets. Messy is normal — that's most businesses we see. Tidying the data is often one of the first quick wins.</p>
+                </details>
+                <details>
+                    <summary>I'm probably too small for this, aren't I?</summary>
+                    <p>Probably not. If a handful of people rely on you to keep things running, there are enough moving parts to untangle. Smaller businesses often lose the most, proportionally, to messy processes — one dropped ball is a bigger deal.</p>
+                </details>
+                <details>
+                    <summary>How much of my time will this take?</summary>
+                    <p>A few structured sessions, not weeks of workshops. We work around your schedule and the business keeps running the whole time — no downing tools, no six-month "transformation".</p>
+                </details>
+                <details>
+                    <summary>Are you going to try to sell me software?</summary>
+                    <p>No. We're tool-agnostic. If your current system works, we'll make it work harder. If it doesn't, we'll help you pick one that fits — and we don't take kickbacks from vendors.</p>
+                </details>
+                <details>
+                    <summary>Do you use AI?</summary>
+                    <p>Where it genuinely saves time — drafting, summarising, classifying, data clean-up. But AI is a tool we sometimes use, never the product. We're process consultants first.</p>
+                </details>
+                <details>
+                    <summary>Is this built for my industry?</summary>
+                    <p>We've worked across construction, industrial and operations for a decade, and now bring the same approach to professional and financial services firms. The workflow mess looks similar everywhere — the fix is tailored to how you run.</p>
+                </details>
+                <details>
+                    <summary>What does it cost?</summary>
+                    <p>It depends on scope — team size, workload and what you want sorted. We scope and price every engagement upfront, so you know exactly what you're signing up for. No surprise invoices.</p>
+                </details>
+                <details>
+                    <summary>What if I book a chat and it's not the right fit?</summary>
+                    <p>Then we'll say so — and where we can, point you to someone better suited. No hard sell. The 20-minute chat costs you nothing but a coffee's worth of time.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="contact" class="cta on-dark">
+        <div class="wrap cta-grid">
+            <div class="reveal">
+                <span class="eyebrow">Next step</span>
+                <h2>Get the owner <span class="mark">out of the bottleneck.</span></h2>
+                <p class="lead">A quick, plain-English conversation about where your business is losing time — and whether we're the right people to help.</p>
+                <ol class="cta-steps">
+                    <li><span><strong>Free 20-minute chat</strong>Tell us what's doing your head in. We'll ask a few questions.</span></li>
+                    <li><span><strong>Clear proposal</strong>If it's a fit, you get a fixed scope and price — no surprises.</span></li>
+                    <li><span><strong>Health Check</strong>We dig into your data and processes and hand you a ranked plan.</span></li>
+                </ol>
+
+                <div class="magnet">
+                    <h3><i class="fa-solid fa-file-arrow-down" style="color: var(--cyan); margin-right: 8px;"></i>Not ready to chat?</h3>
+                    <p>Grab the free Business Bottleneck Cheatsheet — the 7 places time and money quietly slip through the cracks.</p>
+                    <form action="https://formspree.io/f/mdawdddj" method="POST">
+                        <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
+                        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+                        <button type="submit" class="btn btn-cyan">Send me the cheatsheet</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-card reveal">
+                <h3>Book your free 20-minute chat</h3>
+                <p>No pressure. If it's not the right fit, we'll tell you straight.</p>
+                <form action="https://formspree.io/f/mojklnwg" method="POST">
+                    <div class="form-row">
+                        <div class="fg"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Dave Thompson" required></div>
+                        <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="dave@yourbusiness.com.au" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="fg"><label for="company">Business name</label><input type="text" id="company" name="company" placeholder="Thompson &amp; Co"></div>
+                        <div class="fg"><label for="industry">Industry</label><input type="text" id="industry" name="industry" placeholder="Accounting, trade, advisory…"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="fg">
+                            <label for="package">Most useful service</label>
+                            <select id="package" name="package">
+                                <option value="Not Sure">Not sure yet</option>
+                                <option value="Business Health Check">Business Health Check</option>
+                                <option value="Process & Operations Consulting">Process &amp; Operations</option>
+                                <option value="Systems, Data & Automation">Systems, Data &amp; Automation</option>
+                                <option value="Program & Project Management">Program &amp; Project Mgmt</option>
+                            </select>
+                        </div>
+                        <div class="fg">
+                            <label for="source">How did you hear about us?</label>
+                            <select id="source" name="source">
+                                <option value="Not Sure">Not sure / other</option>
+                                <option value="BNI">BNI</option>
+                                <option value="Referral">Referral</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Search">Google / Search</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label for="message">What's the main thing doing your head in right now?</label>
+                        <textarea id="message" name="message" placeholder="A few sentences is plenty — where's the business losing time, margin or sleep?" required></textarea>
+                    </div>
+                    <input type="hidden" name="owner_dependency_score" id="quizHidden" value="Not taken">
+                    <input type="hidden" name="roi_estimate" id="calcHidden" value="Not used">
+                    <button type="submit" class="btn btn-primary">Book my free chat <i class="fa-solid fa-arrow-right"></i></button>
+                    <p class="form-note"><i class="fa-solid fa-lock" style="margin-right: 6px;"></i>We'll only use your details to reply to you.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3><i class="fa-solid fa-layer-group"></i> EPC</h3>
-                <p>Where Complexity Meets Clarity</p>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="logo.png" alt="EPC">
+                    <p>Where complexity meets clarity. Data-led process consulting for owner-led service businesses.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#approach">Our approach</a></li>
+                        <li><a href="#lift">LIFT method</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Free tools</h4>
+                    <ul>
+                        <li><a href="#score">Owner Dependency Score</a></li>
+                        <li><a href="#calculator">ROI calculator</a></li>
+                        <li><a href="#contact">Bottleneck cheatsheet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get in touch</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>66 Cargill St, Victoria Park WA</li>
+                        <li><a href="mailto:archie@elevateprocessco.com"><i class="fa-solid fa-envelope"></i>archie@elevateprocessco.com</a></li>
+                        <li><a href="mailto:vitoria@elevateprocessco.com"><i class="fa-solid fa-envelope"></i>vitoria@elevateprocessco.com</a></li>
+                        <li><a href="https://www.linkedin.com/company/elevate-process-consulting/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>Follow EPC on LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="footer-col">
-                <h3 style="font-size: 1.2rem; color: #fff;">Get In Touch</h3>
-                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> 66 Cargill St, Victoria Park, WA Australia</p>
-                <p style="margin-top: 15px;">
-                    <a href="mailto:archie@elevateprocessco.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> archie@elevateprocessco.com</a>
-                </p>
-                <p>
-                    <a href="mailto:vitoria@elevateprocessco.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> vitoria@elevateprocessco.com</a>
-                </p>
-                <p style="margin-top: 15px;">
-                    <a href="https://www.linkedin.com/company/elevate-process-consulting/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="margin-right: 8px;"></i> EPC on LinkedIn</a>
-                </p>
+            <div class="foot-bottom">
+                <span>&copy; 2026 EPC | Elevate Process Consulting. All rights reserved.</span>
+                <span>Perth, Western Australia</span>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            &copy; 2026 EPC | Elevate Process Consulting. All rights reserved.
         </div>
     </footer>
 
     <script>
-        // Mobile nav toggle
-        (function() {
-            const toggle = document.getElementById('navToggle');
-            const close = document.getElementById('navClose');
-            const nav = document.getElementById('mobileNav');
-            const backdrop = document.getElementById('mobileNavBackdrop');
-            if (!toggle || !nav || !backdrop) return;
+        // Mobile nav
+        (function () {
+            var toggle = document.getElementById('navToggle');
+            var close = document.getElementById('navClose');
+            var nav = document.getElementById('mobileNav');
+            var backdrop = document.getElementById('backdrop');
+            function open() { nav.classList.add('open'); backdrop.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+            function shut() { nav.classList.remove('open'); backdrop.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+            toggle.addEventListener('click', open);
+            close.addEventListener('click', shut);
+            backdrop.addEventListener('click', shut);
+            nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', shut); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
+        })();
 
-            function openNav() {
-                nav.classList.add('is-open');
-                backdrop.classList.add('is-open');
-                toggle.setAttribute('aria-expanded', 'true');
-                document.body.style.overflow = 'hidden';
+        // Owner Dependency Score quiz
+        (function () {
+            var PILLARS = ['Owner time', 'Process', 'People', 'Data & systems'];
+            // Each answer scores 0-3 in order: 0 = runs without you, 3 = depends on you
+            var QUESTIONS = [
+                { p: 0, q: 'If you took two weeks off with your phone switched off, what would happen?', o: ['The business would run as normal', 'A few things would wait until I got back', 'Clients would notice delays and mistakes', 'Honestly, I couldn’t do it'] },
+                { p: 0, q: 'On a normal day, how often does the team come to you with questions?', o: ['Rarely', 'One to three times', 'Four to ten times', 'I’ve lost count'] },
+                { p: 1, q: 'How are your core processes (onboarding, delivery, invoicing) documented?', o: ['Written down and followed', 'Written down but out of date', 'Partly, scattered across files and emails', 'Mostly in my head'] },
+                { p: 1, q: 'How long before a new hire can work without supervision?', o: ['Under two weeks', 'About a month', 'Two to three months', 'Longer — or never quite'] },
+                { p: 2, q: 'Who approves quotes, discounts or exceptions?', o: ['The team, within clear rules', 'A senior team member', 'Mostly me', 'Only me, every time'] },
+                { p: 2, q: 'Who owns each step of a client’s journey through your business?', o: ['A named owner for every step', 'Mostly clear, a few grey areas', 'It’s fuzzy', 'Whoever’s free — usually me'] },
+                { p: 3, q: 'How do you know how the business is tracking this week?', o: ['A live dashboard', 'Monthly reports', 'I check the bank balance', 'Gut feel'] },
+                { p: 3, q: 'How much information gets re-typed from one system into another?', o: ['Almost none', 'A little', 'A lot', 'Nearly everything is manual'] }
+            ];
+            var TIERS = [
+                { max: 25, name: 'Systemised', color: '#00875a', bg: '#e3fcef', head: 'Your business can run without you.', text: 'The foundations are strong. The next gains come from sharper data and automation, so you can scale without adding overhead.' },
+                { max: 50, name: 'Stretched', color: '#0052cc', bg: '#e6efff', head: 'Good bones, but you’re still the safety net.', text: 'Some systems are in place, but key decisions and knowledge still route through you. A few targeted fixes would free up real time.' },
+                { max: 75, name: 'Owner-dependent', color: '#b65c02', bg: '#fff4e5', head: 'The business leans on you heavily.', text: 'Growth is probably adding pressure rather than profit. The fix isn’t working harder — it’s moving knowledge and decisions out of your head.' },
+                { max: 100, name: 'Owner-trapped', color: '#de350b', bg: '#ffebe6', head: 'Right now, you are the system.', text: 'If you stop, it stops. That’s fixable — and the biggest gains usually come in the first few weeks.' }
+            ];
+            var ADVICE = [
+                { svc: 'Business Health Check', text: 'Your time is the bottleneck. Start by finding which tasks can leave your desk first, and what keeping them is costing you.' },
+                { svc: 'Process & Operations Consulting', text: 'Too much of how the work gets done lives in your head. Mapping and documenting your core processes is the fastest win.' },
+                { svc: 'Process & Operations Consulting', text: 'The team needs clear ownership and decision rules, so they stop routing everything through you.' },
+                { svc: 'Systems, Data & Automation', text: 'You’re short on visibility and re-keying too much. Dashboards and automation on the tools you already use will close the gap.' }
+            ];
+            var quiz = document.getElementById('quiz');
+            var idx = -1, answers = [], lastPct = 0, locked = false, recommended = '';
+
+            function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+            function levelColor(p) { return p <= 25 ? '#00875a' : p <= 50 ? '#2f6fe0' : p <= 75 ? '#ff991f' : '#de350b'; }
+
+            function introHTML() {
+                return '<div class="quiz-intro"><div class="quiz-intro-icon"><i class="fa-solid fa-gauge-high"></i></div>' +
+                    '<h3 tabindex="-1">How much does your business depend on you?</h3>' +
+                    '<p>Pick the answer closest to a normal week. Be honest — nobody’s watching.</p>' +
+                    '<button type="button" class="btn btn-primary" data-act="start">Start the assessment <i class="fa-solid fa-arrow-right"></i></button></div>';
             }
-            function closeNav() {
-                nav.classList.remove('is-open');
-                backdrop.classList.remove('is-open');
-                toggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
+
+            function questionHTML() {
+                var Q = QUESTIONS[idx], n = QUESTIONS.length;
+                return '<div class="quiz-progress"><span>Question ' + (idx + 1) + ' of ' + n + '</span><span>' + Math.round(idx / n * 100) + '% done</span></div>' +
+                    '<div class="quiz-bar"><span style="width:' + lastPct + '%"></span></div>' +
+                    '<div class="quiz-pillar">' + esc(PILLARS[Q.p]) + '</div>' +
+                    '<h3 class="quiz-q" tabindex="-1">' + esc(Q.q) + '</h3>' +
+                    '<div class="options" role="group" aria-label="Answers">' + Q.o.map(function (o, i) {
+                        return '<button type="button" class="option' + (answers[idx] === i ? ' selected' : '') + '" data-ans="' + i + '"><span class="key" aria-hidden="true">' + 'ABCD'[i] + '</span>' + esc(o) + '</button>';
+                    }).join('') + '</div>' +
+                    '<div class="quiz-nav"><button type="button" class="link-btn" data-act="back"><i class="fa-solid fa-arrow-left"></i> Back</button>' +
+                    (answers[idx] != null ? '<button type="button" class="link-btn" data-act="next">Next <i class="fa-solid fa-arrow-right"></i></button>' : '<span></span>') + '</div>';
             }
-            toggle.addEventListener('click', openNav);
-            close && close.addEventListener('click', closeNav);
-            backdrop.addEventListener('click', closeNav);
-            nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+            function resultHTML() {
+                var max = QUESTIONS.length * 3, total = 0, sums = [0, 0, 0, 0], caps = [0, 0, 0, 0];
+                QUESTIONS.forEach(function (q, i) { total += answers[i]; sums[q.p] += answers[i]; caps[q.p] += 3; });
+                var score = Math.round(total / max * 100);
+                var pct = sums.map(function (v, i) { return Math.round(v / caps[i] * 100); });
+                var tier = TIERS.filter(function (t) { return score <= t.max; })[0];
+                var worst = pct.indexOf(Math.max.apply(null, pct));
+                var advice = score <= 25
+                    ? { svc: 'Systems, Data & Automation', text: 'You’re in good shape. Systemised businesses usually find their next gains in better reporting and automation.' }
+                    : ADVICE[worst];
+                recommended = advice.svc;
+
+                document.getElementById('quizHidden').value = score + '/100 (' + tier.name + ') — ' +
+                    PILLARS.map(function (p, i) { return p + ' ' + pct[i] + '%'; }).join(', ');
+
+                return '<div class="result-top">' +
+                        '<div class="gauge"><svg viewBox="0 0 200 110" aria-hidden="true">' +
+                            '<path d="M14 100 A86 86 0 0 1 186 100" pathLength="100" fill="none" stroke="#ebeff5" stroke-width="16" stroke-linecap="round"/>' +
+                            '<path class="gauge-fill" d="M14 100 A86 86 0 0 1 186 100" pathLength="100" fill="none" stroke="' + tier.color + '" stroke-width="16" stroke-linecap="round" stroke-dasharray="100 100" stroke-dashoffset="100" data-target="' + (100 - score) + '"' + (score === 0 ? ' opacity="0"' : '') + '/>' +
+                        '</svg><div class="gauge-num"><strong>' + score + '</strong><span>out of 100</span></div></div>' +
+                        '<div><span class="tier" style="color:' + tier.color + ';background:' + tier.bg + '">' + tier.name + '</span>' +
+                        '<h3 tabindex="-1">' + esc(tier.head) + '</h3><p>' + esc(tier.text) + '</p></div>' +
+                    '</div>' +
+                    '<div class="breakdown">' + PILLARS.map(function (p, i) {
+                        return '<div class="bd-row"><span>' + esc(p) + '</span><div class="bar"><span data-w="' + pct[i] + '" style="background:' + levelColor(pct[i]) + '"></span></div><b>' + pct[i] + '%</b></div>';
+                    }).join('') + '</div>' +
+                    '<div class="next-step"><strong>Where to start: ' + esc(score <= 25 ? 'next-level gains' : PILLARS[worst]) + '</strong>' + esc(advice.text) +
+                        ' Best fit: <span class="svc-name">' + esc(advice.svc) + '</span>.</div>' +
+                    '<div class="result-actions"><a href="#contact" class="btn btn-primary" data-act="book">Book a free debrief of my score <i class="fa-solid fa-arrow-right"></i></a>' +
+                        '<button type="button" class="link-btn" data-act="retake"><i class="fa-solid fa-rotate-left"></i> Retake</button></div>' +
+                    '<p class="quiz-fine">0 = the business runs without you · 100 = you are the business. Your score is added to the booking form so we can prepare.</p>';
+            }
+
+            function render(moveFocus) {
+                if (idx < 0) quiz.innerHTML = introHTML();
+                else if (idx < QUESTIONS.length) quiz.innerHTML = questionHTML();
+                else quiz.innerHTML = resultHTML();
+
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        var bar = quiz.querySelector('.quiz-bar span');
+                        if (bar) { lastPct = idx / QUESTIONS.length * 100; bar.style.width = lastPct + '%'; }
+                        var g = quiz.querySelector('.gauge-fill');
+                        if (g) g.setAttribute('stroke-dashoffset', g.getAttribute('data-target'));
+                        quiz.querySelectorAll('.bd-row .bar span').forEach(function (s) { s.style.width = s.getAttribute('data-w') + '%'; });
+                    });
+                });
+
+                if (moveFocus) {
+                    var h = quiz.querySelector('h3');
+                    if (h) h.focus({ preventScroll: true });
+                    var top = quiz.getBoundingClientRect().top;
+                    if (top < 70) window.scrollBy(0, top - 90);
+                }
+            }
+
+            quiz.addEventListener('click', function (e) {
+                var b = e.target.closest('button, a[data-act]');
+                if (!b || locked) return;
+                var act = b.getAttribute('data-act');
+                if (b.hasAttribute('data-ans')) {
+                    answers[idx] = +b.getAttribute('data-ans');
+                    quiz.querySelectorAll('.option').forEach(function (o) { o.classList.toggle('selected', o === b); });
+                    locked = true;
+                    setTimeout(function () { locked = false; idx++; render(true); }, 220);
+                } else if (act === 'start') { idx = 0; lastPct = 0; render(true); }
+                else if (act === 'back') { idx--; render(true); }
+                else if (act === 'next') { idx++; render(true); }
+                else if (act === 'retake') { idx = -1; answers = []; lastPct = 0; document.getElementById('quizHidden').value = 'Not taken'; render(true); }
+                else if (act === 'book') {
+                    var sel = document.getElementById('package');
+                    if (sel && recommended) sel.value = recommended;
+                }
+            });
+
+            render(false);
+        })();
+
+        // ROI calculator
+        (function () {
+            var ids = ['people', 'hours', 'rate', 'ownerHours', 'ownerRate', 'saving', 'invest'];
+            var el = {};
+            ids.forEach(function (id) { el[id] = document.getElementById(id); });
+            var fmt = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 });
+            var WEEKS = 48;
+            function set(id, text) { document.getElementById(id).textContent = text; }
+            function hrs(n) { return Math.round(n).toLocaleString('en-AU') + ' hrs'; }
+            var touched = false;
+            function update(e) {
+                if (e) touched = true;
+                var p = +el.people.value, h = +el.hours.value, r = +el.rate.value;
+                var oh = +el.ownerHours.value, orate = +el.ownerRate.value;
+                var s = +el.saving.value / 100, inv = +el.invest.value;
+
+                set('peopleOut', p);
+                set('hoursOut', h + ' hrs');
+                set('rateOut', '$' + r);
+                set('ownerHoursOut', oh + ' hrs');
+                set('ownerRateOut', '$' + orate);
+                set('savingOut', Math.round(s * 100) + '%');
+                set('investOut', fmt.format(inv));
+
+                var teamHrs = p * h * WEEKS, ownerHrs = oh * WEEKS;
+                var cost = teamHrs * r + ownerHrs * orate;
+                var value = cost * s;
+                var months = inv / (value / 12);
+
+                set('annualCost', fmt.format(cost));
+                set('yearValue', fmt.format(value));
+                set('payback', months > 24 ? '24+ mo' : months < 1 ? Math.max(1, Math.round(months * 4.33)) + ' wks' : months.toFixed(1) + ' mo');
+                set('roi', Math.round((value - inv) / inv * 100).toLocaleString('en-AU') + '%');
+                set('recoverHours', hrs((teamHrs + ownerHrs) * s));
+                set('ownerHoursBack', hrs(ownerHrs * s));
+
+                var top = Math.max(inv, value);
+                var bi = document.getElementById('barInv'), bv = document.getElementById('barVal');
+                bi.style.width = (inv / top * 100) + '%'; bi.textContent = fmt.format(inv);
+                bv.style.width = (value / top * 100) + '%'; bv.textContent = fmt.format(value);
+
+                if (touched) document.getElementById('calcHidden').value = 'Year-one value ' + fmt.format(value) + ' on ' + fmt.format(inv) +
+                    ' (team: ' + p + ' x ' + h + ' hrs/wk @ $' + r + '; owner: ' + oh + ' hrs/wk @ $' + orate + '; ' + Math.round(s * 100) + '% improvement)';
+            }
+            function fill() {
+                ids.forEach(function (id) {
+                    var s = el[id];
+                    s.style.setProperty('--pct', ((s.value - s.min) / (s.max - s.min) * 100) + '%');
+                });
+            }
+            ids.forEach(function (id) { el[id].addEventListener('input', function (e) { update(e); fill(); }); });
+            update();
+            fill();
+        })();
+
+        // Reveal on scroll
+        (function () {
+            var items = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) { items.forEach(function (i) { i.classList.add('in'); }); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            items.forEach(function (i) { io.observe(i); });
         })();
     </script>
 
-<script>
-window.embeddedChatbotConfig = {
-  chatbotId: "0de6452c-ee64-4b91-8032-7c0725b0baf3"}
-</script>
-<script
-src="https://www.aissie.com.au/chat-widget-bundle.js"
-chatbotId="0de6452c-ee64-4b91-8032-7c0725b0baf3"
-defer>
-</script>
-<div id="aissie-chat"></div>
-
+    <script>
+        window.embeddedChatbotConfig = { chatbotId: "0de6452c-ee64-4b91-8032-7c0725b0baf3" };
+    </script>
+    <script src="https://www.aissie.com.au/chat-widget-bundle.js" chatbotId="0de6452c-ee64-4b91-8032-7c0725b0baf3" defer></script>
+    <div id="aissie-chat"></div>
 
 </body>
 </html>
