@@ -162,9 +162,10 @@
             border-bottom: 1px solid var(--line);
         }
         .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .logo img { height: 40px; width: auto; }
-        .nav-links { display: flex; align-items: center; gap: 28px; }
-        .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--ink); transition: color .2s; }
+        .logo { flex-shrink: 0; }
+        .logo img { height: 34px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--ink); transition: color .2s; white-space: nowrap; }
         .nav-links a:hover { color: var(--blue); }
         .nav-links .btn { padding: 10px 20px; min-height: 0; color: var(--white); }
         .nav-toggle {
@@ -621,7 +622,7 @@
         /* ---------- FOOTER ---------- */
         footer { background: #06152f; color: #94a3b8; padding: 64px 0 28px; }
         .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 36px; }
-        .foot-brand img { height: 42px; width: auto; background: var(--white); padding: 6px 10px; border-radius: 8px; margin-bottom: 14px; }
+        .foot-brand img { height: 34px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); } /* all-white logo on the dark footer */
         footer h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 14px; }
         footer ul { list-style: none; }
         footer li { margin-bottom: 9px; font-size: 0.93rem; }
@@ -689,7 +690,7 @@
 
     <header class="nav">
         <div class="wrap nav-inner">
-            <a href="#" class="logo" aria-label="EPC home"><img src="logo.png" alt="EPC — Elevate Process Consulting"></a>
+            <a href="#" class="logo" aria-label="EPC home"><img src="epc-logo.png" alt="EPC — Elevate Process Consulting"></a>
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="#approach">Approach</a>
                 <a href="#services">Services</a>
@@ -1361,7 +1362,7 @@
         <div class="wrap">
             <div class="foot-grid">
                 <div class="foot-brand">
-                    <img src="logo.png" alt="EPC">
+                    <img src="epc-logo.png" alt="EPC">
                     <p>Where complexity meets clarity. Data-led process consulting for owner-led service businesses.</p>
                 </div>
                 <div>
